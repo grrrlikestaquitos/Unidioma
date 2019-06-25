@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541002E122C1FE6D00D42247 /* LanguageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E022C1FE6D00D42247 /* LanguageState.swift */; };
 		54617F1222C17521002A6499 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1122C17521002A6499 /* SettingsController.swift */; };
 		54617F1422C1776E002A6499 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1322C1776E002A6499 /* SettingsView.swift */; };
 		54617F1922C1DDAD002A6499 /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1822C1DDAD002A6499 /* LanguagesView.swift */; };
-		54617F1B22C1DF11002A6499 /* LanguagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1A22C1DF11002A6499 /* LanguagesController.swift */; };
-		54617F1D22C1DFD5002A6499 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54617F1C22C1DFD5002A6499 /* Settings.storyboard */; };
 		5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483718E22C01812004B1000 /* KanjiViewSA.swift */; };
 		5483719222C01853004B1000 /* KanjiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719122C01853004B1000 /* KanjiModel.swift */; };
 		5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719322C01898004B1000 /* KanjiCharacterSA.swift */; };
@@ -75,11 +74,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		541002E022C1FE6D00D42247 /* LanguageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageState.swift; sourceTree = "<group>"; };
 		54617F1122C17521002A6499 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		54617F1322C1776E002A6499 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		54617F1822C1DDAD002A6499 /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
-		54617F1A22C1DF11002A6499 /* LanguagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesController.swift; sourceTree = "<group>"; };
-		54617F1C22C1DFD5002A6499 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		5483718E22C01812004B1000 /* KanjiViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiViewSA.swift; sourceTree = "<group>"; };
 		5483719122C01853004B1000 /* KanjiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiModel.swift; sourceTree = "<group>"; };
 		5483719322C01898004B1000 /* KanjiCharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiCharacterSA.swift; sourceTree = "<group>"; };
@@ -146,18 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				54617F1822C1DDAD002A6499 /* LanguagesView.swift */,
-				54617F1A22C1DF11002A6499 /* LanguagesController.swift */,
+				541002E022C1FE6D00D42247 /* LanguageState.swift */,
 			);
 			path = Languages;
-			sourceTree = "<group>";
-		};
-		54617F1E22C1DFE7002A6499 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				54AD92BC22BF1F1600045B93 /* Interface.storyboard */,
-				54617F1C22C1DFD5002A6499 /* Settings.storyboard */,
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		5483718B22C01774004B1000 /* KanjiViews */ = {
@@ -228,7 +217,7 @@
 		54AD92BB22BF1F1600045B93 /* Hirakana WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				54617F1E22C1DFE7002A6499 /* Storyboards */,
+				54AD92BC22BF1F1600045B93 /* Interface.storyboard */,
 				54AD92BF22BF1F1700045B93 /* Assets.xcassets */,
 				54AD92C122BF1F1700045B93 /* Info.plist */,
 			);
@@ -367,7 +356,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54617F1D22C1DFD5002A6499 /* Settings.storyboard in Resources */,
 				54AD92C022BF1F1700045B93 /* Assets.xcassets in Resources */,
 				54AD92BE22BF1F1600045B93 /* Interface.storyboard in Resources */,
 			);
@@ -400,11 +388,11 @@
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,
 				5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */,
+				541002E122C1FE6D00D42247 /* LanguageState.swift in Sources */,
 				54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */,
 				5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */,
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
-				54617F1B22C1DF11002A6499 /* LanguagesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

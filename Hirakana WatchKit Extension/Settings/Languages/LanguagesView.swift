@@ -8,51 +8,32 @@
 
 import SwiftUI
 
-struct LanguageState: Identifiable {
-    var id: Int
-
-    var language: String
-    var state: Bool
-
-    init(_ id: Int, _ language: String, _ state: Bool) {
-        self.id = id
-        self.language = language
-        self.state = state
-    }
-}
-
 struct LanguagesView : View {
     @State private var languages: [LanguageState] = [
         .init(0, "Japanese", false),
         .init(1, "Chinese", false)
     ]
 
-    var body: some View {
-        List {
-            ForEach (languages.identified(by: \.id)) { item in
-                Button(action: {
-                    self.languages[item.id].state = !item.state
-                }) {
-                    HStack {
-                        HKText(textType: .subtitle, text: item.language)
-                        Spacer()
+    private func languageSelector(item: LanguageState) ->some View {
+        Button(action: { self.languages[item.id].state = !item.state }) {
+            HStack {
+                HKText(textType: .subtitle, text: item.language)
+                    .padding([.leading], 5)
+                Spacer()
 
-                        if item.state == true {
-                            Image(systemName: "checkmark.circle")
-                        }
-                    }
+                if item.state == true {
+                    Image(systemName: "checkmark.circle")
+                        .padding([.trailing], 5)
                 }
             }
         }
     }
 
-//    var body: some View {
-//        Button(action: {
-//            self.name = "alex"
-//        }) {
-//            Text(name)
-//        }
-//    }
+    var body: some View {
+        List(languages.identified(by: \.id)) { item in
+            self.languageSelector(item: item)
+        }
+    }
 }
 
 #if DEBUG

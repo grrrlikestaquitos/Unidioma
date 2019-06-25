@@ -9,12 +9,11 @@
 import SwiftUI
 import Combine
 
-enum SettingsPage: String {
+private enum SettingsPage: String {
     case Languages
 }
 
 struct SettingsView : View {
-    var pagePressed = PassthroughSubject<SettingsPage, Never>()
 
     var body: some View {
         VStack {
@@ -24,21 +23,27 @@ struct SettingsView : View {
     }
 
     private func SettingsPage(_ page: SettingsPage) -> some View {
-        Button(action: {
-            self.pagePressed.send(.Languages)
-        }) {
+        NavigationButton(destination: getSettingDestination(page)) {
             HStack {
-                HKText(textType: .subtitle, text: page.rawValue)
+                HKText(textType: .title, text: page.rawValue)
+                    .padding([.leading], 5)
                 Spacer()
             }
         }
     }
+
+    private func getSettingDestination(_ page: SettingsPage) -> some View {
+        switch page {
+        case .Languages:
+            return LanguagesView()
+        }
+    }
 }
 
-//#if DEBUG
-//struct SettingsView_Previews : PreviewProvider {
-//    static var previews: some View {
-//        SettingsView()
-//    }
-//}
-//#endif
+#if DEBUG
+struct SettingsView_Previews : PreviewProvider {
+    static var previews: some View {
+        SettingsView()
+    }
+}
+#endif

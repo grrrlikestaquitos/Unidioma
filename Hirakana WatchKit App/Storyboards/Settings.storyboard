@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14810.12" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14619.8"/>
+    </dependencies>
+    <scenes>
+        <!--LanguagesController-->
+        <scene sceneID="11V-tr-as0">
+            <objects>
+                <hostingController identifier="LanguagesController" hidesWhenLoading="NO" id="qud-Nt-Aub" customClass="LanguagesController" customModule="Hirakana_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="141"/>
+        </scene>
+    </scenes>
+</document>

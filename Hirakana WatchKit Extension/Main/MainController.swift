@@ -10,7 +10,12 @@ import WatchKit
 import Foundation
 import SwiftUI
 
-class HostingController : WKHostingController<HirakanaView> {
+class MainController : WKHostingController<HirakanaView> {
+    override func willActivate() {
+        super.willActivate()
+        setTitle("Japanese")
+    }
+
     override var body: HirakanaView {
         HirakanaView(viewType: .kanji(Series.A))
     }

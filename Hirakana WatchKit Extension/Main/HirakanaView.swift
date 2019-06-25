@@ -19,7 +19,9 @@ enum ViewType {
 struct HirakanaView : View {
     var viewType: ViewType? = .kanji(Series.A)
 
-    let kanjimodel = KanjiModel(hiragana: "わたし", kanji: "私", romaji: "wa-ta-shi",
+    let kanjimodel = KanjiModel(hiragana: "わたし",
+                                kanji: "私",
+                                romaji: "wa-ta-shi",
                                 meanings: ["I; Me"],
                                 phrases: ["I fell", "私は落ちた", "Watashi wa ochita"])
 

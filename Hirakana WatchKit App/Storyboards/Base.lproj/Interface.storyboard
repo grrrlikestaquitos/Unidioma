@@ -6,12 +6,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14619.8"/>
     </dependencies>
     <scenes>
-        <!--Hosting Controller-->
+        <!--Main Controller-->
         <scene sceneID="RUd-og-cv4">
             <objects>
-                <hostingController id="NBu-mt-KyX" customClass="HostingController" customModule="Hirakana_WatchKit_App" customModuleProvider="target"/>
+                <hostingController hidesWhenLoading="NO" id="NBu-mt-KyX" customClass="MainController" customModule="Hirakana_WatchKit_Extension">
+                    <connections>
+                        <segue destination="JHA-ZX-AQs" kind="relationship" relationship="nextPage" id="tg9-kU-0iI"/>
+                    </connections>
+                </hostingController>
             </objects>
             <point key="canvasLocation" x="187" y="141"/>
+        </scene>
+        <!--Settings Controller-->
+        <scene sceneID="dTq-Bx-zOD">
+            <objects>
+                <hostingController hidesWhenLoading="NO" id="JHA-ZX-AQs" customClass="SettingsController" customModule="Hirakana_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="141"/>
         </scene>
     </scenes>
 </document>

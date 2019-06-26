@@ -29,6 +29,13 @@
 		54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD92D522BF1F1700045B93 /* ComplicationController.swift */; };
 		54AD92D822BF1F1800045B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92D722BF1F1800045B93 /* Assets.xcassets */; };
 		54AD92DB22BF1F1800045B93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */; };
+		8810E17022C32E6C00EA0DCB /* CharactorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E16F22C32E6C00EA0DCB /* CharactorModel.swift */; };
+		8810E17422C3359C00EA0DCB /* CharactorViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17322C3359C00EA0DCB /* CharactorViewSA.swift */; };
+		8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17522C336B100EA0DCB /* CharacterSA.swift */; };
+		8810E17822C33ECE00EA0DCB /* CharacterDefinitionSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17722C33ECE00EA0DCB /* CharacterDefinitionSA.swift */; };
+		8810E17A22C3432700EA0DCB /* CommonWordsSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17922C3432700EA0DCB /* CommonWordsSA.swift */; };
+		8810E17C22C345D800EA0DCB /* CommonWordsCharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17B22C345D800EA0DCB /* CommonWordsCharacterSA.swift */; };
+		8810E17E22C3538200EA0DCB /* CommonWordSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17D22C3538200EA0DCB /* CommonWordSA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +107,13 @@
 		54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54AD92DC22BF1F1800045B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54AD92DD22BF1F1800045B93 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8810E16F22C32E6C00EA0DCB /* CharactorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactorModel.swift; sourceTree = "<group>"; };
+		8810E17322C3359C00EA0DCB /* CharactorViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactorViewSA.swift; sourceTree = "<group>"; };
+		8810E17522C336B100EA0DCB /* CharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSA.swift; sourceTree = "<group>"; };
+		8810E17722C33ECE00EA0DCB /* CharacterDefinitionSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDefinitionSA.swift; sourceTree = "<group>"; };
+		8810E17922C3432700EA0DCB /* CommonWordsSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWordsSA.swift; sourceTree = "<group>"; };
+		8810E17B22C345D800EA0DCB /* CommonWordsCharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWordsCharacterSA.swift; sourceTree = "<group>"; };
+		8810E17D22C3538200EA0DCB /* CommonWordSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWordSA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +243,7 @@
 			children = (
 				54617F1022C174BB002A6499 /* Main */,
 				54617F0F22C17405002A6499 /* Settings */,
+				8810E16D22C32D7C00EA0DCB /* Chinese */,
 				54617F0E22C17335002A6499 /* Japanese */,
 				548371A122C04738004B1000 /* Shared Views */,
 				54AD92CF22BF1F1700045B93 /* ExtensionDelegate.swift */,
@@ -247,6 +262,44 @@
 				54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8810E16D22C32D7C00EA0DCB /* Chinese */ = {
+			isa = PBXGroup;
+			children = (
+				8810E16E22C32D9900EA0DCB /* Model */,
+				8810E17122C3306500EA0DCB /* Series A */,
+				8810E17222C3309D00EA0DCB /* Series B */,
+			);
+			path = Chinese;
+			sourceTree = "<group>";
+		};
+		8810E16E22C32D9900EA0DCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8810E16F22C32E6C00EA0DCB /* CharactorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8810E17122C3306500EA0DCB /* Series A */ = {
+			isa = PBXGroup;
+			children = (
+				8810E17322C3359C00EA0DCB /* CharactorViewSA.swift */,
+				8810E17522C336B100EA0DCB /* CharacterSA.swift */,
+				8810E17B22C345D800EA0DCB /* CommonWordsCharacterSA.swift */,
+				8810E17722C33ECE00EA0DCB /* CharacterDefinitionSA.swift */,
+				8810E17D22C3538200EA0DCB /* CommonWordSA.swift */,
+				8810E17922C3432700EA0DCB /* CommonWordsSA.swift */,
+			);
+			path = "Series A";
+			sourceTree = "<group>";
+		};
+		8810E17222C3309D00EA0DCB /* Series B */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Series B";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,22 +430,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8810E17422C3359C00EA0DCB /* CharactorViewSA.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
 				54617F1222C17521002A6499 /* SettingsController.swift in Sources */,
 				54AD92CE22BF1F1700045B93 /* MainController.swift in Sources */,
+				8810E17822C33ECE00EA0DCB /* CharacterDefinitionSA.swift in Sources */,
 				54617F1922C1DDAD002A6499 /* LanguagesView.swift in Sources */,
 				5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */,
 				5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */,
+				8810E17022C32E6C00EA0DCB /* CharactorModel.swift in Sources */,
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,
 				5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */,
+				8810E17C22C345D800EA0DCB /* CommonWordsCharacterSA.swift in Sources */,
 				541002E122C1FE6D00D42247 /* LanguageState.swift in Sources */,
 				54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */,
+				8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */,
 				5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */,
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,
+				8810E17E22C3538200EA0DCB /* CommonWordSA.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
+				8810E17A22C3432700EA0DCB /* CommonWordsSA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

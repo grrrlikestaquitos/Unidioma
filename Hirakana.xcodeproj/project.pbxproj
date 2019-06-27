@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		541002E122C1FE6D00D42247 /* LanguageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E022C1FE6D00D42247 /* LanguageState.swift */; };
+		541002E122C1FE6D00D42247 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E022C1FE6D00D42247 /* LanguageModel.swift */; };
+		541002E522C2A8FC00D42247 /* SettingsUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E422C2A8FC00D42247 /* SettingsUserDefaults.swift */; };
 		54617F1222C17521002A6499 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1122C17521002A6499 /* SettingsController.swift */; };
 		54617F1422C1776E002A6499 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1322C1776E002A6499 /* SettingsView.swift */; };
-		54617F1922C1DDAD002A6499 /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1822C1DDAD002A6499 /* LanguagesView.swift */; };
+		54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1822C1DDAD002A6499 /* LanguageView.swift */; };
 		5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483718E22C01812004B1000 /* KanjiViewSA.swift */; };
 		5483719222C01853004B1000 /* KanjiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719122C01853004B1000 /* KanjiModel.swift */; };
 		5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719322C01898004B1000 /* KanjiCharacterSA.swift */; };
@@ -29,6 +30,7 @@
 		54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD92D522BF1F1700045B93 /* ComplicationController.swift */; };
 		54AD92D822BF1F1800045B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92D722BF1F1800045B93 /* Assets.xcassets */; };
 		54AD92DB22BF1F1800045B93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */; };
+		54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B168E522C3217C000FECBE /* SettingsDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +76,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		541002E022C1FE6D00D42247 /* LanguageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageState.swift; sourceTree = "<group>"; };
+		541002E022C1FE6D00D42247 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
+		541002E422C2A8FC00D42247 /* SettingsUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUserDefaults.swift; sourceTree = "<group>"; };
 		54617F1122C17521002A6499 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		54617F1322C1776E002A6499 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		54617F1822C1DDAD002A6499 /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
+		54617F1822C1DDAD002A6499 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		5483718E22C01812004B1000 /* KanjiViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiViewSA.swift; sourceTree = "<group>"; };
 		5483719122C01853004B1000 /* KanjiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiModel.swift; sourceTree = "<group>"; };
 		5483719322C01898004B1000 /* KanjiCharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiCharacterSA.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54AD92DC22BF1F1800045B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54AD92DD22BF1F1800045B93 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		54B168E522C3217C000FECBE /* SettingsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541002E222C2A4F200D42247 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				541002E022C1FE6D00D42247 /* LanguageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		541002E322C2A8DD00D42247 /* SettingsUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				541002E422C2A8FC00D42247 /* SettingsUserDefaults.swift */,
+			);
+			path = SettingsUserDefaults;
+			sourceTree = "<group>";
+		};
 		54617F0E22C17335002A6499 /* Japanese */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +144,11 @@
 		54617F0F22C17405002A6499 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				54617F1722C1DCF9002A6499 /* Languages */,
+				541002E322C2A8DD00D42247 /* SettingsUserDefaults */,
+				54617F1722C1DCF9002A6499 /* Language */,
 				54617F1122C17521002A6499 /* SettingsController.swift */,
 				54617F1322C1776E002A6499 /* SettingsView.swift */,
+				54B168E522C3217C000FECBE /* SettingsDataStore.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -140,13 +162,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		54617F1722C1DCF9002A6499 /* Languages */ = {
+		54617F1722C1DCF9002A6499 /* Language */ = {
 			isa = PBXGroup;
 			children = (
-				54617F1822C1DDAD002A6499 /* LanguagesView.swift */,
-				541002E022C1FE6D00D42247 /* LanguageState.swift */,
+				541002E222C2A4F200D42247 /* Model */,
+				54617F1822C1DDAD002A6499 /* LanguageView.swift */,
 			);
-			path = Languages;
+			path = Language;
 			sourceTree = "<group>";
 		};
 		5483718B22C01774004B1000 /* KanjiViews */ = {
@@ -380,15 +402,17 @@
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
 				54617F1222C17521002A6499 /* SettingsController.swift in Sources */,
 				54AD92CE22BF1F1700045B93 /* MainController.swift in Sources */,
-				54617F1922C1DDAD002A6499 /* LanguagesView.swift in Sources */,
+				54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */,
 				5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */,
 				5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */,
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,
+				541002E522C2A8FC00D42247 /* SettingsUserDefaults.swift in Sources */,
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
+				54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,
 				5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */,
-				541002E122C1FE6D00D42247 /* LanguageState.swift in Sources */,
+				541002E122C1FE6D00D42247 /* LanguageModel.swift in Sources */,
 				54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */,
 				5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */,
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,
@@ -539,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hirakana WatchKit Extension\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = BJE27J35HP;
@@ -551,6 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -563,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hirakana WatchKit Extension\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = BJE27J35HP;
@@ -575,6 +602,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -588,12 +616,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJE27J35HP;
 				IBSC_MODULE = Hirakana_WatchKit_Extension;
 				INFOPLIST_FILE = "Hirakana WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -607,12 +637,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJE27J35HP;
 				IBSC_MODULE = Hirakana_WatchKit_Extension;
 				INFOPLIST_FILE = "Hirakana WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -624,12 +656,14 @@
 		54AD92E922BF1F1800045B93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BJE27J35HP;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -637,12 +671,14 @@
 		54AD92EA22BF1F1800045B93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BJE27J35HP;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

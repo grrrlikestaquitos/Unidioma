@@ -12,6 +12,7 @@ import SwiftUI
 import Combine
 
 class SettingsController: WKHostingController<SettingsView> {
+    let settingsDataStore = SettingsDataStore()
 
     override func willActivate() {
         super.willActivate()
@@ -19,7 +20,7 @@ class SettingsController: WKHostingController<SettingsView> {
     }
 
     override var body: SettingsView {
-        SettingsView()
+        SettingsView(dataStore: settingsDataStore)
     }
 
 }

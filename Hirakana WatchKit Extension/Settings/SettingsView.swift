@@ -14,6 +14,7 @@ private enum SettingsPage: String {
 }
 
 struct SettingsView : View {
+    @ObjectBinding var dataStore: SettingsDataStore
 
     var body: some View {
         VStack {
@@ -35,15 +36,15 @@ struct SettingsView : View {
     private func getSettingDestination(_ page: SettingsPage) -> some View {
         switch page {
         case .Languages:
-            return LanguagesView()
+            return LanguageView(dataStore: dataStore)
         }
     }
 }
 
-#if DEBUG
-struct SettingsView_Previews : PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-    }
-}
-#endif
+//#if DEBUG
+//struct SettingsView_Previews : PreviewProvider {
+//    static var previews: some View {
+//        SettingsView()
+//    }
+//}
+//#endif

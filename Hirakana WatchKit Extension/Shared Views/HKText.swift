@@ -9,7 +9,7 @@
 import SwiftUI
 
 enum TextType {
-    case largeTitle, title, subtitle, kanjiBig, kanjiMed, kanjiSmall, pinyinTitle, pinyinSmall
+    case largeTitle, title, subtitle, kanjiBig, kanjiMed, kanjiSmall, pinyinTitle, pinyinSmall, characterBig
 }
 
 struct HKText : View {
@@ -34,9 +34,11 @@ struct HKText : View {
         case .kanjiSmall:
             return 18
         case .pinyinTitle:
-            return 28
+            return 25
         case .pinyinSmall:
             return 10
+        case .characterBig:
+            return 65
         }
     }
 

@@ -14,6 +14,7 @@ enum Series {
 
 enum ViewType {
     case kanji(_ series: Series), hiragana, katakana
+    case charactor(_ series: Series)
 }
 
 struct HirakanaView : View {

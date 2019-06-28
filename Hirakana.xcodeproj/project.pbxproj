@@ -32,10 +32,11 @@
 		8810E17022C32E6C00EA0DCB /* CharactorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E16F22C32E6C00EA0DCB /* CharactorModel.swift */; };
 		8810E17422C3359C00EA0DCB /* CharactorViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17322C3359C00EA0DCB /* CharactorViewSA.swift */; };
 		8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17522C336B100EA0DCB /* CharacterSA.swift */; };
-		8810E17822C33ECE00EA0DCB /* CharacterDefinitionSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17722C33ECE00EA0DCB /* CharacterDefinitionSA.swift */; };
-		8810E17A22C3432700EA0DCB /* CommonWordsSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17922C3432700EA0DCB /* CommonWordsSA.swift */; };
-		8810E17C22C345D800EA0DCB /* CommonWordsCharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17B22C345D800EA0DCB /* CommonWordsCharacterSA.swift */; };
-		8810E17E22C3538200EA0DCB /* CommonWordSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17D22C3538200EA0DCB /* CommonWordSA.swift */; };
+		8810E17822C33ECE00EA0DCB /* MeaningViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17722C33ECE00EA0DCB /* MeaningViewSA.swift */; };
+		8810E17E22C3538200EA0DCB /* PhraseViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17D22C3538200EA0DCB /* PhraseViewSA.swift */; };
+		8810E18022C47F9C00EA0DCB /* CharactorMeaningViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17F22C47F9C00EA0DCB /* CharactorMeaningViewSA.swift */; };
+		8810E18222C4852D00EA0DCB /* ChineseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18122C4852D00EA0DCB /* ChineseView.swift */; };
+		8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18322C5A56100EA0DCB /* PhraseCharacterViewSA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,10 +111,11 @@
 		8810E16F22C32E6C00EA0DCB /* CharactorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactorModel.swift; sourceTree = "<group>"; };
 		8810E17322C3359C00EA0DCB /* CharactorViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactorViewSA.swift; sourceTree = "<group>"; };
 		8810E17522C336B100EA0DCB /* CharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSA.swift; sourceTree = "<group>"; };
-		8810E17722C33ECE00EA0DCB /* CharacterDefinitionSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDefinitionSA.swift; sourceTree = "<group>"; };
-		8810E17922C3432700EA0DCB /* CommonWordsSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWordsSA.swift; sourceTree = "<group>"; };
-		8810E17B22C345D800EA0DCB /* CommonWordsCharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWordsCharacterSA.swift; sourceTree = "<group>"; };
-		8810E17D22C3538200EA0DCB /* CommonWordSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWordSA.swift; sourceTree = "<group>"; };
+		8810E17722C33ECE00EA0DCB /* MeaningViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningViewSA.swift; sourceTree = "<group>"; };
+		8810E17D22C3538200EA0DCB /* PhraseViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseViewSA.swift; sourceTree = "<group>"; };
+		8810E17F22C47F9C00EA0DCB /* CharactorMeaningViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactorMeaningViewSA.swift; sourceTree = "<group>"; };
+		8810E18122C4852D00EA0DCB /* ChineseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseView.swift; sourceTree = "<group>"; };
+		8810E18322C5A56100EA0DCB /* PhraseCharacterViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseCharacterViewSA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5483719822C01A70004B1000 /* HirakanaView.swift */,
+				8810E18122C4852D00EA0DCB /* ChineseView.swift */,
 				54AD92CD22BF1F1700045B93 /* MainController.swift */,
 			);
 			path = Main;
@@ -286,11 +289,11 @@
 			isa = PBXGroup;
 			children = (
 				8810E17322C3359C00EA0DCB /* CharactorViewSA.swift */,
+				8810E17F22C47F9C00EA0DCB /* CharactorMeaningViewSA.swift */,
 				8810E17522C336B100EA0DCB /* CharacterSA.swift */,
-				8810E17B22C345D800EA0DCB /* CommonWordsCharacterSA.swift */,
-				8810E17722C33ECE00EA0DCB /* CharacterDefinitionSA.swift */,
-				8810E17D22C3538200EA0DCB /* CommonWordSA.swift */,
-				8810E17922C3432700EA0DCB /* CommonWordsSA.swift */,
+				8810E18322C5A56100EA0DCB /* PhraseCharacterViewSA.swift */,
+				8810E17722C33ECE00EA0DCB /* MeaningViewSA.swift */,
+				8810E17D22C3538200EA0DCB /* PhraseViewSA.swift */,
 			);
 			path = "Series A";
 			sourceTree = "<group>";
@@ -431,10 +434,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8810E17422C3359C00EA0DCB /* CharactorViewSA.swift in Sources */,
+				8810E18022C47F9C00EA0DCB /* CharactorMeaningViewSA.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
 				54617F1222C17521002A6499 /* SettingsController.swift in Sources */,
 				54AD92CE22BF1F1700045B93 /* MainController.swift in Sources */,
-				8810E17822C33ECE00EA0DCB /* CharacterDefinitionSA.swift in Sources */,
+				8810E17822C33ECE00EA0DCB /* MeaningViewSA.swift in Sources */,
 				54617F1922C1DDAD002A6499 /* LanguagesView.swift in Sources */,
 				5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */,
 				5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */,
@@ -442,17 +446,17 @@
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
+				8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */,
+				8810E18222C4852D00EA0DCB /* ChineseView.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,
 				5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */,
-				8810E17C22C345D800EA0DCB /* CommonWordsCharacterSA.swift in Sources */,
 				541002E122C1FE6D00D42247 /* LanguageState.swift in Sources */,
 				54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */,
 				8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */,
 				5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */,
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,
-				8810E17E22C3538200EA0DCB /* CommonWordSA.swift in Sources */,
+				8810E17E22C3538200EA0DCB /* PhraseViewSA.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
-				8810E17A22C3432700EA0DCB /* CommonWordsSA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

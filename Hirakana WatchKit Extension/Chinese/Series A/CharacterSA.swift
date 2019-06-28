@@ -16,7 +16,7 @@ struct CharacterSA: View {
     var body: some View {
         VStack(alignment: .center) {
             HKText(textType: .pinyinTitle, text: pinyin, color: .orange, offset: (x: 0, y: 12)).pinyin
-            HKText(textType: .kanjiBig, text: charactor)
+            HKText(textType: .characterBig, text: charactor)
         }
     }
 }

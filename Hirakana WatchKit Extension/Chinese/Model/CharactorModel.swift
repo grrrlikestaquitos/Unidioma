@@ -11,7 +11,8 @@ import Foundation
 struct CharactorModel {
     var pinyin: String
     var charactor: String
-    var commonWords: [String]
+    var phraseCharacters: [String]
     var meaning: [String]
-    var pinyinForWords: [String]
+    var pinyinForPhrase: [String]
+    var meaningForPhrase: String
 }

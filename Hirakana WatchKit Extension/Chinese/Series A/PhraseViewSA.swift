@@ -13,7 +13,6 @@ enum Constants {
 }
 
 struct PhraseViewSA: View {
-    
     var phraseCharacters: [String]
     var pinyinForPhrase: [String]
     var meaningForPhrase: String
@@ -25,7 +24,8 @@ struct PhraseViewSA: View {
             HStack {
                 Spacer()
                 HKText(textType: .title, text: meaningForPhrase, offset: (x: 10, y: 8))
-                Spacer(); PhraseCharacterViewSA(pinyinForPhrase: pinyinForPhrase[0], charactersForPhrase: phraseCharacters[0])
+                Spacer()
+                PhraseCharacterViewSA(pinyinForPhrase: pinyinForPhrase[0], charactersForPhrase: phraseCharacters[0])
                 PhraseCharacterViewSA(pinyinForPhrase: pinyinForPhrase[1], charactersForPhrase: phraseCharacters[1])
                 Spacer()
             }

@@ -9,14 +9,13 @@
 import SwiftUI
 
 struct CharacterSA: View {
-    
     var pinyin: String
-    var charactor: String
+    var character: String
     
     var body: some View {
         VStack(alignment: .center) {
             HKText(textType: .pinyinTitle, text: pinyin, color: .orange, offset: (x: 0, y: 12)).pinyin
-            HKText(textType: .characterBig, text: charactor)
+            HKText(textType: .characterBig, text: character)
         }
     }
 }
@@ -24,7 +23,7 @@ struct CharacterSA: View {
 #if DEBUG
 struct CharacterSA_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterSA(pinyin: "wǒ", charactor: "我")
+        CharacterSA(pinyin: "wǒ", character: "我")
     }
 }
 #endif

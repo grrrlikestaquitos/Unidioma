@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct ChineseView: View {
-    var viewType: ViewType? = .charactor(Series.A)
-    let charactorModel = CharactorModel(pinyin: "wǒ", charactor: "我", phraseCharacters: ["我","跑"], meaning: ["I; me; my"], pinyinForPhrase: ["wǒ","paǒ"], meaningForPhrase: "I run")
+    var viewType: ViewType? = .character(Series.A)
+    let characterModel = CharacterModel(pinyin: "wǒ", character: "我", phraseCharacters: ["我","跑"], meaning: ["I; me; my"], pinyinForPhrase: ["wǒ","paǒ"], meaningForPhrase: "I run")
     
     var body: some View {
-        CharactorViewSA(model: charactorModel)
+        CharacterViewSA(model: characterModel)
     }
 }

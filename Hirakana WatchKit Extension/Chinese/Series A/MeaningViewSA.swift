@@ -13,7 +13,6 @@ private enum Headers: String {
 }
 
 struct MeaningViewSA: View {
-    
     var meanings: [String]
     
     var body: some View {

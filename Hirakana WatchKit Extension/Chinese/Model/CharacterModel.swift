@@ -1,5 +1,5 @@
 //
-//  CharactorModel.swift
+//  CharacterModel.swift
 //  Hirakana WatchKit Extension
 //
 //  Created by Katherine Li on 6/25/19.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct CharactorModel {
+struct CharacterModel {
     var pinyin: String
-    var charactor: String
+    var character: String
     var phraseCharacters: [String]
     var meaning: [String]
     var pinyinForPhrase: [String]

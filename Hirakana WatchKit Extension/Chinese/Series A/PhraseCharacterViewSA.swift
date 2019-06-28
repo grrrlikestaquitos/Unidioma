@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct PhraseCharacterViewSA: View {
-    
     var pinyinForPhrase: String
     var charactersForPhrase: String
     

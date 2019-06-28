@@ -1,16 +1,8 @@
-//
-//  SettingsView.swift
-//  Hirakana WatchKit Extension
-//
-//  Created by Andrei Villasana on 6/24/19.
-//  Copyright © 2019 Andrei Villasana. All rights reserved.
-//
-
 import SwiftUI
-import Combine
 
 private enum SettingsPage: String {
-    case Languages
+    case languages = "Languages"
+    case repetition = "Repetition"
 }
 
 struct SettingsView : View {
@@ -18,25 +10,30 @@ struct SettingsView : View {
 
     var body: some View {
         VStack {
-            SettingsPage(.Languages)
+            SettingsNavigator(LanguageView(dataStore: dataStore), .languages)
+            SettingsNavigator(RepetitionView(), .repetition)
             Spacer()
         }
     }
+}
 
-    private func SettingsPage(_ page: SettingsPage) -> some View {
-        NavigationButton(destination: getSettingDestination(page)) {
-            HStack {
-                HKText(textType: .title, text: page.rawValue)
-                    .padding([.leading], 5)
-                Spacer()
-            }
+extension SettingsView {
+    struct SettingsNavigator<P: View>: View {
+        private let page: P
+        private let text: SettingsPage
+
+        fileprivate init(_ page: P,_ text: SettingsPage) {
+            self.page = page
+            self.text = text
         }
-    }
-
-    private func getSettingDestination(_ page: SettingsPage) -> some View {
-        switch page {
-        case .Languages:
-            return LanguageView(dataStore: dataStore)
+        var body: some View {
+            NavigationButton(destination: page) {
+                HStack {
+                    HKText(textType: .title, text: text.rawValue)
+                        .padding([.leading], 5)
+                    Spacer()
+                }
+            }
         }
     }
 }

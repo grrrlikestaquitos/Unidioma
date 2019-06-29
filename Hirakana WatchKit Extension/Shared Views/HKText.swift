@@ -9,7 +9,7 @@
 import SwiftUI
 
 enum TextType {
-    case largeTitle, title, subtitle, kanjiBig, kanjiMed
+    case largeTitle, title, subtitle, kanjiBig, kanjiMed, kanjiSmall, pinyinTitle, pinyinSmall, characterBig
 }
 
 struct HKText : View {
@@ -21,16 +21,24 @@ struct HKText : View {
 
     private var fontSize: CGFloat {
         switch textType {
-            case .largeTitle:
-                return 18
-            case .title:
-                return 14
-            case .subtitle:
-                return 13
-            case .kanjiBig:
-                return 80
-            case .kanjiMed:
-                return 70
+        case .largeTitle:
+            return 18
+        case .title:
+            return 14
+        case .subtitle:
+            return 13
+        case .kanjiBig:
+            return 80
+        case .kanjiMed:
+            return 70
+        case .kanjiSmall:
+            return 18
+        case .pinyinTitle:
+            return 25
+        case .pinyinSmall:
+            return 10
+        case .characterBig:
+            return 65
         }
     }
 
@@ -56,6 +64,15 @@ struct HKText : View {
             .font(.system(size: fontSize))
             .color(color)
             .kerning(6)
+            .lineLimit(lines)
+            .offset(x: offset.x, y: offset.y)
+    }
+    
+    var pinyin: some View {
+        Text(text)
+            .font(.system(size: fontSize))
+            .color(color)
+            .kerning(3)
             .lineLimit(lines)
             .offset(x: offset.x, y: offset.y)
     }

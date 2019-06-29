@@ -31,6 +31,14 @@
 		54AD92D822BF1F1800045B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92D722BF1F1800045B93 /* Assets.xcassets */; };
 		54AD92DB22BF1F1800045B93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */; };
 		54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B168E522C3217C000FECBE /* SettingsDataStore.swift */; };
+		8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */; };
+		8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */; };
+		8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17522C336B100EA0DCB /* CharacterSA.swift */; };
+		8810E17822C33ECE00EA0DCB /* MeaningViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17722C33ECE00EA0DCB /* MeaningViewSA.swift */; };
+		8810E17E22C3538200EA0DCB /* PhraseViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17D22C3538200EA0DCB /* PhraseViewSA.swift */; };
+		8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17F22C47F9C00EA0DCB /* CharacterMeaningViewSA.swift */; };
+		8810E18222C4852D00EA0DCB /* ChineseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18122C4852D00EA0DCB /* ChineseView.swift */; };
+		8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18322C5A56100EA0DCB /* PhraseCharacterViewSA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +112,14 @@
 		54AD92DC22BF1F1800045B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54AD92DD22BF1F1800045B93 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		54B168E522C3217C000FECBE /* SettingsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataStore.swift; sourceTree = "<group>"; };
+		8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewSA.swift; sourceTree = "<group>"; };
+		8810E17522C336B100EA0DCB /* CharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSA.swift; sourceTree = "<group>"; };
+		8810E17722C33ECE00EA0DCB /* MeaningViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningViewSA.swift; sourceTree = "<group>"; };
+		8810E17D22C3538200EA0DCB /* PhraseViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseViewSA.swift; sourceTree = "<group>"; };
+		8810E17F22C47F9C00EA0DCB /* CharacterMeaningViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMeaningViewSA.swift; sourceTree = "<group>"; };
+		8810E18122C4852D00EA0DCB /* ChineseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseView.swift; sourceTree = "<group>"; };
+		8810E18322C5A56100EA0DCB /* PhraseCharacterViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseCharacterViewSA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				5483719822C01A70004B1000 /* HirakanaView.swift */,
+				8810E18122C4852D00EA0DCB /* ChineseView.swift */,
 				54AD92CD22BF1F1700045B93 /* MainController.swift */,
 			);
 			path = Main;
@@ -251,6 +268,7 @@
 			children = (
 				54617F1022C174BB002A6499 /* Main */,
 				54617F0F22C17405002A6499 /* Settings */,
+				8810E16D22C32D7C00EA0DCB /* Chinese */,
 				54617F0E22C17335002A6499 /* Japanese */,
 				548371A122C04738004B1000 /* Shared Views */,
 				54AD92CF22BF1F1700045B93 /* ExtensionDelegate.swift */,
@@ -269,6 +287,44 @@
 				54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8810E16D22C32D7C00EA0DCB /* Chinese */ = {
+			isa = PBXGroup;
+			children = (
+				8810E16E22C32D9900EA0DCB /* Model */,
+				8810E17122C3306500EA0DCB /* Series A */,
+				8810E17222C3309D00EA0DCB /* Series B */,
+			);
+			path = Chinese;
+			sourceTree = "<group>";
+		};
+		8810E16E22C32D9900EA0DCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8810E17122C3306500EA0DCB /* Series A */ = {
+			isa = PBXGroup;
+			children = (
+				8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */,
+				8810E17F22C47F9C00EA0DCB /* CharacterMeaningViewSA.swift */,
+				8810E17522C336B100EA0DCB /* CharacterSA.swift */,
+				8810E18322C5A56100EA0DCB /* PhraseCharacterViewSA.swift */,
+				8810E17722C33ECE00EA0DCB /* MeaningViewSA.swift */,
+				8810E17D22C3538200EA0DCB /* PhraseViewSA.swift */,
+			);
+			path = "Series A";
+			sourceTree = "<group>";
+		};
+		8810E17222C3309D00EA0DCB /* Series B */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Series B";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,23 +455,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */,
+				8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
 				54617F1222C17521002A6499 /* SettingsController.swift in Sources */,
 				54AD92CE22BF1F1700045B93 /* MainController.swift in Sources */,
+				8810E17822C33ECE00EA0DCB /* MeaningViewSA.swift in Sources */,
 				54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */,
 				5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */,
 				5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */,
+				8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */,
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,
 				541002E522C2A8FC00D42247 /* SettingsUserDefaults.swift in Sources */,
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
+				8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */,
+				8810E18222C4852D00EA0DCB /* ChineseView.swift in Sources */,
 				54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,
 				5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */,
 				541002E122C1FE6D00D42247 /* LanguageModel.swift in Sources */,
 				54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */,
+				8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */,
 				5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */,
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,
+				8810E17E22C3538200EA0DCB /* PhraseViewSA.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

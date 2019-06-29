@@ -22,10 +22,14 @@ struct KanjiViewSA : View {
     }
 }
 
-//#if DEBUG
-//struct KanjiViewSA_Previews : PreviewProvider {
-//    static var previews: some View {
-//        KanjiViewSA()
-//    }
-//}
-//#endif
+#if DEBUG
+struct KanjiViewSA_Previews : PreviewProvider {
+    static var previews: some View {
+        KanjiViewSA(model: KanjiModel(hiragana: "わたし",
+                                      kanji: "私",
+                                      romaji: "wa-ta-shi",
+                                      meanings: ["I; Me"],
+                                      phrases: ["I fell", "私は落ちた", "Watashi wa ochita"]))
+    }
+}
+#endif

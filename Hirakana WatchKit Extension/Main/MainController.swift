@@ -20,3 +20,15 @@ class MainController : WKHostingController<HirakanaView> {
         HirakanaView(viewType: .kanji(Series.A))
     }
 }
+
+// MARK: MainController for Chinese 
+//class MainController : WKHostingController<ChineseView> {
+//    override func willActivate() {
+//        super.willActivate()
+//        setTitle("Chinese")
+//    }
+//
+//    override var body: ChineseView {
+//        ChineseView(viewType: .charactor(Series.A))
+//    }
+//}

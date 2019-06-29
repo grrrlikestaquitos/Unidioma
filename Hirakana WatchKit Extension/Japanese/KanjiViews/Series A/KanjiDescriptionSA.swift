@@ -31,10 +31,10 @@ struct KanjiDescriptionSA : View  {
     }
 }
 
-//#if DEBUG
-//struct KanjiDescriptionSA_Previews : PreviewProvider {
-//    static var previews: some View {
-//        KanjiDescriptionSA()
-//    }
-//}
-//#endif
+#if DEBUG
+struct KanjiDescriptionSA_Previews : PreviewProvider {
+    static var previews: some View {
+        KanjiDescriptionSA(meanings: ["I; Me"], phrases: ["I fell", "私は落ちた", "Watashi wa ochita"])
+    }
+}
+#endif

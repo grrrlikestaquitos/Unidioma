@@ -22,10 +22,10 @@ struct KanjiCharacterSA : View {
     }
 }
 
-//#if DEBUG
-//struct KanjiCharacterSA_Previews : PreviewProvider {
-//    static var previews: some View {
-//        KanjiCharacterSA()
-//    }
-//}
-//#endif
+#if DEBUG
+struct KanjiCharacterSA_Previews : PreviewProvider {
+    static var previews: some View {
+        KanjiCharacterSA(hiragana: "わたし", kanji: "私", romaji: "wa-ta-shi")
+    }
+}
+#endif

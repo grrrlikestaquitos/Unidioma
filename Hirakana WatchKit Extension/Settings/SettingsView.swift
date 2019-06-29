@@ -10,8 +10,12 @@ struct SettingsView : View {
 
     var body: some View {
         VStack {
-            SettingsNavigator(LanguageView(dataStore: dataStore), .languages)
-            SettingsNavigator(RepetitionView(), .repetition)
+            SettingsNavigator(.languages) {
+                LanguageView(dataStore: dataStore)
+            }
+            SettingsNavigator(.repetition) {
+                RepetitionView()
+            }
             Spacer()
         }
     }
@@ -22,8 +26,8 @@ extension SettingsView {
         private let page: P
         private let text: SettingsPage
 
-        fileprivate init(_ page: P,_ text: SettingsPage) {
-            self.page = page
+        fileprivate init(_ text: SettingsPage, _ page: () -> (P)) {
+            self.page = page()
             self.text = text
         }
         var body: some View {

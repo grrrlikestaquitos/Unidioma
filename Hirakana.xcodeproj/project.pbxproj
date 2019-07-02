@@ -40,6 +40,9 @@
 		8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17F22C47F9C00EA0DCB /* CharacterMeaningViewSA.swift */; };
 		8810E18222C4852D00EA0DCB /* ChineseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18122C4852D00EA0DCB /* ChineseView.swift */; };
 		8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18322C5A56100EA0DCB /* PhraseCharacterViewSA.swift */; };
+		8810E18622C8335600EA0DCB /* PhraseViewSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18522C8335600EA0DCB /* PhraseViewSB.swift */; };
+		8810E18822CB11BE00EA0DCB /* CharacterViewSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18722CB11BE00EA0DCB /* CharacterViewSB.swift */; };
+		8810E18A22CB123F00EA0DCB /* CharacterSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18922CB123F00EA0DCB /* CharacterSB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,9 @@
 		8810E17F22C47F9C00EA0DCB /* CharacterMeaningViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMeaningViewSA.swift; sourceTree = "<group>"; };
 		8810E18122C4852D00EA0DCB /* ChineseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseView.swift; sourceTree = "<group>"; };
 		8810E18322C5A56100EA0DCB /* PhraseCharacterViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseCharacterViewSA.swift; sourceTree = "<group>"; };
+		8810E18522C8335600EA0DCB /* PhraseViewSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseViewSB.swift; sourceTree = "<group>"; };
+		8810E18722CB11BE00EA0DCB /* CharacterViewSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewSB.swift; sourceTree = "<group>"; };
+		8810E18922CB123F00EA0DCB /* CharacterSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +340,9 @@
 		8810E17222C3309D00EA0DCB /* Series B */ = {
 			isa = PBXGroup;
 			children = (
+				8810E18522C8335600EA0DCB /* PhraseViewSB.swift */,
+				8810E18722CB11BE00EA0DCB /* CharacterViewSB.swift */,
+				8810E18922CB123F00EA0DCB /* CharacterSB.swift */,
 			);
 			path = "Series B";
 			sourceTree = "<group>";
@@ -470,6 +479,7 @@
 				8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
 				5423494F22C4884600023245 /* RepetitionView.swift in Sources */,
+				8810E18622C8335600EA0DCB /* PhraseViewSB.swift in Sources */,
 				54617F1222C17521002A6499 /* SettingsController.swift in Sources */,
 				54AD92CE22BF1F1700045B93 /* MainController.swift in Sources */,
 				8810E17822C33ECE00EA0DCB /* MeaningViewSA.swift in Sources */,
@@ -483,9 +493,11 @@
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
 				8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */,
 				8810E18222C4852D00EA0DCB /* ChineseView.swift in Sources */,
+				8810E18822CB11BE00EA0DCB /* CharacterViewSB.swift in Sources */,
 				54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,
 				5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */,
+				8810E18A22CB123F00EA0DCB /* CharacterSB.swift in Sources */,
 				541002E122C1FE6D00D42247 /* LanguageModel.swift in Sources */,
 				54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */,
 				8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */,

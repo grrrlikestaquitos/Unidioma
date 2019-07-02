@@ -29,6 +29,6 @@ class MainController : WKHostingController<HirakanaView> {
 //    }
 //
 //    override var body: ChineseView {
-//        ChineseView(viewType: .charactor(Series.A))
+//        ChineseView(viewType: .character(Series.B))
 //    }
 //}

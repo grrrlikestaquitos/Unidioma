@@ -13,12 +13,13 @@ struct CharacterFrequencyView: View {
 
     private func SelectionItem(_ text: String, count: Int) -> some View {
         Button(action: {
-            self.dataStore.charPerDay["charPerDay"] = count
+            self.dataStore.charFrequencyWasSelected(count)
         }) {
             HStack {
                 HKText(textType: .subtitle, text: text)
                 Spacer()
-                if self.dataStore.charPerDay["charPerDay"] == count {
+                
+                if self.dataStore.charFrequencyModel.charsPerDay == count {
                     Image(systemName: "checkmark.circle")
                 }
             }

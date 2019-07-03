@@ -3,9 +3,9 @@ import SwiftUI
 struct LanguageView : View {
     @ObjectBinding var dataStore: SettingsDataStore
 
-    private func languageSelector(item: LanguageModel) -> some View {
+    private func renderLanguageSelector(item: LanguageModel) -> some View {
         Button(action: {
-            self.dataStore.languageModel[item.id].isEnabled = !item.isEnabled
+            self.dataStore.languageWasSelected(item)
         }) {
             HStack {
                 HKText(textType: .subtitle, text: item.language)
@@ -21,8 +21,8 @@ struct LanguageView : View {
     }
 
     var body: some View {
-        List(self.dataStore.languageModel.identified(by: \.id)) { item in
-            self.languageSelector(item: item)
+        List(dataStore.languageModel.identified(by: \.id)) { item in
+            self.renderLanguageSelector(item: item)
         }
     }
 }

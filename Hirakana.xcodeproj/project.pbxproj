@@ -22,6 +22,8 @@
 		5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719C22C02668004B1000 /* KanjiCharacterSB.swift */; };
 		5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719E22C02676004B1000 /* KanjiDescriptionSB.swift */; };
 		548371A422C04798004B1000 /* HKText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548371A322C04798004B1000 /* HKText.swift */; };
+		549C42EA22CC2F3B00131E1D /* SettingsDataStoreActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549C42E922CC2F3B00131E1D /* SettingsDataStoreActions.swift */; };
+		549C42ED22CC32F100131E1D /* CharFrequencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549C42EC22CC32F100131E1D /* CharFrequencyModel.swift */; };
 		54AD92B822BF1F1600045B93 /* Hirakana WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 54AD92B722BF1F1600045B93 /* Hirakana WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		54AD92BE22BF1F1600045B93 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92BC22BF1F1600045B93 /* Interface.storyboard */; };
 		54AD92C022BF1F1700045B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92BF22BF1F1700045B93 /* Assets.xcassets */; };
@@ -103,6 +105,8 @@
 		5483719C22C02668004B1000 /* KanjiCharacterSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiCharacterSB.swift; sourceTree = "<group>"; };
 		5483719E22C02676004B1000 /* KanjiDescriptionSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDescriptionSB.swift; sourceTree = "<group>"; };
 		548371A322C04798004B1000 /* HKText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKText.swift; sourceTree = "<group>"; };
+		549C42E922CC2F3B00131E1D /* SettingsDataStoreActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataStoreActions.swift; sourceTree = "<group>"; };
+		549C42EC22CC32F100131E1D /* CharFrequencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharFrequencyModel.swift; sourceTree = "<group>"; };
 		54AD92B322BF1F1600045B93 /* Hirakana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hirakana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AD92B722BF1F1600045B93 /* Hirakana WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hirakana WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AD92BD22BF1F1600045B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -149,26 +153,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		541002E322C2A8DD00D42247 /* SettingsUserDefaults */ = {
+		541002E322C2A8DD00D42247 /* Settings User Defaults */ = {
 			isa = PBXGroup;
 			children = (
 				541002E422C2A8FC00D42247 /* SettingsUserDefaults.swift */,
 			);
-			path = SettingsUserDefaults;
+			path = "Settings User Defaults";
 			sourceTree = "<group>";
 		};
-		5423494D22C4879E00023245 /* Frequency */ = {
+		5423494D22C4879E00023245 /* Character Frequency */ = {
 			isa = PBXGroup;
 			children = (
+				549C42EB22CC32DD00131E1D /* Model */,
 				5423494E22C4884600023245 /* CharacterFrequencyView.swift */,
 			);
-			path = Frequency;
+			path = "Character Frequency";
 			sourceTree = "<group>";
 		};
 		54617F0E22C17335002A6499 /* Japanese */ = {
 			isa = PBXGroup;
 			children = (
-				5483718B22C01774004B1000 /* KanjiViews */,
+				5483718B22C01774004B1000 /* Kanji Views */,
 			);
 			path = Japanese;
 			sourceTree = "<group>";
@@ -176,12 +181,11 @@
 		54617F0F22C17405002A6499 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				5423494D22C4879E00023245 /* Frequency */,
-				541002E322C2A8DD00D42247 /* SettingsUserDefaults */,
+				549C42E822CC2EE000131E1D /* Data */,
+				5423494D22C4879E00023245 /* Character Frequency */,
 				54617F1722C1DCF9002A6499 /* Language */,
 				54617F1122C17521002A6499 /* SettingsController.swift */,
 				54617F1322C1776E002A6499 /* SettingsView.swift */,
-				54B168E522C3217C000FECBE /* SettingsDataStore.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -205,14 +209,14 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
-		5483718B22C01774004B1000 /* KanjiViews */ = {
+		5483718B22C01774004B1000 /* Kanji Views */ = {
 			isa = PBXGroup;
 			children = (
 				5483719022C01832004B1000 /* Model */,
 				5483718D22C017D0004B1000 /* Series A */,
 				5483718C22C0179B004B1000 /* Series B */,
 			);
-			path = KanjiViews;
+			path = "Kanji Views";
 			sourceTree = "<group>";
 		};
 		5483718C22C0179B004B1000 /* Series B */ = {
@@ -249,6 +253,32 @@
 				548371A322C04798004B1000 /* HKText.swift */,
 			);
 			path = "Shared Views";
+			sourceTree = "<group>";
+		};
+		549C42E722CC2E9800131E1D /* Settings Store */ = {
+			isa = PBXGroup;
+			children = (
+				54B168E522C3217C000FECBE /* SettingsDataStore.swift */,
+				549C42E922CC2F3B00131E1D /* SettingsDataStoreActions.swift */,
+			);
+			path = "Settings Store";
+			sourceTree = "<group>";
+		};
+		549C42E822CC2EE000131E1D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				541002E322C2A8DD00D42247 /* Settings User Defaults */,
+				549C42E722CC2E9800131E1D /* Settings Store */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		549C42EB22CC32DD00131E1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				549C42EC22CC32F100131E1D /* CharFrequencyModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		54AD92AC22BF1F1600045B93 = {
@@ -495,6 +525,7 @@
 				8810E18222C4852D00EA0DCB /* ChineseView.swift in Sources */,
 				8810E18822CB11BE00EA0DCB /* CharacterViewSB.swift in Sources */,
 				54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */,
+				549C42ED22CC32F100131E1D /* CharFrequencyModel.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,
 				5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */,
 				8810E18A22CB123F00EA0DCB /* CharacterSB.swift in Sources */,
@@ -505,6 +536,7 @@
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,
 				8810E17E22C3538200EA0DCB /* PhraseViewSA.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
+				549C42EA22CC2F3B00131E1D /* SettingsDataStoreActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

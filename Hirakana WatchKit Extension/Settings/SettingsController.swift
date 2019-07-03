@@ -14,5 +14,4 @@ class SettingsController: WKHostingController<SettingsView> {
     override var body: SettingsView {
         SettingsView(dataStore: settingsDataStore)
     }
-
 }

@@ -2,7 +2,7 @@ import SwiftUI
 
 private enum SettingsPage: String {
     case languages = "Languages"
-    case repetition = "Repetition"
+    case frequency = "Char Frequency"
 }
 
 struct SettingsView : View {
@@ -13,8 +13,8 @@ struct SettingsView : View {
             SettingsNavigator(.languages) {
                 LanguageView(dataStore: dataStore)
             }
-            SettingsNavigator(.repetition) {
-                RepetitionView()
+            SettingsNavigator(.frequency) {
+                CharacterFrequencyView(dataStore: dataStore)
             }
             Spacer()
         }

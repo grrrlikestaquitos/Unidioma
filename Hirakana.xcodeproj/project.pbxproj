@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		541002E122C1FE6D00D42247 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E022C1FE6D00D42247 /* LanguageModel.swift */; };
 		541002E522C2A8FC00D42247 /* SettingsUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E422C2A8FC00D42247 /* SettingsUserDefaults.swift */; };
-		5423494F22C4884600023245 /* RepetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423494E22C4884600023245 /* RepetitionView.swift */; };
+		5423494F22C4884600023245 /* CharacterFrequencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423494E22C4884600023245 /* CharacterFrequencyView.swift */; };
 		54617F1222C17521002A6499 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1122C17521002A6499 /* SettingsController.swift */; };
 		54617F1422C1776E002A6499 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1322C1776E002A6499 /* SettingsView.swift */; };
 		54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1822C1DDAD002A6499 /* LanguageView.swift */; };
@@ -90,7 +90,7 @@
 /* Begin PBXFileReference section */
 		541002E022C1FE6D00D42247 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		541002E422C2A8FC00D42247 /* SettingsUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUserDefaults.swift; sourceTree = "<group>"; };
-		5423494E22C4884600023245 /* RepetitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionView.swift; sourceTree = "<group>"; };
+		5423494E22C4884600023245 /* CharacterFrequencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFrequencyView.swift; sourceTree = "<group>"; };
 		54617F1122C17521002A6499 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		54617F1322C1776E002A6499 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		54617F1822C1DDAD002A6499 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
@@ -157,12 +157,12 @@
 			path = SettingsUserDefaults;
 			sourceTree = "<group>";
 		};
-		5423494D22C4879E00023245 /* Repetition */ = {
+		5423494D22C4879E00023245 /* Frequency */ = {
 			isa = PBXGroup;
 			children = (
-				5423494E22C4884600023245 /* RepetitionView.swift */,
+				5423494E22C4884600023245 /* CharacterFrequencyView.swift */,
 			);
-			path = Repetition;
+			path = Frequency;
 			sourceTree = "<group>";
 		};
 		54617F0E22C17335002A6499 /* Japanese */ = {
@@ -176,7 +176,7 @@
 		54617F0F22C17405002A6499 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				5423494D22C4879E00023245 /* Repetition */,
+				5423494D22C4879E00023245 /* Frequency */,
 				541002E322C2A8DD00D42247 /* SettingsUserDefaults */,
 				54617F1722C1DCF9002A6499 /* Language */,
 				54617F1122C17521002A6499 /* SettingsController.swift */,
@@ -478,8 +478,8 @@
 				8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */,
 				8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
-				5423494F22C4884600023245 /* RepetitionView.swift in Sources */,
 				8810E18622C8335600EA0DCB /* PhraseViewSB.swift in Sources */,
+				5423494F22C4884600023245 /* CharacterFrequencyView.swift in Sources */,
 				54617F1222C17521002A6499 /* SettingsController.swift in Sources */,
 				54AD92CE22BF1F1700045B93 /* MainController.swift in Sources */,
 				8810E17822C33ECE00EA0DCB /* MeaningViewSA.swift in Sources */,

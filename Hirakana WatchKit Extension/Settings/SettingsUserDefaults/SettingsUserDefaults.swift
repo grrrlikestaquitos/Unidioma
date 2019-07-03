@@ -1,11 +1,3 @@
-//
-//  Settings+UserDefaults.swift
-//  Hirakana WatchKit Extension
-//
-//  Created by Andrei Villasana on 6/25/19.
-//  Copyright © 2019 Andrei Villasana. All rights reserved.
-//
-
 import Foundation
 
 fileprivate let defaults = UserDefaults.standard
@@ -41,5 +33,6 @@ struct SettingsUserDefaults<M: Codable> {
 extension SettingsUserDefaults {
     enum Key: String {
         case languages
+        case frequency
     }
 }

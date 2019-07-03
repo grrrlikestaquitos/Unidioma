@@ -1,11 +1,3 @@
-//
-//  HirakanaView.swift
-//  Hirakana WatchKit Extension
-//
-//  Created by Andrei Villasana on 6/23/19.
-//  Copyright © 2019 Andrei Villasana. All rights reserved.
-//
-
 import SwiftUI
 
 enum Series {

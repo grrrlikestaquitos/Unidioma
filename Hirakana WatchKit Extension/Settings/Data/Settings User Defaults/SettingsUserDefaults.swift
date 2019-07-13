@@ -29,10 +29,3 @@ struct SettingsUserDefaults<M: Codable> {
     }
 
 }
-
-extension SettingsUserDefaults {
-    enum Key: String {
-        case languages
-        case frequency
-    }
-}

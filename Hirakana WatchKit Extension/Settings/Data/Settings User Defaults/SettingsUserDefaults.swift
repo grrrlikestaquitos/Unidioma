@@ -7,7 +7,7 @@ struct SettingsUserDefaults<M: Codable> {
     var key: Key
     var defaultValue: M
 
-    var value: M {
+    var wrappedValue: M {
         get {
             return getSetting(key)
         }

@@ -30,8 +30,9 @@ extension SettingsView {
             self.page = page()
             self.text = text
         }
+        
         var body: some View {
-            NavigationButton(destination: page) {
+            NavigationLink(destination: page) {
                 HStack {
                     HKText(textType: .title, text: text.rawValue)
                         .padding([.leading], 5)

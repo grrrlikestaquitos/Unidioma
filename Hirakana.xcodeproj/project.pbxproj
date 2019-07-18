@@ -34,6 +34,8 @@
 		54AD92D822BF1F1800045B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92D722BF1F1800045B93 /* Assets.xcassets */; };
 		54AD92DB22BF1F1800045B93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */; };
 		54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B168E522C3217C000FECBE /* SettingsDataStore.swift */; };
+		54C3919822DC4C1A007D6126 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3919722DC4C1A007D6126 /* HTTP.swift */; };
+		54E598E622DEE16400191EA9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598E522DEE16400191EA9 /* Endpoints.swift */; };
 		8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */; };
 		8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */; };
 		8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17522C336B100EA0DCB /* CharacterSA.swift */; };
@@ -121,6 +123,8 @@
 		54AD92DC22BF1F1800045B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54AD92DD22BF1F1800045B93 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		54B168E522C3217C000FECBE /* SettingsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataStore.swift; sourceTree = "<group>"; };
+		54C3919722DC4C1A007D6126 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		54E598E522DEE16400191EA9 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewSA.swift; sourceTree = "<group>"; };
 		8810E17522C336B100EA0DCB /* CharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSA.swift; sourceTree = "<group>"; };
@@ -312,6 +316,7 @@
 		54AD92CA22BF1F1700045B93 /* Hirakana WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				54C3919922DC4C3B007D6126 /* API */,
 				54617F1022C174BB002A6499 /* Main */,
 				54617F0F22C17405002A6499 /* Settings */,
 				8810E16D22C32D7C00EA0DCB /* Chinese */,
@@ -334,6 +339,15 @@
 				54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		54C3919922DC4C3B007D6126 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				54C3919722DC4C1A007D6126 /* HTTP.swift */,
+				54E598E522DEE16400191EA9 /* Endpoints.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		8810E16D22C32D7C00EA0DCB /* Chinese */ = {
@@ -515,6 +529,7 @@
 			files = (
 				8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */,
 				8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */,
+				54E598E622DEE16400191EA9 /* Endpoints.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
 				8810E18622C8335600EA0DCB /* PhraseViewSB.swift in Sources */,
 				5423494F22C4884600023245 /* CharacterFrequencyView.swift in Sources */,
@@ -528,6 +543,7 @@
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,
 				541002E522C2A8FC00D42247 /* SettingsUserDefaults.swift in Sources */,
+				54C3919822DC4C1A007D6126 /* HTTP.swift in Sources */,
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
 				8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */,
 				8810E18822CB11BE00EA0DCB /* CharacterViewSB.swift in Sources */,

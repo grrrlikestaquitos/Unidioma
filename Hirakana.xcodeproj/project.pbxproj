@@ -35,7 +35,8 @@
 		54AD92DB22BF1F1800045B93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */; };
 		54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B168E522C3217C000FECBE /* SettingsDataStore.swift */; };
 		54C3919822DC4C1A007D6126 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3919722DC4C1A007D6126 /* HTTP.swift */; };
-		54E598E622DEE16400191EA9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598E522DEE16400191EA9 /* Endpoints.swift */; };
+		54E598EB22E0350B00191EA9 /* CharacterRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598EA22E0350B00191EA9 /* CharacterRoute.swift */; };
+		54E598ED22E0351F00191EA9 /* BaseRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598EC22E0351F00191EA9 /* BaseRoute.swift */; };
 		8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */; };
 		8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */; };
 		8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17522C336B100EA0DCB /* CharacterSA.swift */; };
@@ -124,7 +125,8 @@
 		54AD92DD22BF1F1800045B93 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		54B168E522C3217C000FECBE /* SettingsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataStore.swift; sourceTree = "<group>"; };
 		54C3919722DC4C1A007D6126 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
-		54E598E522DEE16400191EA9 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		54E598EA22E0350B00191EA9 /* CharacterRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRoute.swift; sourceTree = "<group>"; };
+		54E598EC22E0351F00191EA9 /* BaseRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoute.swift; sourceTree = "<group>"; };
 		8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewSA.swift; sourceTree = "<group>"; };
 		8810E17522C336B100EA0DCB /* CharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSA.swift; sourceTree = "<group>"; };
@@ -344,10 +346,35 @@
 		54C3919922DC4C3B007D6126 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				54C3919722DC4C1A007D6126 /* HTTP.swift */,
-				54E598E522DEE16400191EA9 /* Endpoints.swift */,
+				54E598EE22E041BE00191EA9 /* Networking */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		54E598E922E033D700191EA9 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				54E598EF22E041D200191EA9 /* BaseRoute */,
+				54E598EA22E0350B00191EA9 /* CharacterRoute.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		54E598EE22E041BE00191EA9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				54C3919722DC4C1A007D6126 /* HTTP.swift */,
+				54E598E922E033D700191EA9 /* Routes */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		54E598EF22E041D200191EA9 /* BaseRoute */ = {
+			isa = PBXGroup;
+			children = (
+				54E598EC22E0351F00191EA9 /* BaseRoute.swift */,
+			);
+			path = BaseRoute;
 			sourceTree = "<group>";
 		};
 		8810E16D22C32D7C00EA0DCB /* Chinese */ = {
@@ -527,9 +554,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54E598ED22E0351F00191EA9 /* BaseRoute.swift in Sources */,
 				8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */,
 				8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */,
-				54E598E622DEE16400191EA9 /* Endpoints.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
 				8810E18622C8335600EA0DCB /* PhraseViewSB.swift in Sources */,
 				5423494F22C4884600023245 /* CharacterFrequencyView.swift in Sources */,
@@ -561,6 +588,7 @@
 				8810E17E22C3538200EA0DCB /* PhraseViewSA.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
 				549C42EA22CC2F3B00131E1D /* SettingsDataStoreActions.swift in Sources */,
+				54E598EB22E0350B00191EA9 /* CharacterRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,7 +790,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BJE27J35HP;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Hirakana_WatchKit_Extension;
 				INFOPLIST_FILE = "Hirakana WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana.watchkitapp;
@@ -783,7 +811,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BJE27J35HP;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Hirakana_WatchKit_Extension;
 				INFOPLIST_FILE = "Hirakana WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana.watchkitapp;

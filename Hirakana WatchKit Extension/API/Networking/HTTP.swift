@@ -13,9 +13,8 @@ enum Response {
 struct HTTP {
     private let decoder = JSONDecoder()
 
-    public func request<M: Codable> (endpoint: Endpoint, model: M.Type, completed: @escaping closure) {
-        let endpointURL = EndpointBuilder().build(endpoint: endpoint)
-        guard let url = URL(string: baseURL + endpointURL) else { return }
+    public func request<M: Codable> (route: BaseRoute, model: M.Type, completed: @escaping closure) {
+        guard let url = URL(string: baseURL + route.buildRouteUrl()) else { return }
 
         session.dataTask(with: url) { (data, responseInfo, error) in
             if let data = data {

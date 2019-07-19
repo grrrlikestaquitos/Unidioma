@@ -1,8 +1,11 @@
 import Foundation
 
 protocol Route {
-    var baseUrl: URLs.Base { get }
+    associatedtype Model: Codable
+
+    var baseUrl: URLs.BaseURL { get }
     var queryFormat: String { get }
+    var urlPath: String { get }
 
     func buildRouteUrl() -> URL
 }

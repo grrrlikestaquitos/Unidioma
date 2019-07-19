@@ -1,34 +1,32 @@
 import Foundation
 
-enum Response {
-    case success(Codable)
-    case failure(Error)
+struct DataResponse<M: Codable>: Codable {
+    let data: M
 }
 
-struct HTTP {
-    typealias ResponseCompletion = (Response) -> ()
-
+struct HTTP<Endpoint: Route> {
     private let decoder = JSONDecoder()
     private let session = URLSession.shared
-    let endpoint: Route
+    let endpoint: Endpoint
 
-    public func request<M: Codable>(model: M, completed: @escaping ResponseCompletion) {
+    public func request(success: ((Endpoint.Model) -> Void)? = nil,
+                        failure: ((Error) -> Void)? = nil) {
         session.dataTask(with: endpoint.buildRouteUrl()) { (data, responseInfo, error) in
             if let data = data {
                 do {
-                    let model: M = try self.serializeJSON(data: data)
-                    completed(.success(model))
+                    let model: DataResponse<Endpoint.Model> = try self.serializeJSON(data: data)
+                    success?(model.data)
                 } catch (let serializationError) {
-                    completed(.failure(serializationError))
+                    failure?(serializationError)
                 }
             }
             if let error = error {
-                completed(.failure(error))
+                failure?(error)
             }
         }.resume()
     }
 
-    private func serializeJSON<M: Codable> (data: Data) throws -> M {
-        return try decoder.decode(M.self, from: data)
+    private func serializeJSON(data: Data) throws -> DataResponse<Endpoint.Model> {
+        return try decoder.decode(DataResponse<Endpoint.Model>.self, from: data)
     }
 }

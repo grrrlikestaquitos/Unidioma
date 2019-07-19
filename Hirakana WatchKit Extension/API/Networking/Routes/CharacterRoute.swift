@@ -1,6 +1,12 @@
-struct CharacterRoute: BaseRoute {
+import Foundation
+
+struct CharacterRoute: Route {
     let route: RouteQuery
 
+    var baseUrl: URLs.Base {
+        return .develop
+    }
+    
     var queryFormat: String {
         switch route {
             case .range:
@@ -10,13 +16,13 @@ struct CharacterRoute: BaseRoute {
         }
     }
 
-    func buildRouteUrl() -> String {
+    func buildRouteUrl() -> URL {
         switch route {
             case .range(let route, let range):
                 let (from, to) = range
-                return String(format: queryFormat, arguments: [route.rawValue, from, to])
+                return String(format: queryFormat, arguments: [route.rawValue, from, to]).asUrl()
             case .all(let route):
-                return String(format: queryFormat, route.rawValue)
+                return String(format: queryFormat, arguments: [route.rawValue]).asUrl()
         }
     }
 }

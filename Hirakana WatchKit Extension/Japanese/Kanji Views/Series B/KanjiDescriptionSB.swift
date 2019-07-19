@@ -9,16 +9,18 @@
 import SwiftUI
 
 struct KanjiDescriptionSB : View {
-    var phrases: [String]
+    let englishPhrase: String
+    let japanesePhrase: String
+    let romajiPhrase: String
 
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 HKText(textType: .title, text: "Phrase:", color: .green)
-                HKText(textType: .title, text: phrases[0], offset: (x: -4, y: 0))
+                HKText(textType: .title, text: englishPhrase, offset: (x: -4, y: 0))
             }
-            HKText(textType: .title, text: phrases[1], color: .yellow)
-            HKText(textType: .subtitle, text: phrases[2], lines: 2).italic
+            HKText(textType: .title, text: japanesePhrase, color: .yellow)
+            HKText(textType: .subtitle, text: romajiPhrase, lines: 2).italic
         }
     }
 }

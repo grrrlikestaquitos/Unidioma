@@ -13,12 +13,14 @@ struct KanjiViewSB : View {
 
     var body: some View {
         VStack {
-            KanjiCharacterSB(kanji: model.kanji,
-                             hiragana: model.hiragana,
+            KanjiCharacterSB(kanji: model.character,
+                             furigana: model.furigana,
                              romaji: model.romaji,
-                             meanings: model.meanings)
+                             meaning: model.meaning)
             Spacer()
-            KanjiDescriptionSB(phrases: model.phrases)
+            KanjiDescriptionSB(englishPhrase: model.japanesePhrase,
+                               japanesePhrase: model.japanesePhrase,
+                               romajiPhrase: model.romajiPhrase)
         }
     }
 }

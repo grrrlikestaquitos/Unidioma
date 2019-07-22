@@ -6,7 +6,7 @@ private enum SettingsPage: String {
 }
 
 struct SettingsView : View {
-    @ObjectBinding var dataStore: SettingsDataStore
+    @ObjectBinding var dataStore: SettingsStore
 
     var body: some View {
         VStack {
@@ -21,17 +21,17 @@ struct SettingsView : View {
     }
 }
 
-extension SettingsView {
+private extension SettingsView {
     struct SettingsNavigator<P: View>: View {
         private let page: P
         private let text: SettingsPage
 
-        fileprivate init(_ text: SettingsPage, _ page: () -> (P)) {
+        init(_ text: SettingsPage, _ page: () -> (P)) {
             self.page = page()
             self.text = text
         }
         var body: some View {
-            NavigationButton(destination: page) {
+            NavigationLink(destination: page) {
                 HStack {
                     HKText(textType: .title, text: text.rawValue)
                         .padding([.leading], 5)

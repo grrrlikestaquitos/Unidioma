@@ -1,17 +1,17 @@
 import SwiftUI
 import Combine
 
-final class SettingsDataStore: BindableObject {
+final class SettingsStore : BindableObject {
     let didChange = PassthroughSubject<Void, Never>()
 
-    @SettingsUserDefaults(key: .languages, defaultValue: defaultLanguage)
+    @HKUserDefaults(key: .languages, defaultValue: defaultLanguage)
     private(set) var languageModel: [LanguageModel] {
         didSet {
             didChange.send()
         }
     }
 
-    @SettingsUserDefaults(key: .frequency, defaultValue: defaultCharFrequency)
+    @HKUserDefaults(key: .frequency, defaultValue: defaultCharFrequency)
     private(set) var charFrequencyModel: CharFrequencyModel {
         didSet {
             didChange.send()
@@ -19,7 +19,7 @@ final class SettingsDataStore: BindableObject {
     }
 }
 
-extension SettingsDataStore: SettingsDataStoreActions {
+extension SettingsStore: SettingsStoreActions {
     func languageWasSelected(_ language: LanguageModel) {
         var updatedLanguage = language
         updatedLanguage.isEnabled = !updatedLanguage.isEnabled
@@ -32,7 +32,7 @@ extension SettingsDataStore: SettingsDataStoreActions {
     }
 }
 
-extension SettingsDataStore {
+private extension SettingsStore {
     static let defaultLanguage: [LanguageModel] = [
             .init(0, "Japanese", true),
             .init(1, "Chinese", false)

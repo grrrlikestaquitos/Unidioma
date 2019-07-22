@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CharacterFrequencyView: View {
-    @ObjectBinding var dataStore: SettingsDataStore
+    @ObjectBinding var dataStore: SettingsStore
 
     var body: some View {
         List {

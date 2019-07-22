@@ -3,8 +3,8 @@ import Foundation
 import SwiftUI
 import Combine
 
-class SettingsController: WKHostingController<SettingsView> {
-    let settingsDataStore = SettingsDataStore()
+final class SettingsController: WKHostingController<SettingsView> {
+    let settingsDataStore = mainStore.settings
 
     override func willActivate() {
         super.willActivate()

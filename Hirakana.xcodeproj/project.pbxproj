@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		541002E122C1FE6D00D42247 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E022C1FE6D00D42247 /* LanguageModel.swift */; };
-		541002E522C2A8FC00D42247 /* SettingsUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E422C2A8FC00D42247 /* SettingsUserDefaults.swift */; };
+		541002E522C2A8FC00D42247 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E422C2A8FC00D42247 /* UserDefaults.swift */; };
 		5423494F22C4884600023245 /* CharacterFrequencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423494E22C4884600023245 /* CharacterFrequencyView.swift */; };
 		54617F1222C17521002A6499 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1122C17521002A6499 /* SettingsController.swift */; };
 		54617F1422C1776E002A6499 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1322C1776E002A6499 /* SettingsView.swift */; };
@@ -22,7 +22,7 @@
 		5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719C22C02668004B1000 /* KanjiCharacterSB.swift */; };
 		5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719E22C02676004B1000 /* KanjiDescriptionSB.swift */; };
 		548371A422C04798004B1000 /* HKText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548371A322C04798004B1000 /* HKText.swift */; };
-		549C42EA22CC2F3B00131E1D /* SettingsDataStoreActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549C42E922CC2F3B00131E1D /* SettingsDataStoreActions.swift */; };
+		549C42EA22CC2F3B00131E1D /* SettingsStoreActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549C42E922CC2F3B00131E1D /* SettingsStoreActions.swift */; };
 		549C42ED22CC32F100131E1D /* CharFrequencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549C42EC22CC32F100131E1D /* CharFrequencyModel.swift */; };
 		54AD92B822BF1F1600045B93 /* Hirakana WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 54AD92B722BF1F1600045B93 /* Hirakana WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		54AD92BE22BF1F1600045B93 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92BC22BF1F1600045B93 /* Interface.storyboard */; };
@@ -33,7 +33,9 @@
 		54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD92D522BF1F1700045B93 /* ComplicationController.swift */; };
 		54AD92D822BF1F1800045B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92D722BF1F1800045B93 /* Assets.xcassets */; };
 		54AD92DB22BF1F1800045B93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */; };
-		54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B168E522C3217C000FECBE /* SettingsDataStore.swift */; };
+		54B168E622C3217C000FECBE /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B168E522C3217C000FECBE /* SettingsStore.swift */; };
+		54F9906822E4DEDA006388B1 /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F9906722E4DEDA006388B1 /* MainStore.swift */; };
+		54F9906A22E4E955006388B1 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F9906922E4E955006388B1 /* Keys.swift */; };
 		8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */; };
 		8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */; };
 		8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17522C336B100EA0DCB /* CharacterSA.swift */; };
@@ -44,7 +46,6 @@
 		8810E18622C8335600EA0DCB /* PhraseViewSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18522C8335600EA0DCB /* PhraseViewSB.swift */; };
 		8810E18822CB11BE00EA0DCB /* CharacterViewSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18722CB11BE00EA0DCB /* CharacterViewSB.swift */; };
 		8810E18A22CB123F00EA0DCB /* CharacterSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E18922CB123F00EA0DCB /* CharacterSB.swift */; };
-		88BA850222D91B6100834F79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA850122D91B6100834F79 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +92,7 @@
 
 /* Begin PBXFileReference section */
 		541002E022C1FE6D00D42247 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
-		541002E422C2A8FC00D42247 /* SettingsUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUserDefaults.swift; sourceTree = "<group>"; };
+		541002E422C2A8FC00D42247 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		5423494E22C4884600023245 /* CharacterFrequencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFrequencyView.swift; sourceTree = "<group>"; };
 		54617F1122C17521002A6499 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		54617F1322C1776E002A6499 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -105,7 +106,7 @@
 		5483719C22C02668004B1000 /* KanjiCharacterSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiCharacterSB.swift; sourceTree = "<group>"; };
 		5483719E22C02676004B1000 /* KanjiDescriptionSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDescriptionSB.swift; sourceTree = "<group>"; };
 		548371A322C04798004B1000 /* HKText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKText.swift; sourceTree = "<group>"; };
-		549C42E922CC2F3B00131E1D /* SettingsDataStoreActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataStoreActions.swift; sourceTree = "<group>"; };
+		549C42E922CC2F3B00131E1D /* SettingsStoreActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreActions.swift; sourceTree = "<group>"; };
 		549C42EC22CC32F100131E1D /* CharFrequencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharFrequencyModel.swift; sourceTree = "<group>"; };
 		54AD92B322BF1F1600045B93 /* Hirakana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hirakana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AD92B722BF1F1600045B93 /* Hirakana WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hirakana WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,7 +121,9 @@
 		54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54AD92DC22BF1F1800045B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54AD92DD22BF1F1800045B93 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		54B168E522C3217C000FECBE /* SettingsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataStore.swift; sourceTree = "<group>"; };
+		54B168E522C3217C000FECBE /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		54F9906722E4DEDA006388B1 /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
+		54F9906922E4E955006388B1 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewSA.swift; sourceTree = "<group>"; };
 		8810E17522C336B100EA0DCB /* CharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSA.swift; sourceTree = "<group>"; };
@@ -131,7 +134,6 @@
 		8810E18522C8335600EA0DCB /* PhraseViewSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseViewSB.swift; sourceTree = "<group>"; };
 		8810E18722CB11BE00EA0DCB /* CharacterViewSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewSB.swift; sourceTree = "<group>"; };
 		8810E18922CB123F00EA0DCB /* CharacterSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSB.swift; sourceTree = "<group>"; };
-		88BA850122D91B6100834F79 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,12 +155,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		541002E322C2A8DD00D42247 /* Settings User Defaults */ = {
+		541002E322C2A8DD00D42247 /* User Defaults */ = {
 			isa = PBXGroup;
 			children = (
-				541002E422C2A8FC00D42247 /* SettingsUserDefaults.swift */,
+				541002E422C2A8FC00D42247 /* UserDefaults.swift */,
+				54F9906922E4E955006388B1 /* Keys.swift */,
 			);
-			path = "Settings User Defaults";
+			path = "User Defaults";
 			sourceTree = "<group>";
 		};
 		5423494D22C4879E00023245 /* Character Frequency */ = {
@@ -181,7 +184,6 @@
 		54617F0F22C17405002A6499 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				549C42E822CC2EE000131E1D /* Data */,
 				5423494D22C4879E00023245 /* Character Frequency */,
 				54617F1722C1DCF9002A6499 /* Language */,
 				54617F1122C17521002A6499 /* SettingsController.swift */,
@@ -254,22 +256,13 @@
 			path = "Shared Views";
 			sourceTree = "<group>";
 		};
-		549C42E722CC2E9800131E1D /* Settings Store */ = {
+		549C42E822CC2EE000131E1D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				54B168E522C3217C000FECBE /* SettingsDataStore.swift */,
-				549C42E922CC2F3B00131E1D /* SettingsDataStoreActions.swift */,
+				54B168E522C3217C000FECBE /* SettingsStore.swift */,
+				549C42E922CC2F3B00131E1D /* SettingsStoreActions.swift */,
 			);
-			path = "Settings Store";
-			sourceTree = "<group>";
-		};
-		549C42E822CC2EE000131E1D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				541002E322C2A8DD00D42247 /* Settings User Defaults */,
-				549C42E722CC2E9800131E1D /* Settings Store */,
-			);
-			path = Data;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		549C42EB22CC32DD00131E1D /* Model */ = {
@@ -312,12 +305,12 @@
 		54AD92CA22BF1F1700045B93 /* Hirakana WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				54F9906622E4DC2D006388B1 /* Data */,
 				54617F1022C174BB002A6499 /* Main */,
 				54617F0F22C17405002A6499 /* Settings */,
 				8810E16D22C32D7C00EA0DCB /* Chinese */,
 				54617F0E22C17335002A6499 /* Japanese */,
 				548371A122C04738004B1000 /* Shared Views */,
-				88BA850022D91B4500834F79 /* Support Files */,
 				54AD92CF22BF1F1700045B93 /* ExtensionDelegate.swift */,
 				54AD92D522BF1F1700045B93 /* ComplicationController.swift */,
 				54AD92D722BF1F1800045B93 /* Assets.xcassets */,
@@ -334,6 +327,16 @@
 				54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		54F9906622E4DC2D006388B1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				54F9906722E4DEDA006388B1 /* MainStore.swift */,
+				541002E322C2A8DD00D42247 /* User Defaults */,
+				549C42E822CC2EE000131E1D /* Settings */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		8810E16D22C32D7C00EA0DCB /* Chinese */ = {
@@ -375,14 +378,6 @@
 				8810E18922CB123F00EA0DCB /* CharacterSB.swift */,
 			);
 			path = "Series B";
-			sourceTree = "<group>";
-		};
-		88BA850022D91B4500834F79 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				88BA850122D91B6100834F79 /* Constants.swift */,
-			);
-			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,6 +512,7 @@
 				8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
 				8810E18622C8335600EA0DCB /* PhraseViewSB.swift in Sources */,
+				54F9906A22E4E955006388B1 /* Keys.swift in Sources */,
 				5423494F22C4884600023245 /* CharacterFrequencyView.swift in Sources */,
 				54617F1222C17521002A6499 /* SettingsController.swift in Sources */,
 				54AD92CE22BF1F1700045B93 /* MainController.swift in Sources */,
@@ -527,15 +523,15 @@
 				8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */,
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,
-				541002E522C2A8FC00D42247 /* SettingsUserDefaults.swift in Sources */,
+				541002E522C2A8FC00D42247 /* UserDefaults.swift in Sources */,
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
 				8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */,
 				8810E18822CB11BE00EA0DCB /* CharacterViewSB.swift in Sources */,
-				54B168E622C3217C000FECBE /* SettingsDataStore.swift in Sources */,
+				54B168E622C3217C000FECBE /* SettingsStore.swift in Sources */,
+				54F9906822E4DEDA006388B1 /* MainStore.swift in Sources */,
 				549C42ED22CC32F100131E1D /* CharFrequencyModel.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,
 				5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */,
-				88BA850222D91B6100834F79 /* Constants.swift in Sources */,
 				8810E18A22CB123F00EA0DCB /* CharacterSB.swift in Sources */,
 				541002E122C1FE6D00D42247 /* LanguageModel.swift in Sources */,
 				54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */,
@@ -544,7 +540,7 @@
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,
 				8810E17E22C3538200EA0DCB /* PhraseViewSA.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
-				549C42EA22CC2F3B00131E1D /* SettingsDataStoreActions.swift in Sources */,
+				549C42EA22CC2F3B00131E1D /* SettingsStoreActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

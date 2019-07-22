@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LanguageView : View {
-    @ObjectBinding var dataStore: SettingsDataStore
+    @ObjectBinding var dataStore: SettingsStore
 
     private func renderLanguageSelector(item: LanguageModel) -> some View {
         Button(action: {

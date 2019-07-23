@@ -11,11 +11,13 @@ enum ViewType {
 
 struct HirakanaView : View {
     var viewType: ViewType? = .kanji(Series.A)
-    let kanjimodel = KanjiModel(hiragana: "わたし",
-                                kanji: "私",
+    let kanjimodel = KanjiModel(character: "私",
+                                furigana: "わたし",
                                 romaji: "wa-ta-shi",
-                                meanings: ["I; Me"],
-                                phrases: ["I fell", "私は落ちた", "Watashi wa ochita"])
+                                meaning: "I; Me",
+                                englishPhrase: "I fell",
+                                japanesePhrase: "私は落ちた",
+                                romajiPhrase: "Watashi wa ochita")
     let characterModel = CharacterModel(pinyin: "wǒ", character: "我", phraseCharacters: ["我","跑"], meaning: ["I; me; my"], pinyinForPhrase: ["wǒ","paǒ"], meaningForPhrase: "I run")
     
     var body: some View {

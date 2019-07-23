@@ -1,7 +1,10 @@
-struct KanjiModel {
-    var hiragana: String
-    var kanji: String
-    var romaji: String
-    var meanings: [String]
-    var phrases: [String]
+struct KanjiModel: Codable {
+    var id: Int?
+    let character: String
+    let furigana: String
+    let romaji: String
+    let meaning: String
+    let englishPhrase: String
+    let japanesePhrase: String
+    let romajiPhrase: String
 }

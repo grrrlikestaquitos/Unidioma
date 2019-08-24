@@ -4,7 +4,6 @@ import SwiftUI
 import Combine
 
 final class SettingsController: WKHostingController<SettingsView> {
-    let settingsDataStore = mainStore.settings
 
     override func willActivate() {
         super.willActivate()
@@ -12,6 +11,6 @@ final class SettingsController: WKHostingController<SettingsView> {
     }
 
     override var body: SettingsView {
-        SettingsView(dataStore: settingsDataStore)
+        SettingsView()
     }
 }

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CharacterFrequencyView: View {
-    @ObjectBinding var dataStore: SettingsStore
+    @ObservedObject var dataStore = SettingsStore()
 
     var body: some View {
         List {
@@ -12,14 +12,12 @@ struct CharacterFrequencyView: View {
     }
 
     private func SelectionItem(_ text: String, count: Int) -> some View {
-        Button(action: {
-            self.dataStore.charFrequencyWasSelected(count)
-        }) {
+        Button(action: { self.dataStore.charFrequencyWasSelected(count) }) {
             HStack {
                 HKText(textType: .subtitle, text: text)
                 Spacer()
                 
-                if self.dataStore.charFrequencyModel.charsPerDay == count {
+                if self.dataStore.charFrequency.daily == count {
                     Image(systemName: "checkmark.circle")
                 }
             }

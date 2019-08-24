@@ -1,22 +1,17 @@
 import SwiftUI
 import Combine
 
-final class SettingsStore : BindableObject {
-    let didChange = PassthroughSubject<Void, Never>()
-
+final class SettingsStore: ObservableObject {
     @HKUserDefaults(key: .languages, defaultValue: defaultLanguage)
-    private(set) var languageModel: [LanguageModel] {
-        didSet {
-            didChange.send()
-        }
-    }
+    private var languages: [LanguageModel]
 
     @HKUserDefaults(key: .frequency, defaultValue: defaultCharFrequency)
-    private(set) var charFrequencyModel: CharFrequencyModel {
-        didSet {
-            didChange.send()
-        }
-    }
+    private var charFrequency: CharFrequencyModel
+
+    
+
+//    @Published private(set) var languageModel = SettingsStore.defaultLanguage
+//    @Published private(set) var charFrequencyModel = SettingsStore.defaultCharFrequency
 }
 
 extension SettingsStore: SettingsStoreActions {
@@ -24,11 +19,11 @@ extension SettingsStore: SettingsStoreActions {
         var updatedLanguage = language
         updatedLanguage.isEnabled = !updatedLanguage.isEnabled
 
-        languageModel[language.id] = updatedLanguage
+        languages[language.id] = updatedLanguage
     }
 
     func charFrequencyWasSelected(_ number: Int) {
-        charFrequencyModel.charsPerDay = number
+        charFrequency.daily = number
     }
 }
 

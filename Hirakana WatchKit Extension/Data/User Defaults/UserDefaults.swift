@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 fileprivate let defaults = UserDefaults.standard
 
@@ -9,19 +10,19 @@ struct HKUserDefaults<M: Codable> {
 
     var wrappedValue: M {
         get {
-            return get(key)
+            return get()
         }
         set {
-            update(key, newValue)
+            update(newValue)
         }
     }
 
-    func update<M: Codable> (_ key: Keys, _ value: M) {
+    func update<M: Codable> (_ value: M) {
         let encodedData = try? JSONEncoder().encode(value)
         defaults.set(encodedData, forKey: key.rawValue)
     }
 
-    func get<M: Codable>(_ key: Keys) -> M {
+    func get<M: Codable>() -> M {
         guard let data = defaults.value(forKey: key.rawValue) as? Data,
               let decodedData = try? JSONDecoder().decode(M.self, from: data)
             else { return defaultValue as! M }

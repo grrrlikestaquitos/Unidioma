@@ -1,19 +1,11 @@
-//
-//  HostingController.swift
-//  Hirakana WatchKit Extension
-//
-//  Created by Andrei Villasana on 6/22/19.
-//  Copyright © 2019 Andrei Villasana. All rights reserved.
-//
-
 import WatchKit
 import SwiftUI
 
 final class MainController : WKHostingController<HirakanaView> {
-    let settingsStore = mainStore.settings
+    let settingsStore = SettingsStore()
 
     var model: LanguageModel {
-        return settingsStore.languageModel[0]
+        return settingsStore.languages[0]
     }
 
     override func willActivate() {

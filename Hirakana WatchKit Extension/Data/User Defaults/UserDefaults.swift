@@ -6,7 +6,7 @@ struct HKUserDefaults<M: Codable> {
     var key: Keys
     var defaultValue: M
 
-    var wrappedValue: M {
+    var value: M {
         get {
             return get()
         }

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LanguageView: View {
-    @ObservedObject var dataStore = SettingsStore()
+    @ObservedObject var dataStore = MainStore.shared.settings
 
     private func renderLanguageSelector(item: LanguageModel) -> some View {
         Button(action: {
@@ -21,7 +21,7 @@ struct LanguageView: View {
     }
 
     var body: some View {
-        List(dataStore.languages) { item in
+        List(dataStore.languages.value) { item in
             self.renderLanguageSelector(item: item)
         }
     }

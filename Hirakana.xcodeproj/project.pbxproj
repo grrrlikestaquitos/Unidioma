@@ -13,6 +13,7 @@
 		54617F1222C17521002A6499 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1122C17521002A6499 /* SettingsController.swift */; };
 		54617F1422C1776E002A6499 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1322C1776E002A6499 /* SettingsView.swift */; };
 		54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1822C1DDAD002A6499 /* LanguageView.swift */; };
+		547BDBF12312317F0099D9E6 /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547BDBF02312317F0099D9E6 /* MainStore.swift */; };
 		5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483718E22C01812004B1000 /* KanjiViewSA.swift */; };
 		5483719222C01853004B1000 /* KanjiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719122C01853004B1000 /* KanjiModel.swift */; };
 		5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5483719322C01898004B1000 /* KanjiCharacterSA.swift */; };
@@ -96,6 +97,7 @@
 		54617F1122C17521002A6499 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		54617F1322C1776E002A6499 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		54617F1822C1DDAD002A6499 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
+		547BDBF02312317F0099D9E6 /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		5483718E22C01812004B1000 /* KanjiViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiViewSA.swift; sourceTree = "<group>"; };
 		5483719122C01853004B1000 /* KanjiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiModel.swift; sourceTree = "<group>"; };
 		5483719322C01898004B1000 /* KanjiCharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiCharacterSA.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			children = (
 				541002E322C2A8DD00D42247 /* User Defaults */,
 				549C42E822CC2EE000131E1D /* Settings */,
+				547BDBF02312317F0099D9E6 /* MainStore.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
 				8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */,
 				8810E18822CB11BE00EA0DCB /* CharacterViewSB.swift in Sources */,
+				547BDBF12312317F0099D9E6 /* MainStore.swift in Sources */,
 				54B168E622C3217C000FECBE /* SettingsStore.swift in Sources */,
 				549C42ED22CC32F100131E1D /* CharFrequencyModel.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,

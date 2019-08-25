@@ -1,14 +1,12 @@
 import Foundation
-import Combine
 
 fileprivate let defaults = UserDefaults.standard
 
-@propertyWrapper
 struct HKUserDefaults<M: Codable> {
     var key: Keys
     var defaultValue: M
 
-    var wrappedValue: M {
+    var value: M {
         get {
             return get()
         }

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CharacterFrequencyView: View {
-    @ObservedObject var dataStore = SettingsStore()
+    @ObservedObject var dataStore = MainStore.shared.settings
 
     var body: some View {
         List {
@@ -17,7 +17,7 @@ struct CharacterFrequencyView: View {
                 HKText(textType: .subtitle, text: text)
                 Spacer()
                 
-                if self.dataStore.charFrequency.daily == count {
+                if self.dataStore.charFrequency.value.daily == count {
                     Image(systemName: "checkmark.circle")
                 }
             }

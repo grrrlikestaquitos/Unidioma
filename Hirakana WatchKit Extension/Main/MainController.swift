@@ -2,20 +2,22 @@ import WatchKit
 import SwiftUI
 
 final class MainController : WKHostingController<HirakanaView> {
-    let settingsStore = SettingsStore()
+    let settingsStore = MainStore.shared.settings
 
-    var model: LanguageModel {
-        return settingsStore.languages[0]
+    var model: LanguageModel? {
+        return settingsStore.languages.value.first { language -> Bool in
+            return language.isEnabled == true
+        }
     }
 
     override func willActivate() {
         super.willActivate()
-        setTitle(model.language)
+        setTitle(model?.language)
     }
 
     
     override var body: HirakanaView {
-        switch model.language {
+        switch model?.language {
             case Language.Japanese.rawValue:
                 return HirakanaView(viewType: .kanji(Series.B))
             case Language.Chinese.rawValue:

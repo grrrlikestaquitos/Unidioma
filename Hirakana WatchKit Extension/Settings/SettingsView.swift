@@ -28,6 +28,7 @@ private extension SettingsView {
             self.page = page()
             self.text = text
         }
+        
         var body: some View {
             NavigationLink(destination: page) {
                 HStack {

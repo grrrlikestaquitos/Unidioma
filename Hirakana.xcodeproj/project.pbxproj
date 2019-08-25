@@ -36,6 +36,11 @@
 		54AD92DB22BF1F1800045B93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AD92DA22BF1F1800045B93 /* Preview Assets.xcassets */; };
 		54B168E622C3217C000FECBE /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B168E522C3217C000FECBE /* SettingsStore.swift */; };
 		54F9906A22E4E955006388B1 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F9906922E4E955006388B1 /* Keys.swift */; };
+		54C3919822DC4C1A007D6126 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3919722DC4C1A007D6126 /* HTTP.swift */; };
+		54E598EB22E0350B00191EA9 /* CharacterRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598EA22E0350B00191EA9 /* CharacterRoute.swift */; };
+		54E598ED22E0351F00191EA9 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598EC22E0351F00191EA9 /* Route.swift */; };
+		54E598F222E15DE800191EA9 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598F122E15DE800191EA9 /* URLs.swift */; };
+		54E598F522E16CFC00191EA9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598F422E16CFC00191EA9 /* String+Extensions.swift */; };
 		8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */; };
 		8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */; };
 		8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810E17522C336B100EA0DCB /* CharacterSA.swift */; };
@@ -124,6 +129,11 @@
 		54AD92DD22BF1F1800045B93 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		54B168E522C3217C000FECBE /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		54F9906922E4E955006388B1 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		54C3919722DC4C1A007D6126 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		54E598EA22E0350B00191EA9 /* CharacterRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRoute.swift; sourceTree = "<group>"; };
+		54E598EC22E0351F00191EA9 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		54E598F122E15DE800191EA9 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		54E598F422E16CFC00191EA9 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewSA.swift; sourceTree = "<group>"; };
 		8810E17522C336B100EA0DCB /* CharacterSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSA.swift; sourceTree = "<group>"; };
@@ -308,15 +318,20 @@
 				54F9906622E4DC2D006388B1 /* Data */,
 				54617F1022C174BB002A6499 /* Main */,
 				54617F0F22C17405002A6499 /* Settings */,
+				54AD92DD22BF1F1800045B93 /* PushNotificationPayload.apns */,
+				54AD92DC22BF1F1800045B93 /* Info.plist */,
+				54AD92D522BF1F1700045B93 /* ComplicationController.swift */,
+				54AD92CF22BF1F1700045B93 /* ExtensionDelegate.swift */,
+				54AD92D722BF1F1800045B93 /* Assets.xcassets */,
+				54C3919922DC4C3B007D6126 /* API */,
 				8810E16D22C32D7C00EA0DCB /* Chinese */,
 				54617F0E22C17335002A6499 /* Japanese */,
-				548371A122C04738004B1000 /* Shared Views */,
-				54AD92CF22BF1F1700045B93 /* ExtensionDelegate.swift */,
-				54AD92D522BF1F1700045B93 /* ComplicationController.swift */,
-				54AD92D722BF1F1800045B93 /* Assets.xcassets */,
-				54AD92DC22BF1F1800045B93 /* Info.plist */,
-				54AD92DD22BF1F1800045B93 /* PushNotificationPayload.apns */,
+				54617F1022C174BB002A6499 /* Main */,
 				54AD92D922BF1F1800045B93 /* Preview Content */,
+				54617F0F22C17405002A6499 /* Settings */,
+				548371A122C04738004B1000 /* Shared Views */,
+				88BA850022D91B4500834F79 /* Support Files */,
+				54E598F322E16CE500191EA9 /* Util */,
 			);
 			path = "Hirakana WatchKit Extension";
 			sourceTree = "<group>";
@@ -337,6 +352,49 @@
 				547BDBF02312317F0099D9E6 /* MainStore.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		54C3919922DC4C3B007D6126 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				54E598EE22E041BE00191EA9 /* Networking */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		54E598E922E033D700191EA9 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				54E598EC22E0351F00191EA9 /* Route.swift */,
+				54E598EA22E0350B00191EA9 /* CharacterRoute.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		54E598EE22E041BE00191EA9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				54C3919722DC4C1A007D6126 /* HTTP.swift */,
+				54E598F022E15DD500191EA9 /* URLs */,
+				54E598E922E033D700191EA9 /* Routes */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		54E598F022E15DD500191EA9 /* URLs */ = {
+			isa = PBXGroup;
+			children = (
+				54E598F122E15DE800191EA9 /* URLs.swift */,
+			);
+			path = URLs;
+			sourceTree = "<group>";
+		};
+		54E598F322E16CE500191EA9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				54E598F422E16CFC00191EA9 /* String+Extensions.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		8810E16D22C32D7C00EA0DCB /* Chinese */ = {
@@ -508,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54E598ED22E0351F00191EA9 /* Route.swift in Sources */,
 				8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */,
 				8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
@@ -520,12 +579,15 @@
 				54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */,
 				5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */,
 				5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */,
+				54E598F522E16CFC00191EA9 /* String+Extensions.swift in Sources */,
 				8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */,
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,
 				541002E522C2A8FC00D42247 /* UserDefaults.swift in Sources */,
+				54C3919822DC4C1A007D6126 /* HTTP.swift in Sources */,
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
 				8810E18422C5A56100EA0DCB /* PhraseCharacterViewSA.swift in Sources */,
+				54E598F222E15DE800191EA9 /* URLs.swift in Sources */,
 				8810E18822CB11BE00EA0DCB /* CharacterViewSB.swift in Sources */,
 				547BDBF12312317F0099D9E6 /* MainStore.swift in Sources */,
 				54B168E622C3217C000FECBE /* SettingsStore.swift in Sources */,
@@ -541,6 +603,7 @@
 				8810E17E22C3538200EA0DCB /* PhraseViewSA.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
 				549C42EA22CC2F3B00131E1D /* SettingsStoreActions.swift in Sources */,
+				54E598EB22E0350B00191EA9 /* CharacterRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +805,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BJE27J35HP;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Hirakana_WatchKit_Extension;
 				INFOPLIST_FILE = "Hirakana WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana.watchkitapp;
@@ -763,7 +826,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BJE27J35HP;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Hirakana_WatchKit_Extension;
 				INFOPLIST_FILE = "Hirakana WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colourhood.Hirakana.watchkitapp;

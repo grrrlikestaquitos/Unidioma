@@ -2,7 +2,7 @@ import WatchKit
 import SwiftUI
 
 final class MainController : WKHostingController<HirakanaView> {
-    let settingsStore = MainStore.shared.settings
+    @ObservedObject var settingsStore = MainStore.shared.settings
 
     var model: LanguageModel? {
         return settingsStore.languages.value.first { language -> Bool in
@@ -13,6 +13,7 @@ final class MainController : WKHostingController<HirakanaView> {
     override func willActivate() {
         super.willActivate()
         setTitle(model?.language)
+        setNeedsBodyUpdate()
     }
 
     

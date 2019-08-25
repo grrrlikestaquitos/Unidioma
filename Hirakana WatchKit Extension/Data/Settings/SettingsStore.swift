@@ -9,7 +9,7 @@ final class SettingsStore: ObservableObject {
 extension SettingsStore: SettingsStoreActions {
     func languageWasSelected(_ language: LanguageModel) {
         var updatedLanguage = language
-        updatedLanguage.isEnabled = !updatedLanguage.isEnabled
+        updatedLanguage.isEnabled.toggle()
         languages.value[language.id] = updatedLanguage
     }
 

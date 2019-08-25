@@ -2,30 +2,28 @@ import Foundation
 
 fileprivate let defaults = UserDefaults.standard
 
-@propertyWrapper
-struct SettingsUserDefaults<M: Codable> {
-    var key: Key
+struct HKUserDefaults<M: Codable> {
+    var key: Keys
     var defaultValue: M
 
-    var wrappedValue: M {
+    var value: M {
         get {
-            return getSetting(key)
+            return get()
         }
         set {
-            updateSetting(key, newValue)
+            update(newValue)
         }
     }
 
-    func updateSetting<M: Codable> (_ key: Key, _ value: M) {
+    private func update<M: Codable> (_ value: M) {
         let encodedData = try? JSONEncoder().encode(value)
         defaults.set(encodedData, forKey: key.rawValue)
     }
 
-    func getSetting<M: Codable>(_ key: Key) -> M {
+    private func get<M: Codable>() -> M {
         guard let data = defaults.value(forKey: key.rawValue) as? Data,
               let decodedData = try? JSONDecoder().decode(M.self, from: data)
             else { return defaultValue as! M }
         return decodedData
     }
-
 }

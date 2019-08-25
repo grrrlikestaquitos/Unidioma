@@ -5,28 +5,26 @@ private enum SettingsPage: String {
     case frequency = "Char Frequency"
 }
 
-struct SettingsView : View {
-    @ObjectBinding var dataStore: SettingsDataStore
-
+struct SettingsView: View {
     var body: some View {
         VStack {
             SettingsNavigator(.languages) {
-                LanguageView(dataStore: dataStore)
+                LanguageView()
             }
             SettingsNavigator(.frequency) {
-                CharacterFrequencyView(dataStore: dataStore)
+                CharacterFrequencyView()
             }
             Spacer()
         }
     }
 }
 
-extension SettingsView {
+private extension SettingsView {
     struct SettingsNavigator<P: View>: View {
         private let page: P
         private let text: SettingsPage
 
-        fileprivate init(_ text: SettingsPage, _ page: () -> (P)) {
+        init(_ text: SettingsPage, _ page: () -> (P)) {
             self.page = page()
             self.text = text
         }

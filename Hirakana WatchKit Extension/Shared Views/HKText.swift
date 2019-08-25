@@ -1,11 +1,3 @@
-//
-//  HKTexts.swift
-//  Hirakana WatchKit Extension
-//
-//  Created by Andrei Villasana on 6/23/19.
-//  Copyright © 2019 Andrei Villasana. All rights reserved.
-//
-
 import SwiftUI
 
 enum TextType {
@@ -45,43 +37,44 @@ struct HKText : View {
     var body: some View {
         Text(text)
             .font(.system(size: fontSize))
-            .color(color)
             .lineLimit(lines)
             .offset(x: offset.x, y: offset.y)
+            .foregroundColor(color)
     }
 
     var italic: some View {
         Text(text)
-            .font(.system(size: fontSize))
-            .color(color)
             .italic()
+            .font(.system(size: fontSize))
             .lineLimit(lines)
             .offset(x: offset.x, y: offset.y)
+            .foregroundColor(color)
+            .foregroundColor(color)
     }
 
     var hiragana: some View {
         Text(text)
-            .font(.system(size: fontSize))
-            .color(color)
             .kerning(6)
+            .font(.system(size: fontSize))
             .lineLimit(lines)
             .offset(x: offset.x, y: offset.y)
+            .foregroundColor(color)
     }
     
     var pinyin: some View {
         Text(text)
-            .font(.system(size: fontSize))
-            .color(color)
             .kerning(3)
+            .font(.system(size: fontSize))
             .lineLimit(lines)
             .offset(x: offset.x, y: offset.y)
+            .foregroundColor(color)
     }
 }
 
 //#if DEBUG
-//struct HKTexts_Previews : PreviewProvider {
+//struct HKText_Previews : PreviewProvider {
 //    static var previews: some View {
-//        HKTexts()
+//        HKText()
 //    }
 //}
 //#endif

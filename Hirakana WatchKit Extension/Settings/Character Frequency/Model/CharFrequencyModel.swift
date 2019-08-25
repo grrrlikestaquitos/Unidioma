@@ -1,7 +1,7 @@
 struct CharFrequencyModel: Codable {
-    var charsPerDay: Int
+    var daily: Int
 
-    init(_ charsPerDay: Int) {
-        self.charsPerDay = charsPerDay
+    init(_ daily: Int) {
+        self.daily = daily
     }
 }

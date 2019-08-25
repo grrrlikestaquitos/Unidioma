@@ -11,3 +11,8 @@ struct LanguageModel: Codable, Identifiable {
         self.isEnabled = isEnabled
     }
 }
+
+enum Language: String {
+    case Japanese
+    case Chinese
+}

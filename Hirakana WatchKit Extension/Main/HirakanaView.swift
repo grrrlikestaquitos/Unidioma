@@ -18,7 +18,13 @@ struct HirakanaView : View {
                                 englishPhrase: "I fell",
                                 japanesePhrase: "私は落ちた",
                                 romajiPhrase: "Watashi wa ochita")
-    let characterModel = CharacterModel(pinyin: "wǒ", character: "我", phraseCharacters: ["我","跑"], meaning: ["I; me; my"], pinyinForPhrase: ["wǒ","paǒ"], meaningForPhrase: "I run")
+    let characterModel = CharacterModel(id: nil,
+                                        pinyin: "wǒ",
+                                        chineseCharacter: "我",
+                                        meaning: "I; me; my",
+                                        englishPhrase: "I run",
+                                        chinesePhrasePinyin: "wǒ paǒ",
+                                        chinesePhraseCharacters: "我 跑")
     
     var body: some View {
         switch viewType {

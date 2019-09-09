@@ -9,10 +9,11 @@
 import Foundation
 
 struct CharacterModel {
+    var id: Int?
     var pinyin: String
-    var character: String
-    var phraseCharacters: [String]
-    var meaning: [String]
-    var pinyinForPhrase: [String]
-    var meaningForPhrase: String
+    var chineseCharacter: String
+    var meaning: String
+    var englishPhrase: String
+    var chinesePhrasePinyin: String
+    var chinesePhraseCharacters: String
 }

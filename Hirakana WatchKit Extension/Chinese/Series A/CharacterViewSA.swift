@@ -12,18 +12,9 @@ struct CharacterViewSA: View {
     var model: CharacterModel
     
     var body: some View {
-        VStack {
-            Spacer()
-            CharacterMeaningViewSA(pinying: model.pinyin, character: model.character, meaning: model.meaning)
-            PhraseViewSA(phraseCharacters: model.phraseCharacters, pinyinForPhrase: model.pinyinForPhrase, meaningForPhrase: model.meaningForPhrase)
-            Spacer()
+        HStack {
+            CharacterSA(pinyin: model.pinyin, chineseCharacter: model.chineseCharacter).offset(x: -10, y: 10)
+            DescriptionSA(meaning: model.meaning, englishPhrase: model.englishPhrase, chinesePhrasePinyin: model.chinesePhrasePinyin, chinesePhraseCharacters: model.chinesePhraseCharacters).offset(x: 5)
         }
-        
-    }
-}
-
-struct CharacterViewSA_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterViewSA(model: CharacterModel(pinyin: "wǒ", character: "我", phraseCharacters: ["我","跑"], meaning: ["I; me; my"], pinyinForPhrase: ["wǒ","paǒ"], meaningForPhrase: "I run"))
     }
 }

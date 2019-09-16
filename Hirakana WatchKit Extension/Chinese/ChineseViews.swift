@@ -8,18 +8,20 @@ struct ChineseViews: View {
         switch series {
             case .A:
                 return AnyView(CharacterSA(pinyin: characterModel.pinyin,
-                                           character: characterModel.character))
+                                           chineseCharacter: characterModel.chineseCharacter))
             case .B:
                 return AnyView(CharacterSB(pinyin: characterModel.pinyin,
-                                           character: characterModel.character))
+                                           chineseCharacter: characterModel.chineseCharacter,
+                                           meaning: characterModel.meaning))
         }
     }
 
-    let characterModel = CharacterModel(pinyin: "wǒ",
-                                        character: "我",
-                                        phraseCharacters: ["我","跑"],
-                                        meaning: ["I; me; my"],
-                                        pinyinForPhrase: ["wǒ","paǒ"],
-                                        meaningForPhrase: "I run")
+    let characterModel = CharacterModel(id: 0,
+                                        pinyin: "wǒ",
+                                        chineseCharacter: "我",
+                                        meaning: "I; me; my",
+                                        englishPhrase: "I run",
+                                        chinesePhrasePinyin: "wǒ paǒ",
+                                        chinesePhraseCharacters: "我 跑")
 }
 

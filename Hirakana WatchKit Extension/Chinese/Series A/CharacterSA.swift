@@ -10,20 +10,12 @@ import SwiftUI
 
 struct CharacterSA: View {
     var pinyin: String
-    var character: String
+    var chineseCharacter: String
     
     var body: some View {
-        VStack(alignment: .center) {
-            HKText(textType: .pinyinTitle, text: pinyin, color: .orange, offset: (x: 0, y: 12)).pinyin
-            HKText(textType: .characterBig, text: character)
+        VStack {
+            HKText(textType: .pinyinTitle, text: pinyin, color: .orange).pinyin
+            HKText(textType: .characterBig, text: chineseCharacter)
         }
     }
 }
-
-#if DEBUG
-struct CharacterSA_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterSA(pinyin: "wǒ", character: "我")
-    }
-}
-#endif

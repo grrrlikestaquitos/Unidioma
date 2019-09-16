@@ -20,7 +20,7 @@ final class MainController : WKHostingController<HirakanaView> {
     override var body: HirakanaView {
         switch model?.language {
             case Language.Japanese.rawValue:
-                return HirakanaView(viewType: .kanji(Series.B))
+                return HirakanaView(viewType: .kanji(Series.A))
             case Language.Chinese.rawValue:
                 return HirakanaView(viewType: .character(Series.B))
             default:

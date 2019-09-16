@@ -18,9 +18,10 @@ struct KanjiViewSB : View {
                              romaji: model.romaji,
                              meaning: model.meaning)
             Spacer()
-            KanjiDescriptionSB(englishPhrase: model.japanesePhrase,
+            KanjiDescriptionSB(englishPhrase: model.englishPhrase,
                                japanesePhrase: model.japanesePhrase,
                                romajiPhrase: model.romajiPhrase)
+            Spacer()
         }
     }
 }

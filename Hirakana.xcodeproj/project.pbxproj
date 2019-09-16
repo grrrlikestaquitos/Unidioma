@@ -10,6 +10,8 @@
 		541002E122C1FE6D00D42247 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E022C1FE6D00D42247 /* LanguageModel.swift */; };
 		541002E522C2A8FC00D42247 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E422C2A8FC00D42247 /* UserDefaults.swift */; };
 		5423494F22C4884600023245 /* CharacterFrequencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423494E22C4884600023245 /* CharacterFrequencyView.swift */; };
+		545046682320BE240072AF8A /* JapaneseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545046672320BE240072AF8A /* JapaneseViews.swift */; };
+		5450466A2320DFDD0072AF8A /* ChineseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545046692320DFDD0072AF8A /* ChineseViews.swift */; };
 		54617F1222C17521002A6499 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1122C17521002A6499 /* SettingsController.swift */; };
 		54617F1422C1776E002A6499 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1322C1776E002A6499 /* SettingsView.swift */; };
 		54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1822C1DDAD002A6499 /* LanguageView.swift */; };
@@ -96,6 +98,8 @@
 		541002E022C1FE6D00D42247 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		541002E422C2A8FC00D42247 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		5423494E22C4884600023245 /* CharacterFrequencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFrequencyView.swift; sourceTree = "<group>"; };
+		545046672320BE240072AF8A /* JapaneseViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseViews.swift; sourceTree = "<group>"; };
+		545046692320DFDD0072AF8A /* ChineseViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseViews.swift; sourceTree = "<group>"; };
 		54617F1122C17521002A6499 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		54617F1322C1776E002A6499 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		54617F1822C1DDAD002A6499 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				5483718B22C01774004B1000 /* Kanji Views */,
+				545046672320BE240072AF8A /* JapaneseViews.swift */,
 			);
 			path = Japanese;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				8810E16E22C32D9900EA0DCB /* Model */,
 				8810E17122C3306500EA0DCB /* Series A */,
 				8810E17222C3309D00EA0DCB /* Series B */,
+				545046692320DFDD0072AF8A /* ChineseViews.swift */,
 			);
 			path = Chinese;
 			sourceTree = "<group>";
@@ -556,6 +562,8 @@
 			files = (
 				54E598ED22E0351F00191EA9 /* Route.swift in Sources */,
 				8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */,
+				5450466A2320DFDD0072AF8A /* ChineseViews.swift in Sources */,
+				8810E18022C47F9C00EA0DCB /* CharacterMeaningViewSA.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
 				54F9906A22E4E955006388B1 /* Keys.swift in Sources */,
 				5423494F22C4884600023245 /* CharacterFrequencyView.swift in Sources */,
@@ -563,6 +571,7 @@
 				54AD92CE22BF1F1700045B93 /* MainController.swift in Sources */,
 				54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */,
 				5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */,
+				545046682320BE240072AF8A /* JapaneseViews.swift in Sources */,
 				5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */,
 				54E598F522E16CFC00191EA9 /* String+Extensions.swift in Sources */,
 				88B81A3A2325C96D005F290B /* DescriptionSA.swift in Sources */,

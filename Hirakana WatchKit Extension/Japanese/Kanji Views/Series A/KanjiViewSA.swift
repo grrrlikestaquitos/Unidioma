@@ -8,7 +8,6 @@ struct KanjiViewSA : View {
             KanjiCharacterSA(furigana: model.furigana,
                              kanji: model.character,
                              romaji: model.romaji)
-            Spacer()
             KanjiDescriptionSA(meaning: model.meaning,
                                englishPhrase: model.englishPhrase,
                                japanesePhrase: model.japanesePhrase,

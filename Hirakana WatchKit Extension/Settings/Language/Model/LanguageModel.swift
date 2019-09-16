@@ -2,13 +2,11 @@ import SwiftUI
 
 struct LanguageModel: Codable, Identifiable {
     var id: Int
-    var language: String
-    var isEnabled: Bool
+    var language: Language.RawValue
 
-    init(_ id: Int, _ language: String, _ isEnabled: Bool) {
+    init(_ id: Int, _ language: Language) {
         self.id = id
-        self.language = language
-        self.isEnabled = isEnabled
+        self.language = language.rawValue
     }
 }
 

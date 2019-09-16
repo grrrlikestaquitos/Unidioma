@@ -3,16 +3,20 @@ import SwiftUI
 struct LanguageView: View {
     @ObservedObject var dataStore = MainStore.shared.settings
 
-    private func renderLanguageSelector(item: LanguageModel) -> some View {
+    let supportedLanguages: [LanguageModel] = [
+        .init(0, .Japanese), .init(1, .Chinese)
+    ]
+
+    private func renderLanguageSelector(language: LanguageModel) -> some View {
         Button(action: {
-            self.dataStore.languageWasSelected(item)
+            self.dataStore.languageWasSelected(language)
         }) {
             HStack {
-                HKText(textType: .subtitle, text: item.language)
+                HKText(textType: .subtitle, text: language.language)
                     .padding([.leading], 5)
                 Spacer()
 
-                if item.isEnabled == true {
+                if (dataStore.languageSelected.value.language == language.language) {
                     Image(systemName: "checkmark.circle")
                         .padding([.trailing], 5)
                 }
@@ -21,8 +25,8 @@ struct LanguageView: View {
     }
 
     var body: some View {
-        List(dataStore.languages.value) { item in
-            self.renderLanguageSelector(item: item)
+        List(supportedLanguages) { language in
+            self.renderLanguageSelector(language: language)
         }
     }
 }

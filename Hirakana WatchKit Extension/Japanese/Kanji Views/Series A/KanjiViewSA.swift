@@ -4,14 +4,18 @@ struct KanjiViewSA : View {
     var model: KanjiModel
 
     var body: some View {
-        HStack {
-            KanjiCharacterSA(furigana: model.furigana,
-                             kanji: model.character,
-                             romaji: model.romaji)
-            KanjiDescriptionSA(meaning: model.meaning,
-                               englishPhrase: model.englishPhrase,
-                               japanesePhrase: model.japanesePhrase,
-                               romajiPhrase: model.romajiPhrase)
+        VStack {
+            Spacer()
+            HStack {
+                KanjiCharacterSA(furigana: model.furigana,
+                                 kanji: model.character,
+                                 romaji: model.romaji)
+                KanjiDescriptionSA(meaning: model.meaning,
+                                   englishPhrase: model.englishPhrase,
+                                   japanesePhrase: model.japanesePhrase,
+                                   romajiPhrase: model.romajiPhrase)
+            }
+            Spacer()
         }
     }
 }

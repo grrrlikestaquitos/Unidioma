@@ -2,7 +2,7 @@ import SwiftUI
 
 struct JapaneseViews: View {
     let type = "japanese"
-    let series = Series.A
+    let series = Series.B
 
     var body: some View {
         switch type {

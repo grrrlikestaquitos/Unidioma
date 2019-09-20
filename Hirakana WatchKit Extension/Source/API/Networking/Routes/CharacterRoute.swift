@@ -1,11 +1,10 @@
 import Foundation
 
-struct CharacterRangeRoute: Route {
-    typealias Model = [KanjiModel]
+struct CharacterRangeRoute<M: Codable>: Route {
+    typealias Model = [M]
 
     let route: (path: CharacterPath, from: Int, to: Int)
-
-    var baseUrl: URLs.BaseURL { .develop }
+    var baseUrl: URLs.BaseURL { .production }
     var queryFormat: String { "/%@?from=%d&to=%d" }
 
     var urlPath: String {

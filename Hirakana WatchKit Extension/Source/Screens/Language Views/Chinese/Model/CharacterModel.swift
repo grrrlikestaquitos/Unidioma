@@ -1,19 +1,19 @@
-//
-//  CharacterModel.swift
-//  Hirakana WatchKit Extension
-//
-//  Created by Katherine Li on 6/25/19.
-//  Copyright © 2019 Andrei Villasana. All rights reserved.
-//
+struct CharacterModel: Codable {
+    let id: Int?
+    let pinyin: String
+    let chineseCharacter: String
+    let meaning: String
+    let englishPhrase: String
+    let chinesePhrasePinyin: String
+    let chinesePhraseCharacters: String
+}
 
-import Foundation
-
-struct CharacterModel {
-    var id: Int?
-    var pinyin: String
-    var chineseCharacter: String
-    var meaning: String
-    var englishPhrase: String
-    var chinesePhrasePinyin: String
-    var chinesePhraseCharacters: String
+extension CharacterModel: BaseModel {
+    static let example = CharacterModel(id: 0,
+                                        pinyin: "wǒ",
+                                        chineseCharacter: "我",
+                                        meaning: "I; me; my",
+                                        englishPhrase: "I run",
+                                        chinesePhrasePinyin: "wǒ paǒ",
+                                        chinesePhraseCharacters: "我 跑")
 }

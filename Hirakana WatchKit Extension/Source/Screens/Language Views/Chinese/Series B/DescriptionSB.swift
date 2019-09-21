@@ -1,11 +1,3 @@
-//
-//  DescriptionSB.swift
-//  Hirakana WatchKit Extension
-//
-//  Created by Katherine Li on 9/8/19.
-//  Copyright © 2019 Andrei Villasana. All rights reserved.
-//
-
 import SwiftUI
 
 struct DescriptionSB : View {

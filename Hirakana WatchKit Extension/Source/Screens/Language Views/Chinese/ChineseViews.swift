@@ -1,27 +1,26 @@
 import SwiftUI
 
 struct ChineseViews: View {
-    let type = "chinese"
-    let series = Series.A
+    
+    enum Constant {
+        static let Chinese = "Chinese"
+    }
+    
+    let type = Constant.Chinese
+    let series = Series.B
+    let model: some BaseModel = CharacterModel.example
 
     var body: some View {
-        switch series {
-            case .A:
-                return AnyView(CharacterSA(pinyin: characterModel.pinyin,
-                                           chineseCharacter: characterModel.chineseCharacter))
-            case .B:
-                return AnyView(CharacterSB(pinyin: characterModel.pinyin,
-                                           chineseCharacter: characterModel.chineseCharacter,
-                                           meaning: characterModel.meaning))
-        }
+        return AnyView(renderChineseView(series: series))
     }
 
-    let characterModel = CharacterModel(id: 0,
-                                        pinyin: "wǒ",
-                                        chineseCharacter: "我",
-                                        meaning: "I; me; my",
-                                        englishPhrase: "I run",
-                                        chinesePhrasePinyin: "wǒ paǒ",
-                                        chinesePhraseCharacters: "我 跑")
+    func renderChineseView(series: Series) -> some View {
+        guard let model = model as? CharacterModel else { return AnyView(Text(""))}
+        switch series {
+        case .A:
+            return AnyView(CharacterViewSA(model: model))
+        case .B:
+            return AnyView(CharacterViewSB(model: model))
+        }
+    }
 }
-

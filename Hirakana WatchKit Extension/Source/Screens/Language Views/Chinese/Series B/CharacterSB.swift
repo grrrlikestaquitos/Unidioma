@@ -1,11 +1,3 @@
-//
-//  CharacterSB.swift
-//  Hirakana WatchKit Extension
-//
-//  Created by Katherine Li on 7/1/19.
-//  Copyright © 2019 Andrei Villasana. All rights reserved.
-//
-
 import SwiftUI
 
 private enum Headers: String {

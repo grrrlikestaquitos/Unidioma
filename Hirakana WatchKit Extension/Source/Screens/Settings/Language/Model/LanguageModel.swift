@@ -1,18 +1,16 @@
 import SwiftUI
 
-struct LanguageModel: Codable, Identifiable {
-    let id: Int
-    let category: [String: LanguageCategory]
+struct LanguageModel: Codable {
+    var category: [String: Category]
 
-    init(id: Int, category: [String: LanguageCategory]) {
-        self.id = id
+    init(category: [String: Category]) {
         self.category = category
     }
 }
 
 extension LanguageModel {
-    struct LanguageCategory: Codable {
-        let currentIndex: Int
+    struct Category: Codable {
+        var currentIndex: Int
     }
 }
 

@@ -6,11 +6,11 @@ struct LanguageView: View {
     var body: some View {
         VStack {
             Selector(onPress: {
-                self.dataStore.languageWasSelected(.Japanese)
+                self.dataStore.languageWasSelected(language: .Japanese)
             }, text: SupportedLanguages.Japanese.rawValue,
                condition: self.dataStore.language.value == SupportedLanguages.Japanese.rawValue)
             Selector(onPress: {
-                self.dataStore.languageWasSelected(.Chinese)
+                self.dataStore.languageWasSelected(language: .Chinese)
             }, text: SupportedLanguages.Chinese.rawValue,
                condition: self.dataStore.language.value == SupportedLanguages.Chinese.rawValue)
         }

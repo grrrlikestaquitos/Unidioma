@@ -1,3 +1,4 @@
 protocol SettingsStoreActions {
-    func languageWasSelected(_ language: SupportedLanguages)
+    func languageWasSelected(language: SupportedLanguages)
+    func update(language: SupportedLanguages, category: String, model: LanguageModel.Category)
 }

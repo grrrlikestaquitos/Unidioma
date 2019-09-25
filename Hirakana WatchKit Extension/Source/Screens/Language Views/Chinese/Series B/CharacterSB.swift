@@ -5,9 +5,9 @@ private enum Headers: String {
 }
 
 struct CharacterSB: View {
-    var pinyin: String
-    var chineseCharacter: String
-    var meaning: String
+    let pinyin: String
+    let chineseCharacter: String
+    let meaning: String
     
     var body: some View {
         HStack {

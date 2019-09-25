@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct CharacterSA: View {
-    var pinyin: String
-    var chineseCharacter: String
+    let pinyin: String
+    let chineseCharacter: String
     
     var body: some View {
         VStack {

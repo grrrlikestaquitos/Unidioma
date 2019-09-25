@@ -1,16 +1,22 @@
 import SwiftUI
 
 struct LanguageModel: Codable, Identifiable {
-    var id: Int
-    var language: Language.RawValue
+    let id: Int
+    let category: [String: LanguageCategory]
 
-    init(_ id: Int, _ language: Language) {
+    init(id: Int, category: [String: LanguageCategory]) {
         self.id = id
-        self.language = language.rawValue
+        self.category = category
     }
 }
 
-enum Language: String {
+extension LanguageModel {
+    struct LanguageCategory: Codable {
+        let currentIndex: Int
+    }
+}
+
+enum SupportedLanguages: String, CaseIterable {
     case Japanese
     case Chinese
 }

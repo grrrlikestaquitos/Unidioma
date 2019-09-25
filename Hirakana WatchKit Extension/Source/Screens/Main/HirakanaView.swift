@@ -7,8 +7,8 @@ enum Series {
 struct HirakanaView: View {
     @ObservedObject var settingsStore = MainStore.shared.settings
 
-    var languageSelected: Language {
-        let language = Language(rawValue: settingsStore.languageSelected.value.language)
+    var languageSelected: SupportedLanguages {
+        let language = SupportedLanguages(rawValue: settingsStore.language.value)
         return language!
     }
 

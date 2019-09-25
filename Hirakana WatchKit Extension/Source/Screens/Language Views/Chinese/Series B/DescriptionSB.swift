@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct DescriptionSB : View {
-    var englishPhrase: String
-    var chinesePhrasePinyin: String
-    var chinesePhraseCharacters: String
+    let englishPhrase: String
+    let chinesePhrasePinyin: String
+    let chinesePhraseCharacters: String
 
     var body: some View {
         HStack {

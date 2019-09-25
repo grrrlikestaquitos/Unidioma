@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct KanjiViewSA : View {
-    var model: KanjiModel
+    let model: KanjiModel
 
     var body: some View {
         VStack {

@@ -1,5 +1,5 @@
 struct KanjiModel: Codable {
-    var id: Int?
+    let id: Int
     let character: String
     let furigana: String
     let romaji: String
@@ -10,7 +10,8 @@ struct KanjiModel: Codable {
 }
 
 extension KanjiModel: BaseModel {
-    static let example = KanjiModel(character: "私",
+    static let example = KanjiModel(id: 0,
+                                    character: "私",
                                     furigana: "わたし",
                                     romaji: "wa-ta-shi",
                                     meaning: "I; Me",

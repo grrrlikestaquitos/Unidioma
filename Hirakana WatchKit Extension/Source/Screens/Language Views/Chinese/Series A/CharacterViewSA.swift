@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CharacterViewSA: View {
-    var model: CharacterModel
+    let model: CharacterModel
     
     var body: some View {
         HStack {

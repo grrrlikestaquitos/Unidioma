@@ -1,4 +1,3 @@
 protocol SettingsStoreActions {
-    func languageWasSelected(_ language: LanguageModel)
-    func charFrequencyWasSelected(_ number: Int)
+    func languageWasSelected(_ language: SupportedLanguages)
 }

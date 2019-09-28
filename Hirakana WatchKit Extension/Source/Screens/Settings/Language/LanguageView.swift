@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LanguageView: View {
-    @ObservedObject var dataStore = MainStore.shared.settings
+    @ObservedObject var dataStore = AppState.shared.settings
 
     var body: some View {
         VStack {

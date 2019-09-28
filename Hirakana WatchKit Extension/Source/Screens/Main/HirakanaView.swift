@@ -5,19 +5,18 @@ enum Series {
 }
 
 struct HirakanaView: View {
-    @ObservedObject var settingsStore = MainStore.shared.settings
-
-    var languageSelected: SupportedLanguages {
-        let language = SupportedLanguages(rawValue: settingsStore.language.value)
-        return language!
-    }
+    @ObservedObject private var settingsStore = AppState.shared.settings
+    var model: BaseModel
+    var language: SupportedLanguages
 
     var body: some View {
-        switch languageSelected {
-        case .Japanese:
-            return AnyView(JapaneseViews())
-        case .Chinese:
-            return AnyView(ChineseViews())
+        switch language {
+            case .Japanese:
+                return AnyView(JapaneseViews(model: model))
+            case .Chinese:
+                return AnyView(ChineseViews(model: model))
+            case .unknown:
+                return AnyView(Text("Something Wrong Happened"))
         }
     }
 }

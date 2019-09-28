@@ -1,7 +1,7 @@
 import Foundation
 
-class MainStore {
-    static let shared = MainStore()
+class AppState {
+    static let shared = AppState()
 
     // Stores
     let settings = SettingsStore()

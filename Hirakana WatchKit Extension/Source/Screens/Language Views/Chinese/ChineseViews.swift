@@ -1,14 +1,8 @@
 import SwiftUI
 
 struct ChineseViews: View {
-    
-    enum Constant {
-        static let Chinese = "Chinese"
-    }
-    
-    let type = Constant.Chinese
     let series = Series.B
-    let model: some BaseModel = CharacterModel.example
+    var model: BaseModel
 
     var body: some View {
         return AnyView(renderChineseView(series: series))

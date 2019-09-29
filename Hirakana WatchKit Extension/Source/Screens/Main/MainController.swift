@@ -3,25 +3,25 @@ import SwiftUI
 
 final class MainController: WKHostingController<HirakanaView> {
     let settingsStore = AppState.shared.settings
+    let mainStore = AppState.shared.main
+    let viewState = MainViewState(appState: AppState.shared)
 
-    var language: SupportedLanguages {
-        return SupportedLanguages(rawValue: settingsStore.language.value)
+    var language: Languages {
+        return Languages(rawValue: settingsStore.language.value)
     }
 
-    var model: BaseModel {
-        return KanjiModel(id: 0,
-                          character: "私",
-                          furigana: "わたし",
-                          romaji: "wa-ta-shi",
-                          meaning: "I; Me",
-                          englishPhrase: "I fell",
-                          japanesePhrase: "私は落ちた",
-                          romajiPhrase: "Watashi wa ochita")
+    var model: BaseModel? {
+        return mainStore.model
+    }
+
+    override func didAppear() {
+        viewState.checkLanguageConfig()
     }
 
     override func willActivate() {
         super.willActivate()
         setTitle(settingsStore.language.value)
+        print("Main activated")
     }
     
     override var body: HirakanaView {

@@ -1,14 +1,8 @@
 import SwiftUI
 
-enum JapaneseViewType {
-    case kanji
-    case hiragana
-//    case katakana
-}
-
 struct JapaneseViews: View {
     let series = Series.B
-    var model: BaseModel
+    var model: BaseModel?
 
     var body: some View {
         switch model {

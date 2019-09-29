@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ChineseViews: View {
     let series = Series.B
-    var model: BaseModel
+    var model: BaseModel?
 
     var body: some View {
         return AnyView(renderChineseView(series: series))

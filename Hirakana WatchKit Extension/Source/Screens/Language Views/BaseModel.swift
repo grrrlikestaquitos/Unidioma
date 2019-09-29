@@ -1,2 +1,1 @@
-protocol BaseModel {
-}
+protocol BaseModel {}

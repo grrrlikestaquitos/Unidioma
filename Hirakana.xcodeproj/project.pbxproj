@@ -26,6 +26,9 @@
 		548371A422C04798004B1000 /* HKText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548371A322C04798004B1000 /* HKText.swift */; };
 		549165EA2338334100F638D7 /* Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549165E92338334100F638D7 /* Selector.swift */; };
 		549165EC23388EE700F638D7 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549165EB23388EE700F638D7 /* Section.swift */; };
+		549165F9233F489800F638D7 /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549165F8233F489800F638D7 /* MainStore.swift */; };
+		549165FB233F4DBD00F638D7 /* MainViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549165FA233F4DBD00F638D7 /* MainViewState.swift */; };
+		549165FE234027C200F638D7 /* LanguageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549165FD234027C200F638D7 /* LanguageType.swift */; };
 		549BA09923335637006C240A /* HiraganaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BA09823335637006C240A /* HiraganaModel.swift */; };
 		549BA09B2333575F006C240A /* HiraganaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BA09A2333575F006C240A /* HiraganaView.swift */; };
 		549BA09D23335E03006C240A /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BA09C23335E03006C240A /* BaseModel.swift */; };
@@ -117,6 +120,9 @@
 		548371A322C04798004B1000 /* HKText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKText.swift; sourceTree = "<group>"; };
 		549165E92338334100F638D7 /* Selector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selector.swift; sourceTree = "<group>"; };
 		549165EB23388EE700F638D7 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		549165F8233F489800F638D7 /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
+		549165FA233F4DBD00F638D7 /* MainViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewState.swift; sourceTree = "<group>"; };
+		549165FD234027C200F638D7 /* LanguageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageType.swift; sourceTree = "<group>"; };
 		549BA08E23308A20006C240A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		549BA09823335637006C240A /* HiraganaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaModel.swift; sourceTree = "<group>"; };
 		549BA09A2333575F006C240A /* HiraganaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaView.swift; sourceTree = "<group>"; };
@@ -192,9 +198,10 @@
 		54617F0F22C17405002A6499 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				549165FC2340275700F638D7 /* Language Type */,
 				54617F1722C1DCF9002A6499 /* Language */,
-				54617F1122C17521002A6499 /* SettingsController.swift */,
 				54617F1322C1776E002A6499 /* SettingsView.swift */,
+				54617F1122C17521002A6499 /* SettingsController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 			children = (
 				5483719822C01A70004B1000 /* HirakanaView.swift */,
 				54AD92CD22BF1F1700045B93 /* MainController.swift */,
+				549165FA233F4DBD00F638D7 /* MainViewState.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -265,6 +273,22 @@
 			path = "Shared Views";
 			sourceTree = "<group>";
 		};
+		549165F7233F487700F638D7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				549165F8233F489800F638D7 /* MainStore.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		549165FC2340275700F638D7 /* Language Type */ = {
+			isa = PBXGroup;
+			children = (
+				549165FD234027C200F638D7 /* LanguageType.swift */,
+			);
+			path = "Language Type";
+			sourceTree = "<group>";
+		};
 		549BA08D23308A20006C240A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +300,7 @@
 		549BA092233350B0006C240A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				54F9906622E4DC2D006388B1 /* Data */,
 				549BA094233351E1006C240A /* Screens */,
 				54C3919922DC4C3B007D6126 /* API */,
 				548371A122C04738004B1000 /* Shared Views */,
@@ -393,7 +418,7 @@
 		54C3919922DC4C3B007D6126 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				54F9906622E4DC2D006388B1 /* Data */,
+				541002E322C2A8DD00D42247 /* User Defaults */,
 				54E598EE22E041BE00191EA9 /* Networking */,
 			);
 			path = API;
@@ -437,7 +462,7 @@
 		54F9906622E4DC2D006388B1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				541002E322C2A8DD00D42247 /* User Defaults */,
+				549165F7233F487700F638D7 /* Main */,
 				549C42E822CC2EE000131E1D /* Settings */,
 				547BDBF02312317F0099D9E6 /* AppState.swift */,
 			);
@@ -612,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54E598ED22E0351F00191EA9 /* Route.swift in Sources */,
+				549165FB233F4DBD00F638D7 /* MainViewState.swift in Sources */,
 				8810E17422C3359C00EA0DCB /* CharacterViewSA.swift in Sources */,
 				5450466A2320DFDD0072AF8A /* ChineseViews.swift in Sources */,
 				5483719622C018EA004B1000 /* KanjiDescriptionSA.swift in Sources */,
@@ -622,11 +648,13 @@
 				54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */,
 				549165EA2338334100F638D7 /* Selector.swift in Sources */,
 				5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */,
+				549165F9233F489800F638D7 /* MainStore.swift in Sources */,
 				545046682320BE240072AF8A /* JapaneseViews.swift in Sources */,
 				5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */,
 				54E598F522E16CFC00191EA9 /* String+Extensions.swift in Sources */,
 				88B81A3A2325C96D005F290B /* DescriptionSA.swift in Sources */,
 				549BA09D23335E03006C240A /* BaseModel.swift in Sources */,
+				549165FE234027C200F638D7 /* LanguageType.swift in Sources */,
 				8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */,
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,

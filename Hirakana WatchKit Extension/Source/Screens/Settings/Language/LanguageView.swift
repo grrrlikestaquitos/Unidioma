@@ -1,18 +1,27 @@
 import SwiftUI
 
 struct LanguageView: View {
-    @ObservedObject var dataStore = AppState.shared.settings
+    var language: Languages.RawValue
+    var actions: SettingsStoreActions
+
+    var isJapaneseSelected: Bool {
+        return (language == Languages.Japanese.rawValue)
+    }
+
+    var isChineseSelected: Bool {
+        return (language == Languages.Chinese.rawValue)
+    }
 
     var body: some View {
         VStack {
-            Selector(onPress: {
-                self.dataStore.languageWasSelected(language: .Japanese)
-            }, text: SupportedLanguages.Japanese.rawValue,
-               condition: self.dataStore.language.value == SupportedLanguages.Japanese.rawValue)
-            Selector(onPress: {
-                self.dataStore.languageWasSelected(language: .Chinese)
-            }, text: SupportedLanguages.Chinese.rawValue,
-               condition: self.dataStore.language.value == SupportedLanguages.Chinese.rawValue)
+            Selector(text: Languages.Japanese.rawValue,
+                     condition: isJapaneseSelected) {
+                        self.actions.languageWasSelected(language: .Japanese)
+            }
+            Selector(text: Languages.Chinese.rawValue,
+                     condition: isChineseSelected) {
+                        self.actions.languageWasSelected(language: .Chinese)
+            }
         }
     }
 }

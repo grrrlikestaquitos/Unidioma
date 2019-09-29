@@ -6,8 +6,9 @@ enum Series {
 
 struct HirakanaView: View {
     @ObservedObject private var settingsStore = AppState.shared.settings
-    var model: BaseModel
-    var language: SupportedLanguages
+    
+    var model: BaseModel?
+    var language: Languages
 
     var body: some View {
         switch language {

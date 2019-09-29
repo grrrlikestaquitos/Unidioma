@@ -1,9 +1,15 @@
 import SwiftUI
 
 struct Selector: View {
-    let onPress: () -> ()
     let text: String
     let condition: Bool
+    let onPress: () -> ()
+
+    init(text: String, condition: Bool, _ onPress: @escaping () -> ()) {
+        self.text = text
+        self.condition = condition
+        self.onPress = onPress
+    }
 
     var borderColor: Color {
         if condition {

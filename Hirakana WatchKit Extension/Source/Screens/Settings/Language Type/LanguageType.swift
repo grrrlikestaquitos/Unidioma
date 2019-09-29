@@ -1,17 +1,21 @@
 import SwiftUI
 
-struct Type: Codable, Identifiable {
-    let id: Int
-    let name: String
-}
-
 struct LanguageType: View {
-    var types: [Type]
+    let language: Languages.RawValue
+    let model: LanguageModel
+    let actions: SettingsStoreActions
+
+    func isTypeSelected(_ type: Type) -> Bool {
+        if let name = model.selectedType?.name {
+            return name == type.name
+        }
+        return false
+    }
     
     var body: some View {
-        ForEach(types) { type in
-            Selector(text: type.name, condition: true) {
-
+        ForEach(model.types) { type in
+            Selector(text: type.name, condition: self.isTypeSelected(type)) {
+                self.actions.languageTypeWasSelected(language: self.language, type: type)
             }
         }
     }

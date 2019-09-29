@@ -16,17 +16,17 @@ class JapaneseModel: LanguageModel {
     let hiragana: Category
     let katakana: Category
 
-    init(kanji: Category, hiragana: Category, katakana: Category) {
+    init(types: [Type],
+         selectedType: Int,
+         kanji: Category,
+         hiragana: Category,
+         katakana: Category) {
         self.kanji = kanji
         self.hiragana = hiragana
         self.katakana = katakana
         super.init()
-
-        super.types = [
-            Type(id: 0, name: "Kanji"),
-            Type(id: 1, name: "Hiragana"),
-            Type(id: 2, name: "Katakana")
-        ]
+        self.types = types
+        self.selectedType = types[selectedType]
     }
 
     required init(from decoder: Decoder) throws {
@@ -37,11 +37,13 @@ class JapaneseModel: LanguageModel {
 class ChineseModel: LanguageModel {
     let pinyin: Category
 
-    init(pinyin: Category) {
+    init(types: [Type],
+         selectedType: Int,
+         pinyin: Category) {
         self.pinyin = pinyin
         super.init()
-
-        super.types = [Type(id: 0, name: "Pinyin")]
+        self.types = types
+        self.selectedType = types[selectedType]
     }
 
     required init(from decoder: Decoder) throws {

@@ -12,9 +12,8 @@ struct SettingsView: View {
         return settingStore.language.value
     }
 
-    var types: [Type] {
-        let config = settingStore.languageConfig.value[language]
-        return config?.types ?? []
+    var model: LanguageModel? {
+        return settingStore.languageConfig.value[language]
     }
 
     var body: some View {
@@ -22,12 +21,24 @@ struct SettingsView: View {
             Section(SettingsPage.language.rawValue) {
                 LanguageView(language: language, actions: settingStore.self)
             }
-            if (types.count > 0) {
-                Section(SettingsPage.type.rawValue) {
-                    LanguageType(types: types)
-                }
-            }
+            RenderLanguageType()
         }
+    }
+
+    func RenderLanguageType() -> some View {
+        guard let unwrappedModel = model else { return AnyView(Text("")) }
+
+        if (unwrappedModel.types.count > 0) {
+            return AnyView(
+                Section(SettingsPage.type.rawValue) {
+                    LanguageType(language: language,
+                                 model: unwrappedModel,
+                                 actions: settingStore.self)
+                }
+            )
+        }
+
+        return AnyView(Text(""))
     }
 }
 

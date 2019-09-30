@@ -15,7 +15,7 @@ extension SettingsStore: SettingsStoreActions {
     }
 
     func languageTypeWasSelected(language: Languages.RawValue, type: Type) {
-        let modifiedConfig = self.languageConfig.value
+        var modifiedConfig = self.languageConfig.value
         modifiedConfig[language]?.selectedType = type
 
         self.languageConfig.value = modifiedConfig
@@ -28,20 +28,23 @@ extension SettingsStore: SettingsStoreActions {
 
 private extension SettingsStore {
     static let defaultLanguageConfig: [Languages.RawValue: LanguageModel] = [
-        Languages.Japanese.rawValue: JapaneseModel(
-            types: [Type(id: 0, name: "Kanji"),
-                    Type(id: 1, name: "Hiragana"),
-                    Type(id: 2, name: "Katakana")],
+        Languages.Japanese.rawValue: LanguageModel(
             selectedType: 0,
-            kanji: Category(currentIndex: 0, limit: nil, timestamp: Date()),
-            hiragana: Category(currentIndex: 0, limit: 45, timestamp: Date()),
-            katakana: Category(currentIndex: 0, limit: 45, timestamp: Date())
+            types: [Type(id: 0, name: "Kanji", category: Category(currentIndex: 0,
+                                                                  limit: nil,
+                                                                  timestamp: Date())),
+                    Type(id: 1, name: "Hiragana", category: Category(currentIndex: 0,
+                                                                     limit: 45,
+                                                                     timestamp: Date())),
+                    Type(id: 2, name: "Katakana", category: Category(currentIndex: 0,
+                                                                     limit: 45,
+                                                                     timestamp: Date()))]
         ),
-        Languages.Chinese.rawValue: ChineseModel(
-            //Katherine TODO, set limit
-            types: [Type(id: 0, name: "Pinyin")],
+        Languages.Chinese.rawValue: LanguageModel(
             selectedType: 0,
-            pinyin: Category(currentIndex: 0, limit: nil, timestamp: Date())
+            types: [Type(id: 0, name: "Pinyin", category: Category(currentIndex: 0,
+                                                                   limit: nil,
+                                                                   timestamp: Date()))]
         )
     ]
 

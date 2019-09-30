@@ -12,13 +12,5 @@ final class MainViewState {
     func checkLanguageConfig() {
         let language = Languages(rawValue: settingsStore.language.value)
         var config = settingsStore.languageConfig.value[language.rawValue]
-
-        switch language {
-            case .Japanese:
-                config = config as? JapaneseModel
-            case .Chinese:
-                 config = config as? ChineseModel
-            case .unknown: return
-        }
     }
 }

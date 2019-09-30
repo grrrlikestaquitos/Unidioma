@@ -1,3 +1,1 @@
-protocol BaseModel {
-    static var example: Self { get }
-}
+protocol BaseModel {}

@@ -1,43 +1,44 @@
 import SwiftUI
 
 private enum SettingsPage: String {
-    case languages = "Languages"
-    case frequency = "Char Frequency"
+    case language = "Language"
+    case type = "Type"
 }
 
 struct SettingsView: View {
+    @ObservedObject var settingStore = AppState.shared.settings
+
+    var language: Languages.RawValue {
+        return settingStore.language.value
+    }
+
+    var model: LanguageModel? {
+        return settingStore.languageConfig.value[language]
+    }
+
     var body: some View {
-        VStack {
-            SettingsNavigator(.languages) {
-                LanguageView()
+        ScrollView {
+            Section(SettingsPage.language.rawValue) {
+                LanguageView(language: language, actions: settingStore.self)
             }
-            SettingsNavigator(.frequency) {
-                CharacterFrequencyView()
-            }
-            Spacer()
+            RenderLanguageType()
         }
     }
-}
 
-private extension SettingsView {
-    struct SettingsNavigator<P: View>: View {
-        private let page: P
-        private let text: SettingsPage
+    func RenderLanguageType() -> some View {
+        guard let unwrappedModel = model else { return AnyView(Text("")) }
 
-        init(_ text: SettingsPage, _ page: () -> (P)) {
-            self.page = page()
-            self.text = text
-        }
-        
-        var body: some View {
-            NavigationLink(destination: page) {
-                HStack {
-                    HKText(textType: .title, text: text.rawValue)
-                        .padding([.leading], 5)
-                    Spacer()
+        if (unwrappedModel.types.count > 0) {
+            return AnyView(
+                Section(SettingsPage.type.rawValue) {
+                    LanguageType(language: language,
+                                 model: unwrappedModel,
+                                 actions: settingStore.self)
                 }
-            }
+            )
         }
+
+        return AnyView(Text(""))
     }
 }
 

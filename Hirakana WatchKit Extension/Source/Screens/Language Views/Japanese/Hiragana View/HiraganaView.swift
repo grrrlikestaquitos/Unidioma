@@ -6,8 +6,6 @@ struct HiraganaView: View {
     var body: some View {
         VStack {
             Spacer()
-            HKText(textType: .subtitle, text: "Hiragana")
-            Spacer()
             HStack {
                 Spacer()
                 HKText(textType: .kanjiMed, text: model.character)
@@ -17,6 +15,7 @@ struct HiraganaView: View {
                 Spacer()
             }
             Spacer()
+            HKText(textType: .subtitle, text: "Hiragana - Alphabet")
             Spacer()
         }
     }

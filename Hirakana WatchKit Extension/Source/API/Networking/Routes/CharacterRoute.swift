@@ -1,15 +1,15 @@
 import Foundation
 
-struct CharacterRangeRoute<M: Codable>: Route {
+struct CharacterRoute<M: Codable>: Route {
     typealias Model = [M]
 
-    let route: (path: CharacterPath, from: Int, to: Int)
+    let route: (path: CharacterPath, id: Int)
     var baseUrl: URLs.BaseURL { .production }
-    var queryFormat: String { "/%@?from=%d&to=%d" }
+    var queryFormat: String { "/%@?id=%d" }
 
     var urlPath: String {
-        let (routes, from, to) = route
-        return String(format: queryFormat, arguments: [routes.rawValue, from, to])
+        let (path, id) = route
+        return String(format: queryFormat, arguments: [path.rawValue, id])
     }
 
     func buildRouteUrl() -> URL {
@@ -17,8 +17,9 @@ struct CharacterRangeRoute<M: Codable>: Route {
     }
 }
 
-extension CharacterRangeRoute {
+extension CharacterRoute {
     enum CharacterPath: String {
         case kanji, hiragana, katakana
     }
 }
+

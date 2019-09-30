@@ -7,9 +7,9 @@ private enum Headers: String {
 
 struct DescriptionSA : View  {
     let meaning: String
-    var englishPhrase: String
-    var chinesePhrasePinyin: String
-    var chinesePhraseCharacters: String
+    let englishPhrase: String
+    let chinesePhrasePinyin: String
+    let chinesePhraseCharacters: String
 
     var body: some View {
         VStack {

@@ -1,16 +1,16 @@
 import SwiftUI
 
-struct LanguageModel: Codable, Identifiable {
-    var id: Int
-    var language: Language.RawValue
-
-    init(_ id: Int, _ language: Language) {
-        self.id = id
-        self.language = language.rawValue
-    }
+protocol LanguageModelProtocol: Codable {
+    var selectedType: Type { get }
+    var types: [Type] { get }
 }
 
-enum Language: String {
-    case Japanese
-    case Chinese
+struct LanguageModel: LanguageModelProtocol {
+    var selectedType: Type
+    var types: [Type]
+
+    init(selectedType: Int, types: [Type]) {
+        self.selectedType = types[selectedType]
+        self.types = types
+    }
 }

@@ -17,6 +17,8 @@ final class MainViewState {
         switch type {
             case .Hiragana:
                 fetchRequest(model: HiraganaModel.self, path: .hiragana, id: id)
+            case .Katakana:
+                fetchRequest(model: KatakanaModel.self, path: .katakana, id: id)
             case .Kanji:
                 fetchRequest(model: KanjiModel.self, path: .kanji, id: id)
             default:
@@ -24,15 +26,18 @@ final class MainViewState {
         }
     }
 
-    func fetchRequest<M: BaseModel>(model: M.Type, path: CharacterRoute<M>.CharacterPath, id: Int) {
+    func fetchRequest<M: BaseModel>(model: M.Type,
+                                    path: CharacterRoute<M>.CharacterPath,
+                                    id: Int) {
         let endpoint = CharacterRoute<M>(route: (path, id))
 
-        HTTP(endpoint: endpoint).request(success: { (data) in
-            DispatchQueue.main.async {
-                self.mainStore.model = data.first
-            }
-        }, failure: { error in
-            print(error)
-        })
+        HTTP(endpoint: endpoint)
+            .request(success: { (data) in
+                DispatchQueue.main.async {
+                    self.mainStore.model = data.first
+                }
+            }, failure: { error in
+                print(error)
+            })
     }
 }

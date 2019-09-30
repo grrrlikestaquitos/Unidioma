@@ -26,7 +26,9 @@ struct SettingsView: View {
     }
 
     func RenderLanguageType() -> some View {
-        guard let unwrappedModel = model else { return AnyView(Text("")) }
+        guard let unwrappedModel = model else {
+            return EmptyView
+        }
 
         if (unwrappedModel.types.count > 0) {
             return AnyView(
@@ -38,7 +40,7 @@ struct SettingsView: View {
             )
         }
 
-        return AnyView(Text(""))
+        return EmptyView
     }
 }
 

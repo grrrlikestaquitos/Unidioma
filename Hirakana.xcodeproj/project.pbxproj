@@ -45,6 +45,7 @@
 		54B168E622C3217C000FECBE /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B168E522C3217C000FECBE /* SettingsStore.swift */; };
 		54C3919822DC4C1A007D6126 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3919722DC4C1A007D6126 /* HTTP.swift */; };
 		54D88CD223415CC500B4D1FD /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CD123415CC500B4D1FD /* Type.swift */; };
+		54D88CD42341A3E400B4D1FD /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CD32341A3E400B4D1FD /* Languages.swift */; };
 		54E598EB22E0350B00191EA9 /* CharacterRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598EA22E0350B00191EA9 /* CharacterRoute.swift */; };
 		54E598ED22E0351F00191EA9 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598EC22E0351F00191EA9 /* Route.swift */; };
 		54E598F222E15DE800191EA9 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598F122E15DE800191EA9 /* URLs.swift */; };
@@ -145,6 +146,7 @@
 		54B168E522C3217C000FECBE /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		54C3919722DC4C1A007D6126 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		54D88CD123415CC500B4D1FD /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		54D88CD32341A3E400B4D1FD /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		54E598EA22E0350B00191EA9 /* CharacterRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRoute.swift; sourceTree = "<group>"; };
 		54E598EC22E0351F00191EA9 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		54E598F122E15DE800191EA9 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				549165F7233F487700F638D7 /* Main */,
 				549C42E822CC2EE000131E1D /* Settings */,
 				547BDBF02312317F0099D9E6 /* AppState.swift */,
+				54D88CD32341A3E400B4D1FD /* Languages.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				549BA09B2333575F006C240A /* HiraganaView.swift in Sources */,
 				88B81A3C2325D46E005F290B /* DescriptionSB.swift in Sources */,
 				549BA09923335637006C240A /* HiraganaModel.swift in Sources */,
+				54D88CD42341A3E400B4D1FD /* Languages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

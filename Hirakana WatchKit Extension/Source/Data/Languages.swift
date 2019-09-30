@@ -14,3 +14,12 @@ enum Languages: String, CaseIterable {
         }
     }
 }
+
+enum LanguageTypes: String {
+    // Japanese
+    case Kanji
+    case Hiragana
+    case Katakana
+    // Chinese
+    case Pinyin
+}

@@ -4,18 +4,16 @@ enum Series {
     case A, B
 }
 
-struct HirakanaView: View {
-    @ObservedObject private var settingsStore = AppState.shared.settings
-    
-    var model: BaseModel?
+struct HirakanaView: View {    
+    @ObservedObject var mainStore = AppState.shared.main
     var language: Languages
 
     var body: some View {
         switch language {
             case .Japanese:
-                return AnyView(JapaneseViews(model: model))
+                return AnyView(JapaneseViews(model: mainStore.model))
             case .Chinese:
-                return AnyView(ChineseViews(model: model))
+                return AnyView(ChineseViews(model: mainStore.model))
             case .unknown:
                 return AnyView(Text("Something Wrong Happened"))
         }

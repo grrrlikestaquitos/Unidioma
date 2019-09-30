@@ -30,21 +30,30 @@ private extension SettingsStore {
     static let defaultLanguageConfig: [Languages.RawValue: LanguageModel] = [
         Languages.Japanese.rawValue: LanguageModel(
             selectedType: 0,
-            types: [Type(id: 0, name: "Kanji", category: Category(currentIndex: 0,
-                                                                  limit: nil,
-                                                                  timestamp: Date())),
-                    Type(id: 1, name: "Hiragana", category: Category(currentIndex: 0,
-                                                                     limit: 45,
-                                                                     timestamp: Date())),
-                    Type(id: 2, name: "Katakana", category: Category(currentIndex: 0,
-                                                                     limit: 45,
-                                                                     timestamp: Date()))]
+            types: [Type(id: 0,
+                         name: LanguageTypes.Hiragana.rawValue,
+                         currentIndex: 0,
+                         limit: 45,
+                         timestamp: Date()),
+                    Type(id: 1,
+                         name: LanguageTypes.Katakana.rawValue,
+                         currentIndex: 0,
+                         limit: 45,
+                         timestamp: Date()),
+                    Type(id: 2,
+                         name: LanguageTypes.Kanji.rawValue,
+                         currentIndex: 0,
+                         limit: nil,
+                         timestamp: Date()),
+            ]
         ),
         Languages.Chinese.rawValue: LanguageModel(
             selectedType: 0,
-            types: [Type(id: 0, name: "Pinyin", category: Category(currentIndex: 0,
-                                                                   limit: nil,
-                                                                   timestamp: Date()))]
+            types: [Type(id: 0,
+                         name: LanguageTypes.Pinyin.rawValue,
+                         currentIndex: 0,
+                         limit: nil,
+                         timestamp: Date())]
         )
     ]
 

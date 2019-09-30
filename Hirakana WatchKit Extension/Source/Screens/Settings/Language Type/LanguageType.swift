@@ -6,10 +6,7 @@ struct LanguageType: View {
     let actions: SettingsStoreActions
 
     func isTypeSelected(_ type: Type) -> Bool {
-        if let name = model.selectedType?.name {
-            return name == type.name
-        }
-        return false
+        return model.selectedType.name == type.name
     }
     
     var body: some View {

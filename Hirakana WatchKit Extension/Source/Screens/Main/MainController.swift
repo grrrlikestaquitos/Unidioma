@@ -3,15 +3,10 @@ import SwiftUI
 
 final class MainController: WKHostingController<HirakanaView> {
     let settingsStore = AppState.shared.settings
-    let mainStore = AppState.shared.main
-    let viewState = MainViewState(appState: AppState.shared)
+    let viewState = MainViewState()
 
     var language: Languages {
         return Languages(rawValue: settingsStore.language.value)
-    }
-
-    var model: BaseModel? {
-        return mainStore.model
     }
 
     override func didAppear() {
@@ -25,6 +20,6 @@ final class MainController: WKHostingController<HirakanaView> {
     }
     
     override var body: HirakanaView {
-        return HirakanaView(model: model, language: language)
+        return HirakanaView(language: language)
     }
 }

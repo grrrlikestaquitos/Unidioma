@@ -7,11 +7,14 @@ struct DataResponse<M: Codable>: Codable {
 struct HTTP<Endpoint: Route> {
     private let decoder = JSONDecoder()
     private let session = URLSession.shared
-    let endpoint: Endpoint
+    var endpoint: Endpoint?
 
     public func request(success: ((Endpoint.Model) -> Void)? = nil,
                         failure: ((Error) -> Void)? = nil) {
+        guard let endpoint = endpoint else { return }
+        
         session.dataTask(with: endpoint.buildRouteUrl()) { (data, responseInfo, error) in
+
             if let data = data {
                 do {
                     let model: DataResponse<Endpoint.Model> = try self.serializeJSON(data: data)
@@ -20,6 +23,7 @@ struct HTTP<Endpoint: Route> {
                     failure?(serializationError)
                 }
             }
+
             if let error = error {
                 failure?(error)
             }

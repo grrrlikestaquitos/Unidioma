@@ -1,12 +1,12 @@
 import SwiftUI
 
 protocol LanguageModelProtocol: Codable {
-    var selectedType: Type? { get }
+    var selectedType: Type { get }
     var types: [Type] { get }
 }
 
 struct LanguageModel: LanguageModelProtocol {
-    var selectedType: Type?
+    var selectedType: Type
     var types: [Type]
 
     init(selectedType: Int, types: [Type]) {

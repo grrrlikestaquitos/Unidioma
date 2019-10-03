@@ -46,12 +46,9 @@ final class MainViewState {
                 updatedConfig.selectedType.currentIndex += 1
                 updatedConfig.selectedType.timestamp = Date()
 
-                DispatchQueue.main.async {
-                    self.settingsStore.languageConfig.value[self.language] = updatedConfig
-                }
-
                 fetchModel(config: updatedConfig) { data in
                     DispatchQueue.main.async {
+                        self.settingsStore.languageConfig.value[self.language] = updatedConfig
                         self.mainStore.model = data
                     }
                 }
@@ -63,18 +60,25 @@ final class MainViewState {
                 if canProgressToNextType {
                     var updatedConfig = config
                     updatedConfig.selectedType = updatedConfig.types[nextTypeId]
-
-                    DispatchQueue.main.async {
-                        self.settingsStore.languageConfig.value[self.language] = updatedConfig
-                    }
                     
                     fetchModel(config: updatedConfig) { data in
                         DispatchQueue.main.async {
+                            self.settingsStore.languageConfig.value[self.language] = updatedConfig
                             self.mainStore.model = data
                         }
                     }
                 }
+            }
+        } else {
+            var updatedConfig = config
+            updatedConfig.selectedType.currentIndex += 1
+            updatedConfig.selectedType.timestamp = Date()
 
+            fetchModel(config: updatedConfig) { data in
+                DispatchQueue.main.async {
+                    self.settingsStore.languageConfig.value[self.language] = updatedConfig
+                    self.mainStore.model = data
+                }
             }
         }
     }

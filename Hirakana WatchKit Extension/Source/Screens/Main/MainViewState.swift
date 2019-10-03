@@ -37,23 +37,38 @@ final class MainViewState {
     }
 
     private func updateConfig(config: LanguageModel) {
-        guard let limit = config.selectedType.limit else { return }
-        let shouldUpdate = config.selectedType.currentIndex <= limit
+        if let limit = config.selectedType.limit {
+            let withinTypeRange = config.selectedType.currentIndex < limit
 
-        if shouldUpdate {
-            var updatedConfig = config
-            updatedConfig.selectedType.currentIndex += 1
-            updatedConfig.selectedType.timestamp = Date()
+            if withinTypeRange {
+                var updatedConfig = config
+                updatedConfig.selectedType.currentIndex += 1
+                updatedConfig.selectedType.timestamp = Date()
 
-            DispatchQueue.main.async {
-                self.settingsStore.languageConfig.value[self.language] = updatedConfig
-            }
-
-            fetchModel(config: updatedConfig) { data in
                 DispatchQueue.main.async {
-                    self.mainStore.model = data
+                    self.settingsStore.languageConfig.value[self.language] = updatedConfig
+                }
+
+                fetchModel(config: updatedConfig) { data in
+                    DispatchQueue.main.async {
+                        self.mainStore.model = data
+                    }
                 }
             }
+        } else {
+            let lanTypeCount = config.types.count - 1
+            let nextTypeId = config.selectedType.id + 1
+            let canProgressToNextType = nextTypeId <= lanTypeCount
+
+            if canProgressToNextType {
+                var updatedConfig = config
+                updatedConfig.selectedType = updatedConfig.types[nextTypeId]
+
+                DispatchQueue.main.async {
+                    self.settingsStore.languageConfig.value[self.language] = updatedConfig
+                }
+            }
+
         }
     }
 

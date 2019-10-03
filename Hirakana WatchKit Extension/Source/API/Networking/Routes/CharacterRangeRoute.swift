@@ -16,9 +16,3 @@ struct CharacterRangeRoute<M: Codable>: Route {
         "\(baseUrl.rawValue)\(urlPath)".asUrl()
     }
 }
-
-extension CharacterRangeRoute {
-    enum CharacterPath: String {
-        case kanji, hiragana, katakana
-    }
-}

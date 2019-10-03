@@ -1,1 +1,1 @@
-protocol BaseModel {}
+protocol BaseModel: Codable {}

@@ -10,7 +10,7 @@ final class MainController: WKHostingController<HirakanaView> {
     }
 
     override func didAppear() {
-        viewState.checkLanguageConfig()
+        viewState.startState()
     }
 
     override func willActivate() {

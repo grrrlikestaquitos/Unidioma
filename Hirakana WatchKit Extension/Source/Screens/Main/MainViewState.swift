@@ -28,6 +28,7 @@ final class MainViewState {
         if didExpire {
             updateConfig(config: config)
         } else {
+            // TODO: Optimize this logic, otherwise redundant calls occur for same language type with same index
             fetchModel(config: config) { data in
                 DispatchQueue.main.async {
                     self.mainStore.model = data
@@ -54,21 +55,27 @@ final class MainViewState {
                         self.mainStore.model = data
                     }
                 }
-            }
-        } else {
-            let lanTypeCount = config.types.count - 1
-            let nextTypeId = config.selectedType.id + 1
-            let canProgressToNextType = nextTypeId <= lanTypeCount
+            } else {
+                let lanTypeCount = config.types.count - 1
+                let nextTypeId = config.selectedType.id + 1
+                let canProgressToNextType = nextTypeId <= lanTypeCount
 
-            if canProgressToNextType {
-                var updatedConfig = config
-                updatedConfig.selectedType = updatedConfig.types[nextTypeId]
+                if canProgressToNextType {
+                    var updatedConfig = config
+                    updatedConfig.selectedType = updatedConfig.types[nextTypeId]
 
-                DispatchQueue.main.async {
-                    self.settingsStore.languageConfig.value[self.language] = updatedConfig
+                    DispatchQueue.main.async {
+                        self.settingsStore.languageConfig.value[self.language] = updatedConfig
+                    }
+                    
+                    fetchModel(config: updatedConfig) { data in
+                        DispatchQueue.main.async {
+                            self.mainStore.model = data
+                        }
+                    }
                 }
-            }
 
+            }
         }
     }
 

@@ -12,6 +12,7 @@
 		545046682320BE240072AF8A /* JapaneseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545046672320BE240072AF8A /* JapaneseViews.swift */; };
 		5450466A2320DFDD0072AF8A /* ChineseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545046692320DFDD0072AF8A /* ChineseViews.swift */; };
 		545C4E0A23432803003A80F8 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C4E0923432803003A80F8 /* ErrorMessage.swift */; };
+		545C4E0C23471A33003A80F8 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C4E0B23471A33003A80F8 /* Date+Extensions.swift */; };
 		54617F1222C17521002A6499 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1122C17521002A6499 /* SettingsController.swift */; };
 		54617F1422C1776E002A6499 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1322C1776E002A6499 /* SettingsView.swift */; };
 		54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1822C1DDAD002A6499 /* LanguageView.swift */; };
@@ -115,6 +116,7 @@
 		545046672320BE240072AF8A /* JapaneseViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseViews.swift; sourceTree = "<group>"; };
 		545046692320DFDD0072AF8A /* ChineseViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseViews.swift; sourceTree = "<group>"; };
 		545C4E0923432803003A80F8 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		545C4E0B23471A33003A80F8 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		54617F1122C17521002A6499 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		54617F1322C1776E002A6499 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		54617F1822C1DDAD002A6499 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 				54D88CDD2341E95C00B4D1FD /* SwiftUIView+Extensions.swift */,
 				54D88CE12343094F00B4D1FD /* TimeInterval+Extensions.swift */,
 				545C4E0923432803003A80F8 /* ErrorMessage.swift */,
+				545C4E0B23471A33003A80F8 /* Date+Extensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 				549165FE234027C200F638D7 /* LanguageType.swift in Sources */,
 				8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */,
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
+				545C4E0C23471A33003A80F8 /* Date+Extensions.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,
 				541002E522C2A8FC00D42247 /* UserDefaults.swift in Sources */,
 				54C3919822DC4C1A007D6126 /* HTTP.swift in Sources */,

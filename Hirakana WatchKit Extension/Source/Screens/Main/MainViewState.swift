@@ -44,7 +44,7 @@ final class MainViewState {
             if withinTypeRange {
                 var updatedConfig = config
                 updatedConfig.selectedType.currentIndex += 1
-                updatedConfig.selectedType.timestamp = Date()
+                updatedConfig.selectedType.timestamp = Date.getHirakanaResetDate()
 
                 fetchModel(config: updatedConfig) { data in
                     DispatchQueue.main.async {
@@ -72,7 +72,7 @@ final class MainViewState {
         } else {
             var updatedConfig = config
             updatedConfig.selectedType.currentIndex += 1
-            updatedConfig.selectedType.timestamp = Date()
+            updatedConfig.selectedType.timestamp = Date.getHirakanaResetDate()
 
             fetchModel(config: updatedConfig) { data in
                 DispatchQueue.main.async {

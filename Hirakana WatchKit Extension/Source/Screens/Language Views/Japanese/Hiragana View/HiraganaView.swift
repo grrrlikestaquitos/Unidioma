@@ -8,14 +8,14 @@ struct HiraganaView: View {
             Spacer()
             HStack {
                 Spacer()
-                HKText(textType: .kanjiMed, text: model.character)
+                HKText(textSize: .seventy, text: model.character)
                 Spacer()
                 Spacer()
-                HKText(textType: .kanjiMed, text: model.romaji)
+                HKText(textSize: .fifty, text: model.romaji)
                 Spacer()
             }
             Spacer()
-            HKText(textType: .subtitle, text: "Hiragana - Alphabet")
+            HKText(textSize: .thirteen, text: "Hiragana - Alphabet")
             Spacer()
         }
     }

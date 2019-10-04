@@ -32,7 +32,7 @@ private extension SettingsStore {
             selectedType: 0,
             types: [Type(id: 0,
                          name: LanguageTypes.Hiragana.rawValue,
-                         currentIndex: 0,
+                         currentIndex: 43,
                          limit: 45,
                          timestamp: Date()),
                     Type(id: 1,

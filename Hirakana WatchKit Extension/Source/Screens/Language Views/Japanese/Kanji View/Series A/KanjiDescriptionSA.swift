@@ -14,13 +14,13 @@ struct KanjiDescriptionSA : View  {
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
-            HKText(textType: .title, text: Headers.Meaning.rawValue, color: .blue)
-            HKText(textType: .subtitle, text: meaning)
+            HKText(textSize: .fourteen, text: Headers.Meaning.rawValue, color: .blue)
+            HKText(textSize: .thirteen, text: meaning)
             Spacer()
-            HKText(textType: .title, text: Headers.Phrase.rawValue, color: .green)
-            HKText(textType: .subtitle, text: englishPhrase)
-            HKText(textType: .subtitle, text: japanesePhrase, color: .yellow)
-            HKText(textType: .subtitle, text: romajiPhrase, lines: 2).italic
+            HKText(textSize: .fourteen, text: Headers.Phrase.rawValue, color: .green)
+            HKText(textSize: .thirteen, text: englishPhrase)
+            HKText(textSize: .thirteen, text: japanesePhrase, color: .yellow)
+            HKText(textSize: .thirteen, text: romajiPhrase, lines: 2).italic
         }
     }
 }

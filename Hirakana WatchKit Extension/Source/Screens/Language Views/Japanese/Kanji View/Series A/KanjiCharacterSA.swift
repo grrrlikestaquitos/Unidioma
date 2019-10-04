@@ -7,9 +7,9 @@ struct KanjiCharacterSA : View {
 
     var body: some View {
         VStack(alignment: .center) {
-            HKText(textType: .largeTitle, text: furigana, color: .orange, offset: (x: 0, y: 12)).hiragana
-            HKText(textType: .kanjiBig, text: kanji)
-            HKText(textType: .title, text: romaji, color: .red, offset: (x: 0, y: -4)).italic
+            HKText(textSize: .eighteen, text: furigana, color: .orange, offset: (x: 0, y: 12)).hiragana
+            HKText(textSize: .eighty, text: kanji)
+            HKText(textSize: .fourteen, text: romaji, color: .red, offset: (x: 0, y: -4)).italic
         }
     }
 }

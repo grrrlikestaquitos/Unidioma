@@ -12,12 +12,12 @@ struct CharacterSB: View {
     var body: some View {
         HStack {
             VStack {
-                HKText(textType: .pinyinTitle, text: pinyin, color: .orange, offset: (x: 0, y: 10))
-                HKText(textType: .characterBig, text: chineseCharacter)
+                HKText(textSize: .twentyFive, text: pinyin, color: .orange, offset: (x: 0, y: 10))
+                HKText(textSize: .sixtyFive, text: chineseCharacter)
             }.offset(x: -5)
             VStack {
-                HKText(textType: .title, text: Headers.Meaning.rawValue, color: .blue)
-                HKText(textType: .subtitle, text: meaning)
+                HKText(textSize: .fourteen, text: Headers.Meaning.rawValue, color: .blue)
+                HKText(textSize: .thirteen, text: meaning)
             }.offset(x: 5)
         }
     }

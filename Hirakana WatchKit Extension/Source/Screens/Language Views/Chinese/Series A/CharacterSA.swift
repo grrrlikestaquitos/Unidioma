@@ -6,8 +6,8 @@ struct CharacterSA: View {
     
     var body: some View {
         VStack {
-            HKText(textType: .pinyinTitle, text: pinyin, color: .orange).pinyin
-            HKText(textType: .characterBig, text: chineseCharacter)
+            HKText(textSize: .twentyFive, text: pinyin, color: .orange).pinyin
+            HKText(textSize: .sixtyFive, text: chineseCharacter)
         }
     }
 }

@@ -20,7 +20,7 @@ struct Selector: View {
 
     var body: some View {
         Button(action: { self.onPress() }) {
-            HKText(textType: .subtitle, text: text)
+            HKText(textSize: .thirteen, text: text)
 //                .padding([.leading], 5)
         }.border(borderColor, width: 2)
         .cornerRadius(4)

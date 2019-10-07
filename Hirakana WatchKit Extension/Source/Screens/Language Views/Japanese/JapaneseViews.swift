@@ -3,7 +3,7 @@ import SwiftUI
 let EmptyView = AnyView(Text(""))
 
 struct JapaneseViews: View {
-    let series = Series.B
+    let series: Series = .C
     var model: BaseModel?
 
     var body: some View {
@@ -28,6 +28,8 @@ struct JapaneseViews: View {
                 return AnyView(KanjiViewSA(model: model))
             case .B:
                 return AnyView(KanjiViewSB(model: model))
+            case .C:
+                return AnyView(KanjiViewSC(model: model))
         }
     }
 

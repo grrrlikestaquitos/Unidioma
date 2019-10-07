@@ -8,11 +8,11 @@ struct KanjiDescriptionSB : View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                HKText(textType: .title, text: "Phrase:", color: .green)
-                HKText(textType: .title, text: englishPhrase, offset: (x: -4, y: 0))
+                HKText(textSize: .fourteen, text: "Phrase:", color: .green)
+                HKText(textSize: .fourteen, text: englishPhrase, offset: (x: -4, y: 0))
             }
-            HKText(textType: .title, text: japanesePhrase, color: .yellow)
-            HKText(textType: .subtitle, text: romajiPhrase, lines: 2).italic
+            HKText(textSize: .fourteen, text: japanesePhrase, color: .yellow)
+            HKText(textSize: .thirteen, text: romajiPhrase, lines: 2).italic
         }
     }
 }

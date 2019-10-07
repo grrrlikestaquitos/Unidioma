@@ -17,6 +17,8 @@ struct ChineseViews: View {
                 return AnyView(CharacterViewSA(model: model))
             case .B:
                 return AnyView(CharacterViewSB(model: model))
+            default:
+                return EmptyView
         }
     }
 }

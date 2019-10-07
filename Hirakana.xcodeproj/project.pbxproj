@@ -11,6 +11,10 @@
 		541002E522C2A8FC00D42247 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541002E422C2A8FC00D42247 /* UserDefaults.swift */; };
 		545046682320BE240072AF8A /* JapaneseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545046672320BE240072AF8A /* JapaneseViews.swift */; };
 		5450466A2320DFDD0072AF8A /* ChineseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545046692320DFDD0072AF8A /* ChineseViews.swift */; };
+		545C4E0A23432803003A80F8 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C4E0923432803003A80F8 /* ErrorMessage.swift */; };
+		545C4E0C23471A33003A80F8 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C4E0B23471A33003A80F8 /* Date+Extensions.swift */; };
+		545C4E35234BB9ED003A80F8 /* KanjiViewSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C4E34234BB9ED003A80F8 /* KanjiViewSC.swift */; };
+		545C4E37234BBA11003A80F8 /* KanjiCharacterSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C4E36234BBA11003A80F8 /* KanjiCharacterSC.swift */; };
 		54617F1222C17521002A6499 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1122C17521002A6499 /* SettingsController.swift */; };
 		54617F1422C1776E002A6499 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1322C1776E002A6499 /* SettingsView.swift */; };
 		54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54617F1822C1DDAD002A6499 /* LanguageView.swift */; };
@@ -50,6 +54,8 @@
 		54D88CDA2341E72100B4D1FD /* KatakanaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CD92341E72100B4D1FD /* KatakanaModel.swift */; };
 		54D88CDC2341E73F00B4D1FD /* KatakanaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CDB2341E73F00B4D1FD /* KatakanaView.swift */; };
 		54D88CDE2341E95C00B4D1FD /* SwiftUIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CDD2341E95C00B4D1FD /* SwiftUIView+Extensions.swift */; };
+		54D88CE02343032800B4D1FD /* CharacterPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CDF2343032800B4D1FD /* CharacterPaths.swift */; };
+		54D88CE22343094F00B4D1FD /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CE12343094F00B4D1FD /* TimeInterval+Extensions.swift */; };
 		54E598EB22E0350B00191EA9 /* CharacterRangeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598EA22E0350B00191EA9 /* CharacterRangeRoute.swift */; };
 		54E598ED22E0351F00191EA9 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598EC22E0351F00191EA9 /* Route.swift */; };
 		54E598F222E15DE800191EA9 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E598F122E15DE800191EA9 /* URLs.swift */; };
@@ -111,6 +117,10 @@
 		541002E422C2A8FC00D42247 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		545046672320BE240072AF8A /* JapaneseViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseViews.swift; sourceTree = "<group>"; };
 		545046692320DFDD0072AF8A /* ChineseViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseViews.swift; sourceTree = "<group>"; };
+		545C4E0923432803003A80F8 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		545C4E0B23471A33003A80F8 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		545C4E34234BB9ED003A80F8 /* KanjiViewSC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiViewSC.swift; sourceTree = "<group>"; };
+		545C4E36234BBA11003A80F8 /* KanjiCharacterSC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiCharacterSC.swift; sourceTree = "<group>"; };
 		54617F1122C17521002A6499 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		54617F1322C1776E002A6499 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		54617F1822C1DDAD002A6499 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
@@ -155,6 +165,8 @@
 		54D88CD92341E72100B4D1FD /* KatakanaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatakanaModel.swift; sourceTree = "<group>"; };
 		54D88CDB2341E73F00B4D1FD /* KatakanaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatakanaView.swift; sourceTree = "<group>"; };
 		54D88CDD2341E95C00B4D1FD /* SwiftUIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUIView+Extensions.swift"; sourceTree = "<group>"; };
+		54D88CDF2343032800B4D1FD /* CharacterPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPaths.swift; sourceTree = "<group>"; };
+		54D88CE12343094F00B4D1FD /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		54E598EA22E0350B00191EA9 /* CharacterRangeRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRangeRoute.swift; sourceTree = "<group>"; };
 		54E598EC22E0351F00191EA9 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		54E598F122E15DE800191EA9 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
@@ -195,6 +207,15 @@
 				54F9906922E4E955006388B1 /* Keys.swift */,
 			);
 			path = "User Defaults";
+			sourceTree = "<group>";
+		};
+		545C4E33234BB95E003A80F8 /* Series C */ = {
+			isa = PBXGroup;
+			children = (
+				545C4E34234BB9ED003A80F8 /* KanjiViewSC.swift */,
+				545C4E36234BBA11003A80F8 /* KanjiCharacterSC.swift */,
+			);
+			path = "Series C";
 			sourceTree = "<group>";
 		};
 		54617F0E22C17335002A6499 /* Japanese */ = {
@@ -244,6 +265,7 @@
 				5483719022C01832004B1000 /* Model */,
 				5483718D22C017D0004B1000 /* Series A */,
 				5483718C22C0179B004B1000 /* Series B */,
+				545C4E33234BB95E003A80F8 /* Series C */,
 			);
 			path = "Kanji View";
 			sourceTree = "<group>";
@@ -469,6 +491,7 @@
 				54E598EC22E0351F00191EA9 /* Route.swift */,
 				54E598EA22E0350B00191EA9 /* CharacterRangeRoute.swift */,
 				54D88CD52341A72500B4D1FD /* CharacterRoute.swift */,
+				54D88CDF2343032800B4D1FD /* CharacterPaths.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -496,6 +519,9 @@
 			children = (
 				54E598F422E16CFC00191EA9 /* String+Extensions.swift */,
 				54D88CDD2341E95C00B4D1FD /* SwiftUIView+Extensions.swift */,
+				54D88CE12343094F00B4D1FD /* TimeInterval+Extensions.swift */,
+				545C4E0923432803003A80F8 /* ErrorMessage.swift */,
+				545C4E0B23471A33003A80F8 /* Date+Extensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -688,6 +714,7 @@
 				54617F1222C17521002A6499 /* SettingsController.swift in Sources */,
 				54AD92CE22BF1F1700045B93 /* MainController.swift in Sources */,
 				54D88CD62341A72500B4D1FD /* CharacterRoute.swift in Sources */,
+				545C4E35234BB9ED003A80F8 /* KanjiViewSC.swift in Sources */,
 				54617F1922C1DDAD002A6499 /* LanguageView.swift in Sources */,
 				549165EA2338334100F638D7 /* Selector.swift in Sources */,
 				5483719422C01898004B1000 /* KanjiCharacterSA.swift in Sources */,
@@ -696,19 +723,23 @@
 				5483719F22C02676004B1000 /* KanjiDescriptionSB.swift in Sources */,
 				54E598F522E16CFC00191EA9 /* String+Extensions.swift in Sources */,
 				88B81A3A2325C96D005F290B /* DescriptionSA.swift in Sources */,
+				54D88CE22343094F00B4D1FD /* TimeInterval+Extensions.swift in Sources */,
 				549BA09D23335E03006C240A /* BaseModel.swift in Sources */,
 				549165FE234027C200F638D7 /* LanguageType.swift in Sources */,
 				8810E17022C32E6C00EA0DCB /* CharacterModel.swift in Sources */,
 				5483719222C01853004B1000 /* KanjiModel.swift in Sources */,
+				545C4E0C23471A33003A80F8 /* Date+Extensions.swift in Sources */,
 				5483719922C01A70004B1000 /* HirakanaView.swift in Sources */,
 				541002E522C2A8FC00D42247 /* UserDefaults.swift in Sources */,
 				54C3919822DC4C1A007D6126 /* HTTP.swift in Sources */,
 				54617F1422C1776E002A6499 /* SettingsView.swift in Sources */,
 				54E598F222E15DE800191EA9 /* URLs.swift in Sources */,
+				545C4E37234BBA11003A80F8 /* KanjiCharacterSC.swift in Sources */,
 				547BDBF12312317F0099D9E6 /* AppState.swift in Sources */,
 				54D88CD223415CC500B4D1FD /* Type.swift in Sources */,
 				88B81A3E2325D5A4005F290B /* CharacterViewSB.swift in Sources */,
 				54B168E622C3217C000FECBE /* SettingsStore.swift in Sources */,
+				545C4E0A23432803003A80F8 /* ErrorMessage.swift in Sources */,
 				54AD92D022BF1F1700045B93 /* ExtensionDelegate.swift in Sources */,
 				5483719D22C02668004B1000 /* KanjiCharacterSB.swift in Sources */,
 				8810E18A22CB123F00EA0DCB /* CharacterSB.swift in Sources */,
@@ -718,6 +749,7 @@
 				8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */,
 				5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */,
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,
+				54D88CE02343032800B4D1FD /* CharacterPaths.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
 				549C42EA22CC2F3B00131E1D /* SettingsStoreActions.swift in Sources */,
 				54D88CDA2341E72100B4D1FD /* KatakanaModel.swift in Sources */,

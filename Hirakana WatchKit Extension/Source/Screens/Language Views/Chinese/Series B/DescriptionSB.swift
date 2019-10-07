@@ -8,12 +8,12 @@ struct DescriptionSB : View {
     var body: some View {
         HStack {
             VStack {
-                HKText(textType: .title, text: "Phrase:", color: .green)
-                HKText(textType: .title, text: englishPhrase)
+                HKText(textSize: .fourteen, text: "Phrase:", color: .green)
+                HKText(textSize: .fourteen, text: englishPhrase)
             }.offset(x: -8)
             VStack {
-                HKText(textType: .title, text: chinesePhrasePinyin, color: .yellow)
-                HKText(textType: .subtitle, text: chinesePhraseCharacters).italic
+                HKText(textSize: .fourteen, text: chinesePhrasePinyin, color: .yellow)
+                HKText(textSize: .thirteen, text: chinesePhraseCharacters).italic
             }.offset(x: 8)
         }
     }

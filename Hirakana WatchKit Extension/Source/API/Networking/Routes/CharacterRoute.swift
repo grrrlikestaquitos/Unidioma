@@ -3,12 +3,12 @@ import Foundation
 struct CharacterRoute<M: Codable>: Route {
     typealias Model = [M]
 
-    let route: (path: CharacterPath, id: Int)
+    let path: CharacterPath
+    let id: Int
     var baseUrl: URLs.BaseURL { .production }
     var queryFormat: String { "/%@?id=%d" }
 
     var urlPath: String {
-        let (path, id) = route
         return String(format: queryFormat, arguments: [path.rawValue, id])
     }
 
@@ -16,10 +16,3 @@ struct CharacterRoute<M: Codable>: Route {
         "\(baseUrl.rawValue)\(urlPath)".asUrl()
     }
 }
-
-extension CharacterRoute {
-    enum CharacterPath: String {
-        case kanji, hiragana, katakana
-    }
-}
-

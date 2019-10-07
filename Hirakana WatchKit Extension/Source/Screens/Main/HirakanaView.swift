@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum Series {
-    case A, B
+    case A, B, C
 }
 
 struct HirakanaView: View {    

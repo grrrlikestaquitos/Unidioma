@@ -12,7 +12,7 @@ struct Section<P: View>: View {
     var body: some View {
         VStack {
             HStack {
-                HKText(textType: .title, text: text, color: .gray)
+                HKText(textSize: .fourteen, text: text, color: .gray)
                     .padding([.top, .bottom], 5)
                 Spacer()
             }

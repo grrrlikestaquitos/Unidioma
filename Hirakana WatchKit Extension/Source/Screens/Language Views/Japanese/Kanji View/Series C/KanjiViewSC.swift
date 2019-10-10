@@ -10,10 +10,12 @@ struct KanjiViewSC : View {
     }
 }
 
-//#if DEBUG
-//struct KanjiViewSC_Previews : PreviewProvider {
-//    static var previews: some View {
-//        KanjiViewSC()
-//    }
-//}
-//#endif
+#if DEBUG
+struct KanjiViewSC_Previews : PreviewProvider {
+    static let model = KanjiModel.example
+
+    static var previews: some View {
+        KanjiViewSC(model: model)
+    }
+}
+#endif

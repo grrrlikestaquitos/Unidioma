@@ -7,6 +7,9 @@ final class SettingsStore: ObservableObject {
 
     @Published var languageConfig = HKUserDefaults(key: .languageConfig,
                                                    defaultValue: defaultLanguageConfig)
+
+    @Published var notificationSchedule = HKUserDefaults(key: .notificationSchedule,
+                                                          defaultValue: defaultNotificationSchedule)
 }
 
 extension SettingsStore: SettingsStoreActions {
@@ -58,4 +61,11 @@ private extension SettingsStore {
     ]
 
     static let defaultLanguage: Languages.RawValue = Languages.Japanese.rawValue
+
+    static let defaultNotificationSchedule: [TimeSchedule] = [
+        TimeSchedule(id: 0, name: "Morning", time: 7, isSelected: false),
+        TimeSchedule(id: 1, name: "Noon", time: 13, isSelected: true),
+        TimeSchedule(id: 2, name: "Evening", time: 17, isSelected: true),
+        TimeSchedule(id: 3, name: "Night", time: 21, isSelected: false)
+    ]
 }

@@ -36,6 +36,7 @@
 		54977A822351A548002C5A9B /* HKNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54977A812351A548002C5A9B /* HKNotifications.swift */; };
 		54977A852351A82C002C5A9B /* ScheduleNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54977A842351A82C002C5A9B /* ScheduleNotificationsView.swift */; };
 		54977A8723529323002C5A9B /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54977A8623529323002C5A9B /* ImageSelector.swift */; };
+		54977A8D2352EB8E002C5A9B /* TimeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54977A8C2352EB8E002C5A9B /* TimeSchedule.swift */; };
 		549BA09923335637006C240A /* HiraganaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BA09823335637006C240A /* HiraganaModel.swift */; };
 		549BA09B2333575F006C240A /* HiraganaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BA09A2333575F006C240A /* HiraganaView.swift */; };
 		549BA09D23335E03006C240A /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BA09C23335E03006C240A /* BaseModel.swift */; };
@@ -145,6 +146,7 @@
 		54977A812351A548002C5A9B /* HKNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKNotifications.swift; sourceTree = "<group>"; };
 		54977A842351A82C002C5A9B /* ScheduleNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNotificationsView.swift; sourceTree = "<group>"; };
 		54977A8623529323002C5A9B /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
+		54977A8C2352EB8E002C5A9B /* TimeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSchedule.swift; sourceTree = "<group>"; };
 		549BA08E23308A20006C240A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		549BA09823335637006C240A /* HiraganaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaModel.swift; sourceTree = "<group>"; };
 		549BA09A2333575F006C240A /* HiraganaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaView.swift; sourceTree = "<group>"; };
@@ -344,9 +346,18 @@
 		54977A832351A807002C5A9B /* Schedule Notification */ = {
 			isa = PBXGroup;
 			children = (
+				54977A8B2352EB7C002C5A9B /* Model */,
 				54977A842351A82C002C5A9B /* ScheduleNotificationsView.swift */,
 			);
 			path = "Schedule Notification";
+			sourceTree = "<group>";
+		};
+		54977A8B2352EB7C002C5A9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54977A8C2352EB8E002C5A9B /* TimeSchedule.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		549BA08D23308A20006C240A /* Frameworks */ = {
@@ -773,6 +784,7 @@
 				541002E122C1FE6D00D42247 /* LanguageModel.swift in Sources */,
 				54AD92D622BF1F1700045B93 /* ComplicationController.swift in Sources */,
 				54D88CDC2341E73F00B4D1FD /* KatakanaView.swift in Sources */,
+				54977A8D2352EB8E002C5A9B /* TimeSchedule.swift in Sources */,
 				8810E17622C336B100EA0DCB /* CharacterSA.swift in Sources */,
 				5483718F22C01812004B1000 /* KanjiViewSA.swift in Sources */,
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,

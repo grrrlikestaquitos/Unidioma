@@ -17,6 +17,10 @@ struct SettingsView: View {
         return settingStore.languageConfig.value[language]
     }
 
+    var schedule: [TimeSchedule] {
+        return settingStore.notificationSchedule.value
+    }
+
     var body: some View {
         ScrollView {
             Section(SettingsPage.language.rawValue) {
@@ -24,7 +28,7 @@ struct SettingsView: View {
             }
             RenderLanguageType()
             Section(SettingsPage.scheduleNotification.rawValue) {
-                ScheduleNotificationsView()
+                ScheduleNotificationsView(model: schedule)
             }
         }
     }

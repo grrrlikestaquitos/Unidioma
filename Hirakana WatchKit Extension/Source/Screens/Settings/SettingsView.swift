@@ -3,6 +3,7 @@ import SwiftUI
 private enum SettingsPage: String {
     case language = "Language"
     case type = "Type"
+    case scheduleNotification = "Schedule Notification"
 }
 
 struct SettingsView: View {
@@ -22,6 +23,9 @@ struct SettingsView: View {
                 LanguageView(language: language, actions: settingStore.self)
             }
             RenderLanguageType()
+            Section(SettingsPage.scheduleNotification.rawValue) {
+                ScheduleNotificationsView()
+            }
         }
     }
 
@@ -44,10 +48,10 @@ struct SettingsView: View {
     }
 }
 
-//#if DEBUG
-//struct SettingsView_Previews : PreviewProvider {
-//    static var previews: some View {
-//        SettingsView()
-//    }
-//}
-//#endif
+#if DEBUG
+struct SettingsView_Previews : PreviewProvider {
+    static var previews: some View {
+        SettingsView()
+    }
+}
+#endif

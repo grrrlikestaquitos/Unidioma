@@ -5,13 +5,29 @@ struct ScheduleNotificationsView: View {
     let actions: SettingsStoreActions
 
     var body: some View {
-        HStack {
-            ForEach(model) { time in
-                ImageSelector(imageName: time.name, condition: time.isSelected) {
-                    self.actions.timeScheduleSelected(id: time.id)
+        VStack(alignment: .leading) {
+            RenderSelectedText()
+            HStack {
+                ForEach(model) { time in
+                    ImageSelector(imageName: time.name, condition: time.isSelected) {
+                        self.actions.timeScheduleSelected(id: time.id)
+                    }
                 }
             }
+            .padding([.horizontal], 2)
         }
-        .padding([.horizontal], 2)
+    }
+
+    func RenderSelectedText() -> some View {
+        var text = ""
+        var selectedStrings: [String] = []
+
+        for timeSchedule in model where timeSchedule.isSelected {
+            selectedStrings.append(timeSchedule.name)
+        }
+
+        text = selectedStrings.joined(separator: ", ")
+
+        return HKText(textSize: .ten, text: text, lines: 3)
     }
 }

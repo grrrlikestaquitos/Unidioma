@@ -10,12 +10,9 @@ struct Section<P: View>: View {
     }
 
     var body: some View {
-        VStack {
-            HStack {
-                HKText(textSize: .fourteen, text: text, color: .gray)
-                    .padding([.top, .bottom], 5)
-                Spacer()
-            }
+        VStack(alignment: .leading) {
+            HKText(textSize: .fourteen, text: text, color: .gray)
+                .padding([.top, .bottom], 5)
             self.view
         }
     }

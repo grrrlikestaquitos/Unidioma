@@ -9,6 +9,7 @@ enum TextSize: CGFloat {
     case eighteen = 18
     case fourteen = 14
     case thirteen = 13
+    case ten = 10
 }
 
 struct HKText : View {

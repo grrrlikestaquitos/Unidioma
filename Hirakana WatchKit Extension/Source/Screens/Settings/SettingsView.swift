@@ -31,6 +31,7 @@ struct SettingsView: View {
                 ScheduleNotificationsView(model: schedule,
                                           actions: settingStore.self)
             }
+            EmptyView.padding(25)
         }
     }
 

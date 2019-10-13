@@ -4,6 +4,11 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        let appNotification = HKNotifications()
+
+        appNotification.requestPermission()
+        appNotification.resetNotifications()
+        appNotification.createNotifications()
     }
 
     func applicationDidBecomeActive() {

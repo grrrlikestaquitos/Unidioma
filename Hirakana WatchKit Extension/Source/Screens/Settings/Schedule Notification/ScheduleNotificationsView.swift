@@ -3,6 +3,7 @@ import SwiftUI
 struct ScheduleNotificationsView: View {
     let model: [TimeSchedule]
     let actions: SettingsStoreActions
+    let notifications = HKNotifications()
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -11,6 +12,8 @@ struct ScheduleNotificationsView: View {
                 ForEach(model) { time in
                     ImageSelector(imageName: time.name, condition: time.isSelected) {
                         self.actions.timeScheduleSelected(id: time.id)
+                        self.notifications.resetNotifications()
+                        self.notifications.createNotifications()
                     }
                 }
             }

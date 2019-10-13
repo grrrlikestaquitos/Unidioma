@@ -15,7 +15,7 @@ struct HKNotifications {
 
         let content = UNMutableNotificationContent()
         content.title = "Word of the day!"
-        content.body = "New word of the day!\n Tap to learn more"
+        content.body = "New word of the day!\nTap to learn more"
         content.sound = .default
 
         for schedule in timeSchedules where schedule.isSelected {
@@ -30,4 +30,22 @@ struct HKNotifications {
     func resetNotifications() {
         center.removeAllPendingNotificationRequests()
     }
+}
+
+extension HKNotifications {
+    #if DEBUG
+    func scheduleMockNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Word of the day!"
+        content.body = "New word of the day!\n Tap to learn more"
+        content.sound = .default
+
+        let timeInterval = Date().timeIntervalSinceNow + 10.0
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+        let request = UNNotificationRequest(identifier: "mock_notification", content: content, trigger: trigger)
+
+        center.add(request)
+    }
+
+    #endif
 }

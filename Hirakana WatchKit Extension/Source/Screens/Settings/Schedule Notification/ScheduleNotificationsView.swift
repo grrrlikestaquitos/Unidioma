@@ -16,8 +16,8 @@ struct ScheduleNotificationsView: View {
                         self.notifications.createNotifications()
                     }
                 }
-            }
-            .padding([.horizontal], 2)
+            }.padding([.horizontal], 2)
+            RenderMockNotification()
         }
     }
 
@@ -33,4 +33,12 @@ struct ScheduleNotificationsView: View {
 
         return HKText(textSize: .ten, text: text, lines: 3)
     }
+
+    #if DEBUG
+    func RenderMockNotification() -> some View {
+        Selector(text: "Mock Notification", condition: false) {
+            self.notifications.scheduleMockNotification()
+        }
+    }
+    #endif
 }

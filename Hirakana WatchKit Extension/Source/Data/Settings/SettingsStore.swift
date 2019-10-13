@@ -24,8 +24,11 @@ extension SettingsStore: SettingsStoreActions {
         self.languageConfig.value = modifiedConfig
     }
 
-    func update(language: Languages, category: String, model: LanguageModel) {
-        // TODO
+    func timeScheduleSelected(id: Int) {
+        var modifiedSchedule = self.notificationSchedule.value
+        modifiedSchedule[id].isSelected.toggle()
+
+        self.notificationSchedule.value = modifiedSchedule
     }
 }
 

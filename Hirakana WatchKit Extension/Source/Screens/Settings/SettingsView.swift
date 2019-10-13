@@ -28,7 +28,8 @@ struct SettingsView: View {
             }
             RenderLanguageType()
             Section(SettingsPage.scheduleNotification.rawValue) {
-                ScheduleNotificationsView(model: schedule)
+                ScheduleNotificationsView(model: schedule,
+                                          actions: settingStore.self)
             }
         }
     }

@@ -1,9 +1,16 @@
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
+    let settings = AppState.shared.settings
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        let appNotification = HKNotifications()
+
+        appNotification.requestPermission {
+            appNotification.resetNotifications()
+            appNotification.createNotifications(timeSchedules: self.settings.notificationSchedule.value)
+        }
     }
 
     func applicationDidBecomeActive() {

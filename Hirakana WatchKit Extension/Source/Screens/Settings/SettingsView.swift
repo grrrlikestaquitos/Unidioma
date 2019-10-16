@@ -29,7 +29,8 @@ struct SettingsView: View {
             RenderLanguageType()
             Section(SettingsPage.scheduleNotification.rawValue) {
                 ScheduleNotificationsView(model: schedule,
-                                          actions: settingStore.self)
+                                          actions: settingStore.self,
+                                          isNotificationEnabled: settingStore.notificationsEnabled)
             }
             EmptyView.padding(25)
         }

@@ -3,16 +3,27 @@ import UserNotifications
 
 struct HKNotifications {
     private let center = UNUserNotificationCenter.current()
-    private let settings = AppState.shared.settings
 
-    func requestPermission() {
+    func requestPermission(didComplete: (() -> ())? = nil) {
         center.requestAuthorization(options: [.alert, .sound]) { (success, error) in
+            if success {
+                didComplete?()
+            }
         }
     }
 
-    func createNotifications() {
-        let timeSchedules = settings.notificationSchedule.value
+    func getNotificationPermissionStatus(isEnabled: @escaping (Bool) -> Void) {
+        center.getNotificationSettings { notificationSetting in
+            switch notificationSetting.authorizationStatus {
+                case .authorized:
+                    isEnabled(true)
+                default:
+                    isEnabled(false)
+            }
+        }
+    }
 
+    func createNotifications(timeSchedules: [TimeSchedule]) {
         let content = UNMutableNotificationContent()
         content.title = "Word of the day!"
         content.body = "New word of the day!\nTap to learn more"
@@ -46,6 +57,5 @@ extension HKNotifications {
 
         center.add(request)
     }
-
     #endif
 }

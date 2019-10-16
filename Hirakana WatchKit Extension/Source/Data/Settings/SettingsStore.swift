@@ -2,6 +2,8 @@ import SwiftUI
 import Combine
 
 final class SettingsStore: ObservableObject {
+    private let appNotifications = HKNotifications()
+
     @Published var language = HKUserDefaults(key: .languageSelected,
                                              defaultValue: defaultLanguage)
 
@@ -10,6 +12,8 @@ final class SettingsStore: ObservableObject {
 
     @Published var notificationSchedule = HKUserDefaults(key: .notificationSchedule,
                                                           defaultValue: defaultNotificationSchedule)
+
+    @Published var notificationsEnabled: Bool = false
 }
 
 extension SettingsStore: SettingsStoreActions {
@@ -29,6 +33,20 @@ extension SettingsStore: SettingsStoreActions {
         modifiedSchedule[id].isSelected.toggle()
 
         self.notificationSchedule.value = modifiedSchedule
+        appNotifications.resetNotifications()
+        appNotifications.createNotifications(timeSchedules: modifiedSchedule)
+    }
+
+    func getNotificationStatus() {
+        appNotifications.getNotificationPermissionStatus { enabled in
+            DispatchQueue.main.async {
+                self.notificationsEnabled = enabled
+            }
+        }
+    }
+
+    func mockNotification() {
+        appNotifications.scheduleMockNotification()
     }
 }
 

@@ -18,10 +18,18 @@ struct ImageSelector: View {
         return Color.gray
     }
 
+    var opacity: Double {
+        if condition {
+            return 1
+        }
+        return 0.4
+    }
+
     var body: some View {
         Button(action: { self.onPress() }) {
             Image(imageName)
                 .renderingMode(.original)
+                .opacity(opacity)
         }
         .clipShape(Circle())
         .overlay(Circle().stroke(borderColor, lineWidth: 1))

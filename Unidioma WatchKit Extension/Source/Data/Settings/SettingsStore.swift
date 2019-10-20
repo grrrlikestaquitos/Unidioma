@@ -51,37 +51,28 @@ extension SettingsStore: SettingsStoreActions {
 }
 
 private extension SettingsStore {
+    static let defaultLanguage: Languages.RawValue = Languages.Japanese.rawValue
+    
     static let defaultLanguageConfig: [Languages.RawValue: LanguageModel] = [
         Languages.Japanese.rawValue: LanguageModel(
             selectedType: 0,
-            types: [Type(id: 0,
-                         name: LanguageTypes.Hiragana.rawValue,
-                         currentIndex: 43,
-                         limit: 45,
-                         timestamp: Date.getCharacterResetDate()),
-                    Type(id: 1,
-                         name: LanguageTypes.Katakana.rawValue,
-                         currentIndex: 0,
-                         limit: 45,
-                         timestamp: Date.getCharacterResetDate()),
-                    Type(id: 2,
-                         name: LanguageTypes.Kanji.rawValue,
-                         currentIndex: 0,
-                         limit: nil,
-                         timestamp: Date.getCharacterResetDate()),
+            types: [
+                Type(id: 0, name: LanguageTypes.Hiragana.rawValue, currentIndex: 0,
+                     limit: 45, timestamp: Date.getCharacterResetDate()),
+                Type(id: 1, name: LanguageTypes.Katakana.rawValue, currentIndex: 0,
+                     limit: 45, timestamp: Date.getCharacterResetDate()),
+                    Type(id: 2, name: LanguageTypes.Kanji.rawValue, currentIndex: 0,
+                         limit: nil, timestamp: Date.getCharacterResetDate())
             ]
         ),
         Languages.Chinese.rawValue: LanguageModel(
             selectedType: 0,
-            types: [Type(id: 0,
-                         name: LanguageTypes.Pinyin.rawValue,
-                         currentIndex: 0,
-                         limit: nil,
-                         timestamp: Date())]
+            types: [
+                Type(id: 0, name: LanguageTypes.Pinyin.rawValue, currentIndex: 0,
+                     limit: nil, timestamp: Date.getCharacterResetDate())
+            ]
         )
     ]
-
-    static let defaultLanguage: Languages.RawValue = Languages.Japanese.rawValue
 
     static let defaultNotificationSchedule: [TimeSchedule] = [
         TimeSchedule(id: 0, name: "Morning", time: 7, isSelected: false),

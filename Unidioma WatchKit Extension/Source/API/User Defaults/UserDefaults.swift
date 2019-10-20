@@ -6,8 +6,18 @@ struct HKUserDefaults<M: Codable> {
     var key: Keys
     var defaultValue: M
 
+    private var _cachedValue: Any?
+
+    init(key: Keys, defaultValue: M) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
+
     var value: M {
         get {
+            if let cachedValue = _cachedValue {
+                return cachedValue as! M
+            }
             return get()
         }
         set {
@@ -15,10 +25,11 @@ struct HKUserDefaults<M: Codable> {
         }
     }
 
-    private func update<M: Codable> (_ value: M) {
+    private mutating func update<M: Codable> (_ value: M) {
         do {
             let encodedData = try JSONEncoder().encode(value)
             defaults.set(encodedData, forKey: key.rawValue)
+            _cachedValue = value
         } catch {
             print("Error while encoding \(error)")
         }

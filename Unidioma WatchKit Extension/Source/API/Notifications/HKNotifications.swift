@@ -53,6 +53,7 @@ extension HKNotifications {
 
         let timeInterval = Date().timeIntervalSinceNow + 10.0
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+        
         let request = UNNotificationRequest(identifier: "mock_notification", content: content, trigger: trigger)
 
         center.add(request)

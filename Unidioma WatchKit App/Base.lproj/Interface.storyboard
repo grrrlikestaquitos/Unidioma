@@ -6,10 +6,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14643"/>
     </dependencies>
     <scenes>
-        <!--Main Controller-->
+        <!--MainController-->
         <scene sceneID="RUd-og-cv4">
             <objects>
-                <hostingController hidesWhenLoading="NO" id="NBu-mt-KyX" customClass="MainController" customModule="Unidioma">
+                <hostingController identifier="MainController" hidesWhenLoading="NO" id="NBu-mt-KyX" customClass="MainController" customModule="Unidioma">
                     <connections>
                         <segue destination="JHA-ZX-AQs" kind="relationship" relationship="nextPage" id="p8w-gK-sbz"/>
                     </connections>

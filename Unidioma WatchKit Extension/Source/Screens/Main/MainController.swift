@@ -16,7 +16,6 @@ final class MainController: WKHostingController<MainView> {
     override func willActivate() {
         super.willActivate()
         setTitle(settingsStore.language.value)
-        print("Main activated")
     }
     
     override var body: MainView {

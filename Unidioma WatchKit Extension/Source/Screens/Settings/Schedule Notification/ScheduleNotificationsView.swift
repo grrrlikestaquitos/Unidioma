@@ -47,11 +47,14 @@ struct ScheduleNotificationsView: View {
         return HKText(textSize: .ten, text: text, lines: 3)
     }
 
-    #if DEBUG
+
     func RenderMockNotification() -> some View {
-        Selector(text: "Mock Notification", condition: false) {
-            self.actions.mockNotification()
-        }
+        #if DEBUG
+            return Selector(text: "Mock Notification", condition: false) {
+                self.actions.mockNotification()
+            }
+        #else
+            return EmptyView
+        #endif
     }
-    #endif
 }

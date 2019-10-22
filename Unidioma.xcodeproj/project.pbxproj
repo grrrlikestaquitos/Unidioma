@@ -179,6 +179,7 @@
 		54E598EC22E0351F00191EA9 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		54E598F122E15DE800191EA9 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		54E598F422E16CFC00191EA9 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		54F3DCC4235EB314008C10C0 /* Unidioma WatchKit Extension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Unidioma WatchKit Extension copy-Info.plist"; path = "/Users/colourhood/Desktop/COLOURHOOD/Unidioma/Unidioma WatchKit Extension copy-Info.plist"; sourceTree = "<absolute>"; };
 		54F9906922E4E955006388B1 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		8810E16F22C32E6C00EA0DCB /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		8810E17322C3359C00EA0DCB /* CharacterViewSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewSA.swift; sourceTree = "<group>"; };
@@ -446,6 +447,7 @@
 				54AD92CA22BF1F1700045B93 /* Unidioma WatchKit Extension */,
 				54AD92B422BF1F1600045B93 /* Products */,
 				549BA08D23308A20006C240A /* Frameworks */,
+				54F3DCC4235EB314008C10C0 /* Unidioma WatchKit Extension copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};

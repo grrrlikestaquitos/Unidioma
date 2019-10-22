@@ -44,7 +44,6 @@ struct HKNotifications {
 }
 
 extension HKNotifications {
-    #if DEBUG
     func scheduleMockNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Word of the day!"
@@ -58,5 +57,4 @@ extension HKNotifications {
 
         center.add(request)
     }
-    #endif
 }

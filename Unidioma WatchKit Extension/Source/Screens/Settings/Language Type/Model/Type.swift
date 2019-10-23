@@ -6,6 +6,7 @@ struct Type: Codable, Identifiable {
     var currentIndex: Int
     let limit: Int?
     var timestamp: Date
+    var didStartLearning: Bool
 }
 
 

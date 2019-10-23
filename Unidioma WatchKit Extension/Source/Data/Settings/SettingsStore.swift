@@ -57,19 +57,35 @@ private extension SettingsStore {
         Languages.Japanese.rawValue: LanguageModel(
             selectedType: 0,
             types: [
-                Type(id: 0, name: LanguageTypes.Hiragana.rawValue, currentIndex: 0,
-                     limit: 45, timestamp: Date.getCharacterResetDate()),
-                Type(id: 1, name: LanguageTypes.Katakana.rawValue, currentIndex: 0,
-                     limit: 45, timestamp: Date.getCharacterResetDate()),
-                    Type(id: 2, name: LanguageTypes.Kanji.rawValue, currentIndex: 0,
-                         limit: nil, timestamp: Date.getCharacterResetDate())
+                Type(id: 0,
+                     name: LanguageTypes.Hiragana.rawValue,
+                     currentIndex: 0,
+                     limit: 45,
+                     timestamp: Date.getCharacterResetDate(),
+                     didStartLearning: false),
+                Type(id: 1,
+                     name: LanguageTypes.Katakana.rawValue,
+                     currentIndex: 0,
+                     limit: 45,
+                     timestamp: Date.getCharacterResetDate(),
+                     didStartLearning: false),
+                Type(id: 2,
+                     name: LanguageTypes.Kanji.rawValue,
+                     currentIndex: 0,
+                     limit: nil,
+                     timestamp: Date.getCharacterResetDate(),
+                     didStartLearning: false)
             ]
         ),
         Languages.Chinese.rawValue: LanguageModel(
             selectedType: 0,
             types: [
-                Type(id: 0, name: LanguageTypes.Pinyin.rawValue, currentIndex: 0,
-                     limit: nil, timestamp: Date.getCharacterResetDate())
+                Type(id: 0,
+                     name: LanguageTypes.Pinyin.rawValue,
+                     currentIndex: 0,
+                     limit: nil,
+                     timestamp: Date.getCharacterResetDate(),
+                     didStartLearning: false)
             ]
         )
     ]

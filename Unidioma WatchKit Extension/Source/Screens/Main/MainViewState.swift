@@ -22,17 +22,30 @@ final class MainViewState {
     }
 
     private func getLanguageTypes() {
-        guard let config = config,
-            let didExpire = didTimestampExpire(date: config.selectedType.timestamp) else { return }
+        guard let config = config else { return }
+        let didExpire = didTimestampExpire(date: config.selectedType.timestamp)
 
-        if didExpire {
+        if config.selectedType.didStartLearning && didExpire == true {
             updateConfig(config: config)
-        } else {
-            // TODO: Optimize this logic, otherwise redundant calls occur for same language type with same index
-            fetchModel(config: config) { data in
+            return
+        }
+        if !config.selectedType.didStartLearning {
+            var updatedConfig = config
+            updatedConfig.selectedType.didStartLearning = true
+
+            fetchModel(config: updatedConfig) { data in
                 DispatchQueue.main.async {
+                    self.settingsStore.languageConfig.value[self.language] = updatedConfig
                     self.mainStore.model = data
                 }
+            }
+            return
+        }
+
+        // TODO: Optimize this logic, otherwise redundant calls occur for same language type with same index
+        fetchModel(config: config) { data in
+            DispatchQueue.main.async {
+                self.mainStore.model = data
             }
         }
     }

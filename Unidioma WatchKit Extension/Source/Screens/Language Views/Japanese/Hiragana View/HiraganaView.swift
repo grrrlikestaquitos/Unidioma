@@ -11,7 +11,11 @@ struct HiraganaView: View {
                 HKText(textSize: .seventy, text: model.character)
                 Spacer()
                 Spacer()
-                HKText(textSize: .fifty, text: model.romaji)
+                if (model.romaji.count > 1) {
+                    HKText(textSize: .fifty, text: model.romaji)
+                } else {
+                    HKText(textSize: .seventy, text: model.romaji)
+                }
                 Spacer()
             }
             Spacer()

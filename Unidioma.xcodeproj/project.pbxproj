@@ -198,13 +198,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		541002E222C2A4F200D42247 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		541002E322C2A8DD00D42247 /* User Defaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +251,6 @@
 		54617F1722C1DCF9002A6499 /* Language */ = {
 			isa = PBXGroup;
 			children = (
-				541002E222C2A4F200D42247 /* Model */,
 				54617F1822C1DDAD002A6499 /* LanguageView.swift */,
 			);
 			path = Language;
@@ -267,7 +259,6 @@
 		5483718B22C01774004B1000 /* Kanji View */ = {
 			isa = PBXGroup;
 			children = (
-				5483719022C01832004B1000 /* Model */,
 				5483718D22C017D0004B1000 /* Series A */,
 				5483718C22C0179B004B1000 /* Series B */,
 				545C4E33234BB95E003A80F8 /* Series C */,
@@ -293,14 +284,6 @@
 				5483719522C018EA004B1000 /* KanjiDescriptionSA.swift */,
 			);
 			path = "Series A";
-			sourceTree = "<group>";
-		};
-		5483719022C01832004B1000 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				5483719122C01853004B1000 /* KanjiModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		548371A122C04738004B1000 /* Shared Views */ = {
@@ -351,18 +334,9 @@
 		54977A832351A807002C5A9B /* Schedule Notification */ = {
 			isa = PBXGroup;
 			children = (
-				54977A8B2352EB7C002C5A9B /* Model */,
 				54977A842351A82C002C5A9B /* ScheduleNotificationsView.swift */,
 			);
 			path = "Schedule Notification";
-			sourceTree = "<group>";
-		};
-		54977A8B2352EB7C002C5A9B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				54977A8C2352EB8E002C5A9B /* TimeSchedule.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		549BA08D23308A20006C240A /* Frameworks */ = {
@@ -411,7 +385,6 @@
 		549BA09523335200006C240A /* Language Views */ = {
 			isa = PBXGroup;
 			children = (
-				549BA09C23335E03006C240A /* BaseModel.swift */,
 				8810E16D22C32D7C00EA0DCB /* Chinese */,
 				54617F0E22C17335002A6499 /* Japanese */,
 			);
@@ -421,18 +394,9 @@
 		549BA0962333533C006C240A /* Hiragana View */ = {
 			isa = PBXGroup;
 			children = (
-				549BA0972333561C006C240A /* Model */,
 				549BA09A2333575F006C240A /* HiraganaView.swift */,
 			);
 			path = "Hiragana View";
-			sourceTree = "<group>";
-		};
-		549BA0972333561C006C240A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				549BA09823335637006C240A /* HiraganaModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		549C42E822CC2EE000131E1D /* Settings */ = {
@@ -494,6 +458,7 @@
 		54C3919922DC4C3B007D6126 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				54D7556723C2F1FD00652401 /* Models */,
 				54977A802351A532002C5A9B /* Notifications */,
 				541002E322C2A8DD00D42247 /* User Defaults */,
 				54E598EE22E041BE00191EA9 /* Networking */,
@@ -501,21 +466,25 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		54D7556723C2F1FD00652401 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54977A8C2352EB8E002C5A9B /* TimeSchedule.swift */,
+				54D88CD92341E72100B4D1FD /* KatakanaModel.swift */,
+				549BA09823335637006C240A /* HiraganaModel.swift */,
+				5483719122C01853004B1000 /* KanjiModel.swift */,
+				8810E16F22C32E6C00EA0DCB /* PinyinModel.swift */,
+				549BA09C23335E03006C240A /* BaseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		54D88CD72341E70200B4D1FD /* Katakana View */ = {
 			isa = PBXGroup;
 			children = (
-				54D88CD82341E70E00B4D1FD /* Model */,
 				54D88CDB2341E73F00B4D1FD /* KatakanaView.swift */,
 			);
 			path = "Katakana View";
-			sourceTree = "<group>";
-		};
-		54D88CD82341E70E00B4D1FD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				54D88CD92341E72100B4D1FD /* KatakanaModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		54E598E922E033D700191EA9 /* Routes */ = {
@@ -573,20 +542,11 @@
 		8810E16D22C32D7C00EA0DCB /* Chinese */ = {
 			isa = PBXGroup;
 			children = (
-				8810E16E22C32D9900EA0DCB /* Model */,
 				8810E17122C3306500EA0DCB /* Series A */,
 				8810E17222C3309D00EA0DCB /* Series B */,
 				545046692320DFDD0072AF8A /* ChineseViews.swift */,
 			);
 			path = Chinese;
-			sourceTree = "<group>";
-		};
-		8810E16E22C32D9900EA0DCB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8810E16F22C32E6C00EA0DCB /* PinyinModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		8810E17122C3306500EA0DCB /* Series A */ = {

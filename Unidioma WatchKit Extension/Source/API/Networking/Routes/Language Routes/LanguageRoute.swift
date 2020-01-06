@@ -15,8 +15,3 @@ struct LanguageRoute<M: Codable>: Route {
         "\(baseUrl.rawValue)/\(urlPath)".asUrl()
     }
 }
-
-struct LanguageModel: BaseModel {
-    let character: AnyCodable
-    let type: String
-}

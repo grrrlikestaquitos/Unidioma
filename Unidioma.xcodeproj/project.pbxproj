@@ -52,6 +52,7 @@
 		54B168E622C3217C000FECBE /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B168E522C3217C000FECBE /* SettingsStore.swift */; };
 		54B98D5D23C2DF0400BE47D5 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B98D5C23C2DF0400BE47D5 /* AnyCodable.swift */; };
 		54C3919822DC4C1A007D6126 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3919722DC4C1A007D6126 /* HTTP.swift */; };
+		54D7556923C2F50500652401 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D7556823C2F50500652401 /* LanguageModel.swift */; };
 		54D88CD42341A3E400B4D1FD /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CD32341A3E400B4D1FD /* Languages.swift */; };
 		54D88CD62341A72500B4D1FD /* CharacterRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CD52341A72500B4D1FD /* CharacterRoute.swift */; };
 		54D88CDA2341E72100B4D1FD /* KatakanaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D88CD92341E72100B4D1FD /* KatakanaModel.swift */; };
@@ -166,6 +167,7 @@
 		54B168E522C3217C000FECBE /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		54B98D5C23C2DF0400BE47D5 /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
 		54C3919722DC4C1A007D6126 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		54D7556823C2F50500652401 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		54D88CD32341A3E400B4D1FD /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		54D88CD52341A72500B4D1FD /* CharacterRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRoute.swift; sourceTree = "<group>"; };
 		54D88CD92341E72100B4D1FD /* KatakanaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatakanaModel.swift; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 				5483719122C01853004B1000 /* KanjiModel.swift */,
 				8810E16F22C32E6C00EA0DCB /* PinyinModel.swift */,
 				549BA09C23335E03006C240A /* BaseModel.swift */,
+				54D7556823C2F50500652401 /* LanguageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				5483719B22C025FF004B1000 /* KanjiViewSB.swift in Sources */,
 				54977A822351A548002C5A9B /* HKNotifications.swift in Sources */,
 				54D88CE02343032800B4D1FD /* CharacterPaths.swift in Sources */,
+				54D7556923C2F50500652401 /* LanguageModel.swift in Sources */,
 				548371A422C04798004B1000 /* HKText.swift in Sources */,
 				549C42EA22CC2F3B00131E1D /* SettingsStoreActions.swift in Sources */,
 				54D88CDA2341E72100B4D1FD /* KatakanaModel.swift in Sources */,

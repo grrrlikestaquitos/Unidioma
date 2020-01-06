@@ -15,11 +15,11 @@ enum Languages: String, CaseIterable {
     }
 }
 
-enum LanguageTypes: String {
+enum CharacterTypes: String {
     // Japanese
-    case Kanji
-    case Hiragana
-    case Katakana
+    case kanji
+    case hiragana
+    case katakana
     // Chinese
-    case Pinyin
+    case pinyin
 }

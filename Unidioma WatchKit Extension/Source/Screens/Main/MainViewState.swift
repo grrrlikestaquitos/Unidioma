@@ -4,133 +4,40 @@ final class MainViewState {
     let settingsStore = AppState.shared.settings
     let mainStore = AppState.shared.main
 
-    private var config: LanguageModel? {
-        return settingsStore.languageConfig.value[language]
-    }
-
-    private var language: Languages.RawValue {
-        return settingsStore.language.value
-    }
-
     func startState() {
-        getLanguageTypes()
+        fetchCharacterForLanguage()
     }
 
-    private func didTimestampExpire(date: Date) -> Bool? {
-        let difference = Date().timeIntervalSince(date)
-        return try? difference.didExpireAfter(hours: 24)
-    }
-
-    private func getLanguageTypes() {
-        guard let config = config else { return }
-        let didExpire = didTimestampExpire(date: config.selectedType.timestamp)
-
-        if config.selectedType.didStartLearning && didExpire == true {
-            updateConfig(config: config)
-            return
-        }
-        if !config.selectedType.didStartLearning {
-            var updatedConfig = config
-            updatedConfig.selectedType.didStartLearning = true
-
-            fetchModel(config: updatedConfig) { data in
-                DispatchQueue.main.async {
-                    self.settingsStore.languageConfig.value[self.language] = updatedConfig
-                    self.mainStore.model = data
-                }
-            }
-            return
-        }
-
-        // TODO: Optimize this logic, otherwise redundant calls occur for same language type with same index
-        fetchModel(config: config) { data in
+    private func fetchCharacterForLanguage() {
+        fetchRequest(model: LanguageModel.self) { (data) in
+            let parsedModel = self.parseLanguageCharacterModel(type: data.type,
+                                                               character: data.character.value)
             DispatchQueue.main.async {
-                self.mainStore.model = data
+                self.mainStore.model = parsedModel
             }
         }
     }
 
-    private func updateConfig(config: LanguageModel) {
-        if let limit = config.selectedType.limit {
-            let withinTypeRange = config.selectedType.currentIndex < limit
+    func parseLanguageCharacterModel(type: String, character: Any) -> BaseModel? {
+        let characterType = CharacterTypes(rawValue: type)
 
-            if withinTypeRange {
-                var updatedConfig = config
-                updatedConfig.selectedType.currentIndex += 1
-                updatedConfig.selectedType.timestamp = Date.getCharacterResetDate()
-
-                fetchModel(config: updatedConfig) { data in
-                    DispatchQueue.main.async {
-                        self.settingsStore.languageConfig.value[self.language] = updatedConfig
-                        self.mainStore.model = data
-                    }
-                }
-            } else {
-                let lanTypeCount = config.types.count - 1
-                let nextTypeId = config.selectedType.id + 1
-                let canProgressToNextType = nextTypeId <= lanTypeCount
-
-                if canProgressToNextType {
-                    var updatedConfig = config
-                    updatedConfig.selectedType = updatedConfig.types[nextTypeId]
-                    
-                    fetchModel(config: updatedConfig) { data in
-                        DispatchQueue.main.async {
-                            self.settingsStore.languageConfig.value[self.language] = updatedConfig
-                            self.mainStore.model = data
-                        }
-                    }
-                }
-            }
-        } else {
-            var updatedConfig = config
-            updatedConfig.selectedType.currentIndex += 1
-            updatedConfig.selectedType.timestamp = Date.getCharacterResetDate()
-
-            fetchModel(config: updatedConfig) { data in
-                DispatchQueue.main.async {
-                    self.settingsStore.languageConfig.value[self.language] = updatedConfig
-                    self.mainStore.model = data
-                }
-            }
+        switch characterType {
+            case .kanji:
+                return try? KanjiModel(dictionary: character)
+            case .hiragana:
+                return character as? HiraganaModel
+            case .katakana:
+                return character as? KatakanaModel
+            default: return nil
         }
     }
 
     // Network Requests
-    func fetchModel(config: LanguageModel, completion: ((BaseModel) -> Void)? = nil) {
-        guard let type = LanguageTypes(rawValue: config.selectedType.name) else { return }
-        let id = config.selectedType.currentIndex
+    func fetchRequest<M: BaseModel>(model: M.Type, completed: @escaping (M) -> ()) {
+        let endpoint = LanguageRoute<M>(languagePath: settingsStore.language.value)
 
-        switch type {
-            case .Hiragana:
-                fetchRequest(model: HiraganaModel.self, path: .hiragana, id: id, completed: { data in
-                    completion?(data)
-                })
-            case .Katakana:
-                fetchRequest(model: KatakanaModel.self, path: .katakana, id: id, completed: { data in
-                    completion?(data)
-                })
-            case .Kanji:
-                fetchRequest(model: KanjiModel.self, path: .kanji, id: id, completed: { data in
-                    completion?(data)
-                })
-            case .Pinyin:
-                fetchRequest(model: CharacterModel.self, path: .pinyin, id: id, completed: { data in
-                    completion?(data)
-                })
-        }
-    }
-
-
-    func fetchRequest<M: BaseModel>(model: M.Type, path: CharacterPath, id: Int, completed: @escaping (M) -> ()) {
-        let endpoint = CharacterRoute<M>(path: path, id: id)
-
-        HTTP(endpoint: endpoint)
-            .request(success: { data in
-                guard let data = data.first else { return }
-                completed(data)
-            }, failure: { error in
-                print(error)
-            })
+        HTTP(endpoint: endpoint).request(success: { (data) in
+            completed(data)
+        })
     }
 }

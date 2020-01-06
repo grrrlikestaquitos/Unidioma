@@ -5,7 +5,7 @@ struct LanguageRoute<M: Codable>: Route {
 
     var queryFormat: String?
     let languagePath: String
-    var baseUrl: URLs.BaseURL { .develop }
+    var baseUrl: URLs.BaseURL { .production }
 
     var urlPath: String {
         "/\(languagePath)"

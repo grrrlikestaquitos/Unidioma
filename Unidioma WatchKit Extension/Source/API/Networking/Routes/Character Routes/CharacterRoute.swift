@@ -6,9 +6,10 @@ struct CharacterRoute<M: Codable>: Route {
     let path: CharacterPath
     let id: Int
     var baseUrl: URLs.BaseURL { .production }
-    var queryFormat: String { "/%@?id=%d" }
+    var queryFormat: String? { "/%@?id=%d" }
 
     var urlPath: String {
+        guard let queryFormat = queryFormat else { return "" }
         return String(format: queryFormat, arguments: [path.rawValue, id])
     }
 

@@ -13,10 +13,6 @@ struct SettingsView: View {
         return settingStore.language.value
     }
 
-    var model: LanguageModel? {
-        return settingStore.languageConfig.value[language]
-    }
-
     var schedule: [TimeSchedule] {
         return settingStore.notificationSchedule.value
     }
@@ -26,7 +22,6 @@ struct SettingsView: View {
             Section(SettingsPage.language.rawValue) {
                 LanguageView(language: language, actions: settingStore.self)
             }
-            RenderLanguageType()
             Section(SettingsPage.scheduleNotification.rawValue) {
                 ScheduleNotificationsView(model: schedule,
                                           actions: settingStore.self,
@@ -34,24 +29,6 @@ struct SettingsView: View {
             }
             EmptyView.padding(25)
         }
-    }
-
-    func RenderLanguageType() -> some View {
-        guard let unwrappedModel = model else {
-            return EmptyView
-        }
-
-        if (unwrappedModel.types.count > 0) {
-            return AnyView(
-                Section(SettingsPage.type.rawValue) {
-                    LanguageType(language: language,
-                                 model: unwrappedModel,
-                                 actions: settingStore.self)
-                }
-            )
-        }
-
-        return EmptyView
     }
 }
 

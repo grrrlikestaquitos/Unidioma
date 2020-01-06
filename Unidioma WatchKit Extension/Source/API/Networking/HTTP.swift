@@ -14,7 +14,6 @@ struct HTTP<Endpoint: Route> {
         guard let endpoint = endpoint else { return }
         
         session.dataTask(with: endpoint.buildRouteUrl()) { (data, responseInfo, error) in
-
             if let data = data {
                 do {
                     let model: DataResponse<Endpoint.Model> = try self.serializeJSON(data: data)

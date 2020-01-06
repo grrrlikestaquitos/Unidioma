@@ -9,14 +9,14 @@ struct ChineseViews: View {
     }
 
     func renderChineseView(series: Series) -> some View {
-        guard let model = model as? CharacterModel else {
+        guard let model = model as? PinyinModel else {
             return EmptyView
         }
         switch series {
             case .A:
-                return AnyView(CharacterViewSA(model: model))
+                return AnyView(PinyinViewSA(model: model))
             case .B:
-                return AnyView(CharacterViewSB(model: model))
+                return AnyView(PinyinViewSB(model: model))
             default:
                 return EmptyView
         }

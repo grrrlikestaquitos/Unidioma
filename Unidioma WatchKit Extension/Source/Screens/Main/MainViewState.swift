@@ -25,9 +25,9 @@ final class MainViewState {
             case .kanji:
                 return try? KanjiModel(dictionary: character)
             case .hiragana:
-                return character as? HiraganaModel
+                return try? HiraganaModel(dictionary: character)
             case .katakana:
-                return character as? KatakanaModel
+                return try? KatakanaModel(dictionary: character)
             default: return nil
         }
     }
